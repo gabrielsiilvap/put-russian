@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ПУТЬ · Learn Russian</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#223B57; --paper:#EFE6CC; --surface:#FBF6EA;
+    --text:#223B57; --muted:#6E6552; --line:#DCD0B2;
+    --p1:#B33E24; --p1t:#F1DCCF; --p2:#A86A1C; --p2t:#F6E7C7; --p3:#34508F; --p3t:#D9E0F1;
+    --gold:#EBA72E; --cream:#EEE4C8; --maxw:1080px;
+    --disp:"Unbounded",sans-serif; --ui:"Manrope",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--text);font-family:var(--ui);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{font-weight:700;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+  a{color:inherit;text-decoration:none}
+
+  .hero{background:var(--ink);color:#F3ECD9;padding:46px 0 38px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(circle at 88% 8%,rgba(235,167,46,.14),transparent 42%),
+    radial-gradient(circle at 6% 96%,rgba(179,62,36,.18),transparent 46%);pointer-events:none;z-index:1}
+  .herorn{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+  .hero-inner{position:relative;z-index:2}
+  .hero .eyebrow{color:#CDBF9C;margin-bottom:14px}
+  .title{font-family:var(--disp);font-weight:800;letter-spacing:-.02em;line-height:.86;font-size:clamp(44px,9vw,84px);margin:0}
+  .title span{color:var(--gold)}
+  .lede{font-family:var(--disp);font-weight:500;font-size:clamp(15px,2vw,19px);color:#DACFB6;margin:14px 0 0;letter-spacing:-.01em}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .pill{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:6px 13px;font-size:12.5px;color:#E6DCC2;font-weight:500}
+  .pill .k{color:var(--gold);font-weight:700}
+  .prog{margin-top:24px;max-width:520px}
+  .prog-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+  .prog-top .n{font-family:var(--disp);font-weight:700;font-size:18px}
+  .prog-top .l{font-size:11px;color:#CDBF9C;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+  .track{height:7px;border-radius:999px;background:rgba(255,255,255,.15);overflow:hidden}
+  .fill{height:100%;width:0;background:var(--gold);border-radius:999px;transition:width .5s cubic-bezier(.4,0,.2,1)}
+
+  .ornband-wrap{background:var(--cream);border-top:1px solid #C9B98C;border-bottom:1px solid #C9B98C;line-height:0}
+  .ornband{display:block}
+
+  main{padding:30px 0 20px;min-height:50vh}
+  .crumb{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:18px}
+  .crumb:hover{color:var(--text)}
+
+  .secttl{font-family:var(--disp);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
+
+  .wgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:14px}
+  .wcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;cursor:pointer;transition:box-shadow .2s,border-color .2s,transform .12s;display:flex;flex-direction:column;gap:4px}
+  .wcard:hover{box-shadow:0 12px 30px -18px rgba(60,42,18,.34);border-color:#C7B585;transform:translateY(-2px)}
+  .wcard .top{display:flex;justify-content:space-between;align-items:center}
+  .wcard .wn{font-family:var(--disp);font-weight:800;font-size:26px;color:var(--pc);line-height:1;letter-spacing:-.02em}
+  .ptag{font-size:11px;font-weight:700;color:var(--pc);background:var(--pt);padding:4px 10px;border-radius:999px}
+  .wcard h3{font-family:var(--disp);font-weight:500;font-size:18px;letter-spacing:-.01em;margin:8px 0 0;color:var(--text)}
+  .wcard .dts{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.04em}
+  .mini{height:5px;border-radius:999px;background:var(--line);overflow:hidden;margin-top:12px}
+  .mini i{display:block;height:100%;background:var(--pc);border-radius:999px}
+  .wcard .dn{font-size:11.5px;color:var(--muted);font-weight:600;margin-top:7px}
+
+  .vhead{margin-bottom:22px}
+  .vhead .wn{font-family:var(--disp);font-weight:800;font-size:13px;letter-spacing:.14em;color:var(--pc)}
+  .vhead h2{font-family:var(--disp);font-weight:700;font-size:clamp(26px,4.5vw,38px);letter-spacing:-.02em;margin:4px 0 6px;line-height:1.05}
+  .vhead .sub{color:var(--muted);font-size:15px}
+  .vhead .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .vchip{font-size:12px;font-weight:600;color:var(--pc);background:var(--pt);padding:5px 12px;border-radius:999px}
+
+  .daylist{display:grid;gap:9px}
+  .drow{display:grid;grid-template-columns:54px 1fr auto;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:13px 16px;cursor:pointer;transition:border-color .2s,box-shadow .2s}
+  .drow:hover{border-color:#C7B585;box-shadow:0 10px 24px -18px rgba(60,42,18,.32)}
+  .drow .dd{text-align:center}
+  .drow .dd .dow{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+  .drow .dd .no{font-family:var(--disp);font-weight:700;font-size:20px;line-height:1.05;color:var(--pc)}
+  .drow .df{font-weight:500;font-size:15px}
+  .drow .dmeta{font-size:12px;color:var(--muted);margin-top:2px}
+  .tag{font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;white-space:nowrap}
+  .t-new{background:var(--p3t);color:var(--p3)} .t-apply{background:var(--p1t);color:var(--p1)} .t-rest{background:#E7DCC1;color:var(--muted)}
+  .check{width:24px;height:24px;border-radius:50%;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;color:transparent;font-size:13px;font-weight:800}
+  .drow.done .check{background:var(--pc);border-color:var(--pc);color:#fff}
+  .drow.done .df{color:var(--muted)}
+
+  .lesson{display:grid;gap:26px}
+  .block .bt{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
+  .block .bt .eyebrow{color:var(--pc)}
+  .block .bt .ct{font-size:11px;font-weight:700;color:var(--muted);background:var(--pt);padding:3px 9px;border-radius:999px}
+  .words{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+  .wcell{background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:9px 13px}
+  .wcell b{font-weight:600;font-size:16px;color:var(--text)}
+  .wcell span{display:block;font-size:12.5px;color:var(--muted);margin-top:1px}
+  .phr{display:grid;gap:8px}
+  .pcell{background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:11px 14px}
+  .pcell .ru{font-weight:500;font-size:15.5px;color:var(--text)}
+  .pcell .en{font-size:13px;color:var(--muted);margin-top:2px}
+  .task{display:flex;gap:10px;align-items:flex-start;background:var(--pt);border-radius:12px;padding:14px 16px;font-size:15px;color:var(--text)}
+  .task i{font-size:18px;color:var(--pc);margin-top:1px}
+  .soon{background:var(--surface);border:1px dashed var(--line);border-radius:14px;padding:26px;text-align:center;color:var(--muted)}
+  .soon b{display:block;color:var(--text);font-family:var(--disp);font-weight:500;font-size:17px;margin-bottom:6px}
+
+  .cta{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .btn{font-family:var(--ui);font-weight:700;font-size:14px;border-radius:11px;padding:12px 20px;cursor:pointer;border:1px solid var(--pc);background:var(--pc);color:#fff;transition:opacity .15s}
+  .btn:hover{opacity:.9}
+  .btn.ghost{background:transparent;color:var(--pc)}
+  .btn.done{background:#E7DCC1;border-color:#E7DCC1;color:var(--muted)}
+  .soon svg{color:var(--pc);margin-bottom:12px}
+  :focus-visible{outline:3px solid var(--p1);outline-offset:2px;border-radius:6px}
+  .navbtns{display:flex;justify-content:space-between;gap:10px;margin-top:24px}
+  .navbtns a{font-size:13px;font-weight:600;color:var(--muted)}
+  .navbtns a:hover{color:var(--text)}
+
+  footer{padding:34px 0 60px;border-top:1px solid var(--line);margin-top:30px}
+  .foot-note{font-size:13.5px;color:var(--muted);max-width:680px;line-height:1.7}
+  .foot-note b{color:var(--text);font-weight:600}
+  .reset{margin-top:16px;background:none;border:1px solid var(--line);color:var(--muted);font-family:var(--ui);font-weight:600;font-size:12.5px;border-radius:9px;padding:8px 14px;cursor:pointer}
+  .reset:hover{border-color:#c2c7cf;color:var(--text)}
+
+  :focus-visible{outline:3px solid var(--p1);outline-offset:2px;border-radius:6px}
+  @media (max-width:560px){.drow{grid-template-columns:44px 1fr auto}}
+  .homebar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+  .btn{display:inline-flex;align-items:center;gap:7px}
+  .btn.small{padding:9px 15px;font-size:13px;border-radius:10px}
+  .modes{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:6px}
+  .modebtn{font-family:var(--ui);text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;cursor:pointer;font-weight:600;font-size:15px;color:var(--text);display:flex;flex-direction:column;gap:3px;transition:border-color .2s,box-shadow .2s}
+  .modebtn:hover{border-color:var(--pc);box-shadow:0 10px 24px -18px rgba(60,42,18,.32)}
+  .modebtn i{font-size:20px;color:var(--pc)}
+  .modebtn svg{color:var(--pc);margin-bottom:2px}
+  .task svg{color:var(--pc)}
+  .modebtn span{font-weight:500;font-size:12px;color:var(--muted)}
+  .dprog{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+  .dprog-bar{flex:1;height:6px;border-radius:999px;background:var(--line);overflow:hidden}
+  .dprog-bar i{display:block;height:100%;background:var(--pc);border-radius:999px;transition:width .3s}
+  .dprog span{font-size:12px;color:var(--muted);font-weight:600;white-space:nowrap}
+  .card-q{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:34px 24px;text-align:center}
+  .card-q .prompt{font-size:11px;color:var(--muted);margin-bottom:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+  .card-q .big{font-family:var(--disp);font-weight:500;font-size:34px;color:var(--text);letter-spacing:-.01em}
+  .card-q .emoji{font-size:54px;line-height:1.3}
+  .card-q .mean{font-size:20px;color:var(--pc);font-weight:600;margin-top:14px}
+  .qbtn{font-family:var(--ui);font-weight:700;font-size:15px;border-radius:11px;padding:12px 22px;cursor:pointer;border:1px solid var(--pc);background:var(--pc);color:#fff;margin-top:20px;transition:opacity .15s}
+  .qbtn:hover{opacity:.9}
+  .qbtn.ghost{background:transparent;color:var(--pc)}
+  .qbtn.good{background:#2E7D52;border-color:#2E7D52}
+  .qbtn.bad{background:transparent;color:var(--muted);border-color:var(--line)}
+  .rate{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .opts{display:grid;gap:10px;margin-top:18px}
+  .opt{font-family:var(--ui);font-weight:500;font-size:16px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;color:var(--text);transition:border-color .15s,background .15s}
+  .opt:hover{border-color:var(--pc)}
+  .opt.right{background:#E4F1E8;border-color:#2E7D52;color:#1E5A38}
+  .opt.wrong{background:#F4DED8;border-color:var(--p1);color:var(--p1)}
+  .tinput{width:100%;font-family:var(--ui);font-size:18px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--text);margin-top:18px}
+  .tinput:focus{outline:none;border-color:var(--pc)}
+  .feedback{margin-top:14px;font-size:15px;font-weight:600}
+  .feedback.ok{color:#2E7D52}
+  .feedback.no{color:var(--p1)}
+  .summary{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:32px;text-align:center}
+  .summary .score{font-family:var(--disp);font-weight:700;font-size:42px;color:var(--pc)}
+  .summary .lbl{color:var(--muted);font-size:14px;margin-top:6px}
+  .summary .acts{display:flex;gap:10px;justify-content:center;margin-top:22px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="herorn" viewBox="0 0 720 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <pattern id="khatim" width="64" height="64" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="#EEE4C8" stroke-width="1" opacity="0.12">
+          <rect x="14" y="14" width="36" height="36"/>
+          <path d="M32 6 L58 32 L32 58 L6 32 Z"/>
+          <circle cx="32" cy="32" r="2.4"/>
+        </g>
+      </pattern>
+    </defs>
+    <rect width="720" height="360" fill="url(#khatim)"/>
+  </svg>
+  <div class="wrap hero-inner">
+    <div class="eyebrow">A0 → conversational A2 · B1 stretch · Dushanbe</div>
+    <a href="#/"><h1 class="title">ПУ<span>Т</span>Ь</h1></a>
+    <p class="lede">Learn Russian, one day at a time.</p>
+    <div class="pills">
+      <span class="pill"><span class="k">~30</span> words / learning day</span>
+      <span class="pill"><span class="k">13</span> weeks · 91 days</span>
+      <span class="pill">Jun 30 – Sep 30, 2026</span>
+    </div>
+    <div class="prog">
+      <div class="prog-top">
+        <div class="n"><span id="p-days">0</span> / 91 lessons · <span id="p-words">0</span> words</div>
+        <div class="l" id="p-label">just getting started</div>
+      </div>
+      <div class="track"><div class="fill" id="p-fill"></div></div>
+    </div>
+  </div>
+</header>
+
+<div class="ornband-wrap">
+  <svg class="ornband" width="100%" height="22" aria-hidden="true">
+    <defs>
+      <pattern id="kilim" width="44" height="22" patternUnits="userSpaceOnUse">
+        <rect width="44" height="22" fill="#EEE4C8"/>
+        <path d="M22 2 L42 11 L22 20 L2 11 Z" fill="none" stroke="#223B57" stroke-width="1.1"/>
+        <path d="M22 5 L36 11 L22 17 L8 11 Z" fill="#B33E24"/>
+        <path d="M22 8 L28 11 L22 14 L16 11 Z" fill="#EBA72E"/>
+        <circle cx="0" cy="11" r="2" fill="#34508F"/>
+        <circle cx="44" cy="11" r="2" fill="#34508F"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="22" fill="url(#kilim)"/>
+  </svg>
+</div>
+
+<main class="wrap" id="app"></main>
+
+<div class="ornband-wrap">
+  <svg class="ornband" width="100%" height="22" aria-hidden="true"><rect width="100%" height="22" fill="url(#kilim)"/></svg>
+</div>
+
+<footer class="wrap">
+  <p class="foot-note">Five learning days a week at about thirty words, plus an apply day in the city and a rest day to let it settle. <b>Active beats passive</b>: words you can say in a real exchange count for far more than words you only recognize on a card. Week one is fully taught and ready today. The later weeks have their topics and daily structure in place, with lessons filling in.</p>
+  <button class="reset" id="reset">Reset progress</button>
+</footer>
+
+<script>
+function W(n,topic,sub,dates,days){return {n,topic,sub,dates,days};}
+function shell(focuses){return focuses.map((f,i)=>({n:i+1,dow:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"][i],
+  focus:f[0],type:f[1],count:f[1]==="new"?30:0,words:[],phrases:[],task:f[2]||""}));}
+
+const COURSE=[
+  W(1,"First words & survival","Greetings, your name, numbers, courtesy","Jun 30 – Jul 6",[
+    {n:1,dow:"Mon",focus:"Hello and thank you",type:"new",count:12,
+     words:[["привет","hi"],["здравствуйте","hello (formal)"],["доброе утро","good morning"],["добрый день","good afternoon"],["добрый вечер","good evening"],["спасибо","thank you"],["пожалуйста","please / you are welcome"],["да","yes"],["нет","no"],["извините","excuse me / sorry"],["хорошо","good, okay"],["пока","bye"]],
+     phrases:[["Привет! Как дела?","Hi! How are you? (recognize and greet back)"],["Спасибо! → Пожалуйста.","Thanks! → You are welcome."],["Доброе утро / добрый вечер","Greet by time of day"]],
+     task:"Greet three people out loud today: a taxi driver, a shopkeeper, a neighbor."},
+    {n:2,dow:"Tue",focus:"My name is...",type:"new",count:16,
+     words:[["меня зовут","my name is"],["как тебя зовут","what is your name (informal)"],["как вас зовут","what is your name (formal)"],["очень приятно","nice to meet you"],["я","I"],["ты","you (informal)"],["вы","you (formal)"],["он","he"],["она","she"],["мы","we"],["друг","friend (m)"],["подруга","friend (f)"],["брат","brother"],["сестра","sister"],["имя","first name"],["фамилия","surname"]],
+     phrases:[["Как вас зовут? → Меня зовут Габриэль.","What is your name? → My name is Gabriel."],["Очень приятно!","Nice to meet you"],["Кто это? → Это мой друг.","Who is this? → This is my friend."]],
+     task:"Introduce yourself to one person and ask their name."},
+    {n:3,dow:"Wed",focus:"Numbers 0 to 12",type:"new",count:20,
+     words:[["ноль","0"],["один","1"],["два","2"],["три","3"],["четыре","4"],["пять","5"],["шесть","6"],["семь","7"],["восемь","8"],["девять","9"],["десять","10"],["одиннадцать","11"],["двенадцать","12"],["сколько","how much / how many"],["число","number"],["плюс","plus"],["минус","minus"],["считать","to count"],["много","many"],["мало","few"]],
+     phrases:[["Сколько это стоит?","How much is it? (recognize now, answer in week 3)"],["Сколько тебе лет?","How old are you? (preview)"]],
+     task:"Count to twelve out loud three times, then count objects around your home."},
+    {n:4,dow:"Thu",focus:"How are you, where from",type:"new",count:24,
+     words:[["как дела","how are you"],["хорошо","good"],["плохо","bad"],["нормально","okay"],["отлично","great"],["так себе","so-so"],["откуда","from where"],["я из Бразилии","I am from Brazil"],["страна","country"],["город","city"],["здесь","here"],["там","there"],["сейчас","now"],["сегодня","today"],["говорить","to speak"],["понимать","to understand"],["немного","a little"],["по-русски","in Russian"],["по-английски","in English"],["это","this, it"],["что","what"],["а","and, but"],["кто","who"],["тоже","also"]],
+     phrases:[["Как дела? → Хорошо, спасибо. А у тебя?","How are you? → Good, thanks. And you?"],["Откуда ты? → Я из Бразилии.","Where are you from? → I am from Brazil."],["Ты говоришь по-русски? → Немного.","Do you speak Russian? → A little."]],
+     task:"Have a four-line exchange with someone: hello, how are you, where from, bye."},
+    {n:5,dow:"Fri",focus:"Courtesy and getting by",type:"new",count:28,
+     words:[["до свидания","goodbye (formal)"],["до завтра","see you tomorrow"],["спокойной ночи","good night"],["спасибо большое","thank you very much"],["не за что","do not mention it"],["простите","sorry (formal)"],["можно","may I"],["конечно","of course"],["я не знаю","I do not know"],["я не понимаю","I do not understand"],["повторите","repeat please"],["медленно","slowly"],["помогите","help"],["вода","water"],["хлеб","bread"],["туалет","toilet"],["где","where"],["вход","entrance"],["выход","exit"],["открыто","open"],["закрыто","closed"],["налево","left"],["направо","right"],["стоп","stop"],["такси","taxi"],["дорого","expensive"],["дёшево","cheap"],["деньги","money"]],
+     phrases:[["Извините, вы говорите по-английски?","Excuse me, do you speak English?"],["Повторите, пожалуйста. Медленно.","Repeat please. Slowly."],["Где туалет? → Там, направо.","Where is the toilet? → There, on the right."]],
+     task:"Use three survival phrases in real situations today."},
+    {n:6,dow:"Sat",focus:"Take it to the street",type:"apply",count:0,words:[],phrases:[],
+     task:"No new words. Go to the bozor. Greet, ask сколько, say спасибо and пока, count what you buy. At least three real micro-exchanges."},
+    {n:7,dow:"Sun",focus:"Review and rest",type:"rest",count:0,words:[],phrases:[],
+     task:"SRS review of week one only. Re-listen to the week audio. No new material, let it settle."}
+  ]),
+  W(2,"People & family","Family, descriptions, jobs, nationalities","Jul 7 – 13",shell([
+    ["Family members","new"],["Describing people","new"],["Jobs & professions","new"],["Nationalities & languages","new"],["Possessives and whose","new"],
+    ["Apply: talk about your family","apply","Tell a neighbor about your family out loud."],["Review and rest","rest","SRS review only. No new words."]])),
+  W(3,"Food, market & money","Foods, the bozor, quantities, prices","Jul 14 – 20",shell([
+    ["Foods & drinks","new"],["At the bozor","new"],["Quantities & containers","new"],["Prices & money","new"],["Ordering & buying","new"],
+    ["Apply: shop for dinner","apply","Buy a full meal at the bozor in Russian."],["Review and rest","rest","SRS review only."]])),
+  W(4,"Directions & the city","Places, where is, transport, taxi","Jul 21 – 27",shell([
+    ["Places in town","new"],["Where is it?","new"],["Left, right, straight","new"],["Taxi & transport","new"],["Asking & following directions","new"],
+    ["Apply: navigate by taxi","apply","Direct a taxi and ask for two places."],["Review and rest","rest","SRS review only."]])),
+  W(5,"Home & daily routine","Rooms, items, daily verbs, telling time","Jul 28 – Aug 3",shell([
+    ["Rooms & furniture","new"],["Household items","new"],["Daily verbs","new"],["Telling time","new"],["My typical day","new"],
+    ["Apply: narrate your morning","apply","Describe your morning routine aloud."],["Review and rest","rest","SRS review only."]])),
+  W(6,"Time & the past","Days, months, past tense, time markers","Aug 4 – 10",shell([
+    ["Days & months","new"],["Past tense basics","new"],["Yesterday & last week","new"],["Time markers","new"],["What I did","new"],
+    ["Apply: tell your weekend","apply","Tell someone what you did this weekend."],["Review and rest","rest","SRS review only."]])),
+  W(7,"Health & body","Body, symptoms, pharmacy, doctor","Aug 11 – 17",shell([
+    ["Body parts","new"],["Symptoms","new"],["At the pharmacy","new"],["At the doctor","new"],["I need, it hurts","new"],
+    ["Apply: pharmacy run","apply","Ask for something you need at the аптека."],["Review and rest","rest","SRS review only."]])),
+  W(8,"Ministry & work","Church, work verbs, meetings, serving","Aug 18 – 24",shell([
+    ["Church & faith words","new"],["Work & study verbs","new"],["Meetings & people","new"],["Helping & serving","new"],["Talking about your week","new"],
+    ["Apply: describe your ministry","apply","Explain your work and ministry simply."],["Review and rest","rest","SRS review only."]])),
+  W(9,"Emotions & opinions","Feelings, like, think, connectors","Aug 25 – 31",shell([
+    ["Feelings","new"],["Like and dislike (нравится)","new"],["Think and believe","new"],["Because, but, so","new"],["Agree & disagree","new"],
+    ["Apply: share an opinion","apply","Give an opinion with a reason out loud."],["Review and rest","rest","SRS review only."]])),
+  W(10,"Travel & plans","Transport, future, motion, booking","Sep 1 – 7",shell([
+    ["Transport & tickets","new"],["Future tense","new"],["Verbs of motion","new"],["Hotels & booking","new"],["Making plans","new"],
+    ["Apply: plan a trip aloud","apply","Talk through a trip you want to take."],["Review and rest","rest","SRS review only."]])),
+  W(11,"Services & requests","Shops, bank, requests, problems","Sep 8 – 14",shell([
+    ["Shops & services","new"],["Bank, phone, internet","new"],["Imperatives (requests)","new"],["Problems & complaints","new"],["Polite asks","new"],
+    ["Apply: handle a service task","apply","Sort out one real errand in Russian."],["Review and rest","rest","SRS review only."]])),
+  W(12,"Narration & description","Sequencing, describing, weather, story","Sep 15 – 21",shell([
+    ["Sequencing words","new"],["Describing people","new"],["Describing places","new"],["Weather & nature","new"],["Tell a short story","new"],
+    ["Apply: narrate an event","apply","Tell a one-minute story about your week."],["Review and rest","rest","SRS review only."]])),
+  W(13,"Faith & free conversation","Faith words, conditional, testimony","Sep 22 – 30",shell([
+    ["Faith & life words","new"],["Conditional (бы)","new"],["Conversation fillers","new"],["Your testimony, part 1","new"],["Your testimony, part 2","new"],
+    ["Apply: real conversation","apply","Hold a conversation on a familiar topic."],["Assessment","rest","Graded mock conversation against the B1 can-do list."]])),
+];
+
+function phaseOf(n){return n<=4?1:n<=9?2:3;}
+function pc(n){return ["var(--p1)","var(--p2)","var(--p3)"][phaseOf(n)-1];}
+function pt(n){return ["var(--p1t)","var(--p2t)","var(--p3t)"][phaseOf(n)-1];}
+function wordCount(d){return d.words.length||d.count||0;}
+function weekWords(w){return w.days.reduce((s,d)=>s+wordCount(d),0);}
+
+const KEY="put-app-v1";
+function loadDone(){try{return new Set(JSON.parse(localStorage.getItem(KEY))||[])}catch(e){return new Set()}}
+function saveDone(s){try{localStorage.setItem(KEY,JSON.stringify([...s]))}catch(e){}}
+let done=loadDone();
+const dk=(w,d)=>w+"-"+d;
+
+function totals(){
+  let days=0,words=0;
+  COURSE.forEach(w=>w.days.forEach(d=>{if(done.has(dk(w.n,d.n))){days++;words+=wordCount(d);}}));
+  return {days,words};
+}
+function updateHero(){
+  const t=totals();
+  document.getElementById("p-days").textContent=t.days;
+  document.getElementById("p-words").textContent=t.words.toLocaleString();
+  document.getElementById("p-fill").style.width=(t.days/91*100)+"%";
+  document.getElementById("p-label").textContent=t.days===0?"just getting started":t.days>=91?"you made it":"on the way";
+}
+
+function homeView(){
+  return `<div class="homebar" style="--pc:var(--p3)"><p class="secttl" style="margin:0">Thirteen weeks · tap a week to open it</p><a class="btn ghost small" href="#/review">${ic('refresh',15)} Review learned words</a></div>
+  <div class="wgrid">${COURSE.map(w=>{
+    const total=w.days.length, dn=w.days.filter(d=>done.has(dk(w.n,d.n))).length;
+    return `<a class="wcard" style="--pc:${pc(w.n)};--pt:${pt(w.n)}" href="#/week/${w.n}">
+      <div class="top"><span class="wn">${String(w.n).padStart(2,"0")}</span><span class="ptag">Phase ${phaseOf(w.n)}</span></div>
+      <h3>${w.topic}</h3>
+      <div class="dts">${w.dates}</div>
+      <div class="mini"><i style="width:${dn/total*100}%"></i></div>
+      <div class="dn">${dn} / ${total} days done</div>
+    </a>`;}).join("")}</div>`;
+}
+
+function weekView(wn){
+  const w=COURSE.find(x=>x.n===wn); if(!w)return homeView();
+  const dn=w.days.filter(d=>done.has(dk(w.n,d.n))).length;
+  return `<a class="crumb" href="#/">← all weeks</a>
+  <div class="vhead" style="--pc:${pc(w.n)};--pt:${pt(w.n)}">
+    <div class="wn">Week ${String(w.n).padStart(2,"0")} · Phase ${phaseOf(w.n)}</div>
+    <h2>${w.topic}</h2>
+    <div class="sub">${w.sub}</div>
+    <div class="meta"><span class="vchip">${w.dates}</span><span class="vchip">${weekWords(w)} words</span><span class="vchip">${dn} / 7 days done</span></div>
+  </div>
+  <div class="daylist">${w.days.map(d=>{
+    const isd=done.has(dk(w.n,d.n));
+    const meta=d.type==="new"?`~${wordCount(d)} new words`:d.type==="apply"?"apply in the city":"review and rest";
+    return `<a class="drow${isd?" done":""}" style="--pc:${pc(w.n)}" href="#/week/${w.n}/day/${d.n}">
+      <div class="dd"><div class="dow">${d.dow}</div><div class="no">${d.n}</div></div>
+      <div><div class="df">${d.focus}</div><div class="dmeta">${meta}</div></div>
+      <div style="display:flex;align-items:center;gap:10px"><span class="tag t-${d.type}">${d.type}</span><span class="check">✓</span></div>
+    </a>`;}).join("")}</div>`;
+}
+
+function dayView(wn,dnum){
+  const w=COURSE.find(x=>x.n===wn); if(!w)return homeView();
+  const d=w.days.find(x=>x.n===dnum); if(!d)return weekView(wn);
+  const isd=done.has(dk(w.n,d.n));
+  let body="";
+  if(d.words.length){
+    body+=`<div class="block"><div class="bt"><span class="eyebrow">New words</span><span class="ct">${d.words.length} today</span></div>
+      <div class="words">${d.words.map(x=>`<div class="wcell"><b>${x[0]}</b><span>${x[1]}</span></div>`).join("")}</div></div>`;
+  }
+  if(d.phrases.length){
+    body+=`<div class="block"><div class="bt"><span class="eyebrow">Phrases to handle</span></div>
+      <div class="phr">${d.phrases.map(x=>`<div class="pcell"><div class="ru">${x[0]}</div><div class="en">${x[1]}</div></div>`).join("")}</div></div>`;
+  }
+  if(d.task){
+    const tname=d.type==="apply"?"mappin":d.type==="rest"?"moon":"microphone";
+    body+=`<div class="block"><div class="bt"><span class="eyebrow">Today</span></div>
+      <div class="task">${ic(tname,18)}<span>${d.task}</span></div></div>`;
+  }
+  if(!d.words.length && d.type==="new"){
+    body+=`<div class="soon"><svg width="46" height="46" viewBox="0 0 46 46" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="11" y="11" width="24" height="24"/><path d="M23 4 L42 23 L23 42 L4 23 Z"/><circle cx="23" cy="23" r="3"/></svg><b>Lesson coming</b>Topic: ${d.focus}. Target: ~${d.count} new words. The full word list and phrases drop in the next build pass.</div>`;
+  }
+  return `<a class="crumb" href="#/week/${w.n}">← ${w.topic}</a>
+  <div class="vhead" style="--pc:${pc(w.n)};--pt:${pt(w.n)}">
+    <div class="wn">Week ${w.n} · Day ${d.n} · ${d.dow}</div>
+    <h2>${d.focus}</h2>
+    <div class="meta"><span class="vchip">${d.type}</span>${d.words.length?`<span class="vchip">${d.words.length} words</span>`:""}</div>
+  </div>
+  <div class="lesson" style="--pc:${pc(w.n)};--pt:${pt(w.n)}">${body}</div>
+  <div class="cta" style="--pc:${pc(w.n)}">
+    ${d.words.length?`<a class="btn ghost" href="#/week/${w.n}/day/${d.n}/practice">${ic('bolt',16)} Practice these words</a>`:""}
+    <button class="btn${isd?" done":""}" id="mark">${isd?"✓ completed":"Mark day complete"}</button>
+  </div>
+  <div class="navbtns">
+    ${d.n>1?`<a href="#/week/${w.n}/day/${d.n-1}">← previous day</a>`:`<a href="#/week/${w.n}">← week ${w.n}</a>`}
+    ${d.n<7?`<a href="#/week/${w.n}/day/${d.n+1}">next day →</a>`:(w.n<13?`<a href="#/week/${w.n+1}">week ${w.n+1} →</a>`:"<span></span>")}
+  </div>`;
+}
+
+var curPool=[], curCtx=null, sess=null;
+var EMOJI={"вода":"💧","хлеб":"🍞","мясо":"🥩","фрукты":"🍎","овощи":"🥕","туалет":"🚻","такси":"🚕","деньги":"💵","город":"🏙️","страна":"🗺️","друг":"🧑‍🤝‍🧑","подруга":"👭","брат":"👦","сестра":"👧","имя":"🪪","фамилия":"🪪","ноль":"0️⃣","один":"1️⃣","два":"2️⃣","три":"3️⃣","четыре":"4️⃣","пять":"5️⃣","шесть":"6️⃣","семь":"7️⃣","восемь":"8️⃣","девять":"9️⃣","десять":"🔟","одиннадцать":"1️⃣1️⃣","двенадцать":"1️⃣2️⃣","вход":"🚪","выход":"🚪","направо":"➡️","налево":"⬅️","прямо":"⬆️","стоп":"🛑","сегодня":"📅","сейчас":"⏰","говорить":"🗣️","понимать":"💡","здесь":"📍","там":"📌","открыто":"✅","закрыто":"⛔","дорого":"💰","дёшево":"🪙"};
+function ic(name,size){var s=size||18;var P={
+ microphone:'<path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/>',
+ mappin:'<path d="M12 21s-6-5.3-6-10a6 6 0 1 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/>',
+ moon:'<path d="M21 12.8A8 8 0 1 1 11.2 3a6 6 0 0 0 9.8 9.8z"/>',
+ bolt:'<path d="M13 3 4 14h7l-1 7 9-11h-7l1-7z"/>',
+ refresh:'<path d="M4 12a8 8 0 0 1 14-5l2 2"/><path d="M20 5v4h-4"/><path d="M20 12a8 8 0 0 1-14 5l-2-2"/><path d="M4 19v-4h4"/>',
+ shuffle:'<path d="M16 4h4v4"/><path d="M4 20 20 4"/><path d="M20 16v4h-4"/><path d="M14 14l6 6"/><path d="M4 4l6 6"/>',
+ cards:'<rect x="3" y="7" width="13" height="13" rx="2"/><path d="M8 4h9a2 2 0 0 1 2 2v10"/>',
+ list:'<path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><path d="M4 6l1 1 2-2"/><path d="M4 12l1 1 2-2"/><path d="M4 18l1 1 2-2"/>',
+ keyboard:'<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h.01M11 10h.01M15 10h.01M8 14h8"/>'
+};return '<svg viewBox="0 0 24 24" width="'+s+'" height="'+s+'" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;vertical-align:-3px">'+(P[name]||"")+'</svg>';}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function drillable(p){return (p||[]).filter(function(w){return w[0] && w[0].indexOf("·")<0;});}
+function norm(s){return (s||"").toLowerCase().trim().replace(/ё/g,"е").replace(/[^а-яa-z\s]/gi,"").replace(/\s+/g," ");}
+var ALLWORDS=drillable(COURSE.reduce(function(a,w){w.days.forEach(function(d){a=a.concat(d.words);});return a;},[]));
+function cumulativePool(){var a=[];COURSE.forEach(function(w){w.days.forEach(function(d){if(done.has(dk(w.n,d.n)))a=a.concat(d.words);});});return a;}
+function meaningHTML(it){return (EMOJI[it[0]]?'<div class="emoji">'+EMOJI[it[0]]+'</div>':'')+'<div class="mean">'+it[1]+'</div>';}
+function progressHTML(){return '<div class="dprog"><div class="dprog-bar"><i style="width:'+(sess.i/sess.queue.length*100)+'%"></i></div><span>'+(sess.i+1)+' / '+sess.queue.length+'</span></div>';}
+function modePicker(){return '<div class="modes">'
+ +'<button class="modebtn" onclick="startSession(curPool,\'mixed\')">'+ic('shuffle',20)+'Mixed<span>all types, fully random</span></button>'
+ +'<button class="modebtn" onclick="startSession(curPool,\'flash\')">'+ic('cards',20)+'Flashcards<span>flip RU and meaning</span></button>'
+ +'<button class="modebtn" onclick="startSession(curPool,\'mc\')">'+ic('list',20)+'Multiple choice<span>pick the match</span></button>'
+ +'<button class="modebtn" onclick="startSession(curPool,\'type\')">'+ic('keyboard',20)+'Type recall<span>write it from memory</span></button>'
+ +'</div>';}
+function practiceView(pool,ctx){return '<a class="crumb" href="'+ctx.backHref+'">← '+ctx.backLabel+'</a>'
+ +'<div class="vhead" style="--pc:'+ctx.pc+'"><div class="wn">Practice</div><h2>'+ctx.title+'</h2>'
+ +'<div class="sub">'+drillable(pool).length+' words in this set. Order and answers reshuffle every run.</div></div>'
+ +'<div id="drill" class="drill" style="--pc:'+ctx.pc+'">'+modePicker()+'</div>';}
+function showModes(){document.getElementById("drill").innerHTML=modePicker();}
+function startSession(pool,mode){var p=drillable(pool);var host=document.getElementById("drill");
+ if(p.length<4){host.innerHTML='<div class="soon"><svg width="46" height="46" viewBox="0 0 46 46" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="11" y="11" width="24" height="24"/><path d="M23 4 L42 23 L23 42 L4 23 Z"/></svg><b>Not enough words yet</b>Finish a few lessons to build this set, then come back to practice.</div>';return;}
+ sess={mode:mode,queue:shuffle(p.slice()),i:0,correct:0,answered:0,locked:false};renderQuestion();}
+function renderQuestion(){if(sess.i>=sess.queue.length)return renderSummary();sess.cur=sess.queue[sess.i];sess.locked=false;
+ var m=sess.mode==="mixed"?["flash","mc","type"][Math.floor(Math.random()*3)]:sess.mode;sess.qmode=m;
+ if(m==="flash")renderFlash(false);else if(m==="mc")renderMC();else renderType();}
+function renderFlash(reveal){var it=sess.cur;var host=document.getElementById("drill");
+ host.innerHTML=progressHTML()+'<div class="card-q"><div class="prompt">Russian</div><div class="big">'+it[0]+'</div>'
+ +(reveal?meaningHTML(it)+'<div class="rate"><button class="qbtn good" onclick="rate(true)">I knew it</button><button class="qbtn bad" onclick="rate(false)">Missed it</button></div>':'<button class="qbtn" onclick="renderFlash(true)">Show meaning</button>')+'</div>';}
+function rate(ok){record(ok);advance();}
+function renderMC(){var it=sess.cur;var askRu=Math.random()<0.5;var correct=askRu?it[1]:it[0];
+ var others=shuffle(ALLWORDS.filter(function(w){return w[0]!==it[0];}).slice()).slice(0,3).map(function(w){return askRu?w[1]:w[0];});
+ var opts=shuffle([correct].concat(others));sess.mcCorrect=correct;
+ var promptHTML=askRu?'<div class="big">'+it[0]+'</div>':((EMOJI[it[0]]?'<div class="emoji">'+EMOJI[it[0]]+'</div>':'')+'<div class="big" style="font-size:24px">'+it[1]+'</div>');
+ var host=document.getElementById("drill");
+ host.innerHTML=progressHTML()+'<div class="card-q"><div class="prompt">'+(askRu?"Russian → meaning":"Meaning → Russian")+'</div>'+promptHTML+'</div>'
+ +'<div class="opts">'+opts.map(function(o){return '<button class="opt" onclick="answerMC(this,'+(o===correct)+')">'+o+'</button>';}).join("")+'</div>';}
+function answerMC(btn,ok){if(sess.locked)return;sess.locked=true;
+ document.querySelectorAll(".opt").forEach(function(b){b.disabled=true;if(b.textContent===sess.mcCorrect)b.classList.add("right");});
+ if(!ok)btn.classList.add("wrong");record(ok);
+ document.getElementById("drill").insertAdjacentHTML("beforeend",'<button class="qbtn" style="margin-top:18px" onclick="advance()">Next →</button>');}
+function renderType(){var it=sess.cur;var host=document.getElementById("drill");
+ host.innerHTML=progressHTML()+'<div class="card-q"><div class="prompt">Type the Russian</div>'
+ +(EMOJI[it[0]]?'<div class="emoji">'+EMOJI[it[0]]+'</div>':'')+'<div class="big" style="font-size:24px">'+it[1]+'</div>'
+ +'<input class="tinput" id="ans" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="по-русски...">'
+ +'<div id="fb"></div><button class="qbtn" id="checkbtn" onclick="checkType()">Check</button></div>';
+ var inp=document.getElementById("ans");inp.focus();
+ inp.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();checkType();}});}
+function checkType(){if(sess.locked)return;var inp=document.getElementById("ans");var ok=norm(inp.value)===norm(sess.cur[0]);
+ sess.locked=true;inp.disabled=true;
+ document.getElementById("checkbtn").outerHTML='<button class="qbtn" onclick="advance()">Next →</button>';
+ document.getElementById("fb").innerHTML=ok?'<div class="feedback ok">Correct ✓</div>':'<div class="feedback no">Answer: '+sess.cur[0]+'</div>';
+ record(ok);}
+function record(ok){sess.answered++;if(ok)sess.correct++;}
+function advance(){sess.i++;sess.locked=false;renderQuestion();}
+function renderSummary(){var host=document.getElementById("drill");var pct=sess.answered?Math.round(sess.correct/sess.answered*100):0;
+ host.innerHTML='<div class="summary"><div class="score">'+sess.correct+' / '+sess.answered+'</div><div class="lbl">'+pct+'% this round. Run it again and the order changes.</div>'
+ +'<div class="acts"><button class="qbtn" onclick="startSession(curPool,sess.mode)">Practice again</button><button class="qbtn ghost" onclick="showModes()">Choose another type</button></div></div>';}
+function enterPractice(wn,dn){var w=COURSE.find(function(x){return x.n===wn;});var d=w&&w.days.find(function(x){return x.n===dn;});if(!d){location.hash="#/";return;}curPool=d.words;curCtx={title:"Day "+d.n+": "+d.focus,backHref:"#/week/"+wn+"/day/"+dn,backLabel:"back to lesson",pc:pc(wn)};document.getElementById("app").innerHTML=practiceView(curPool,curCtx);}
+function enterReview(){curPool=cumulativePool();curCtx={title:"Review learned words",backHref:"#/",backLabel:"all weeks",pc:"var(--p3)"};document.getElementById("app").innerHTML=practiceView(curPool,curCtx);}
+
+function route(){
+  const h=location.hash.replace(/^#\//,"").split("/").filter(Boolean);
+  const app=document.getElementById("app");
+  if(h[0]==="week" && h[2]==="day" && h[4]==="practice"){enterPractice(+h[1],+h[3]);}
+  else if(h[0]==="review"){enterReview();}
+  else if(h[0]==="week" && h[2]==="day"){app.innerHTML=dayView(+h[1],+h[3]);bindMark(+h[1],+h[3]);}
+  else if(h[0]==="week"){app.innerHTML=weekView(+h[1]);}
+  else{app.innerHTML=homeView();}
+  window.scrollTo(0,0);
+  updateHero();
+}
+function bindMark(wn,dn){
+  const b=document.getElementById("mark"); if(!b)return;
+  b.addEventListener("click",()=>{
+    const k=dk(wn,dn);
+    if(done.has(k))done.delete(k);else done.add(k);
+    saveDone(done); route();
+  });
+}
+document.getElementById("reset").addEventListener("click",()=>{done=new Set();saveDone(done);route();});
+window.addEventListener("hashchange",route);
+route();
+</script>
+</body>
+</html>
