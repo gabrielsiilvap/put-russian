@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Глаголы · Present Tense Drill</title>
+<style>
+  :root{
+    --paper:#FAF8F2;
+    --ink:#1C1A17;
+    --ink-soft:#6B675E;
+    --line:#E4E0D5;
+    --conj1:#2E7CC4;      /* first conjugation: blue */
+    --conj1-bg:#E7F1FA;
+    --conj2:#7A3FD1;      /* second conjugation: purple */
+    --conj2-bg:#F0E9FB;
+    --irr:#C46A1B;        /* irregular: amber */
+    --irr-bg:#FBEFDF;
+    --good:#3C7A2E;
+    --good-bg:#E9F5E3;
+    --bad:#C0392B;
+    --bad-bg:#FBE9E6;
+    --lime:#E2FC51;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:20px 16px 60px;
+  }
+  .wrap{width:100%;max-width:680px}
+  header{
+    display:flex;align-items:baseline;justify-content:space-between;
+    border-bottom:2px solid var(--ink);
+    padding-bottom:10px;margin-bottom:16px;
+  }
+  h1{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:700;letter-spacing:-0.01em}
+  h1 .ru{font-style:italic}
+  .clock{font-variant-numeric:tabular-nums;font-size:14px;color:var(--ink-soft)}
+  .note{
+    background:var(--lime);
+    border:1.5px solid var(--ink);
+    border-radius:10px;
+    padding:10px 14px;
+    font-size:13.5px;
+    line-height:1.45;
+    margin-bottom:16px;
+  }
+  .tabs{display:flex;gap:8px;margin-bottom:18px}
+  .tab{
+    flex:1;padding:9px 0;border:1.5px solid var(--ink);border-radius:999px;
+    background:transparent;font-size:14px;font-weight:600;cursor:pointer;
+    color:var(--ink);transition:background .15s;
+  }
+  .tab.active{background:var(--ink);color:var(--paper)}
+  .tab:focus-visible{outline:3px solid var(--conj1);outline-offset:2px}
+
+  /* ---------- STUDY ---------- */
+  .legend{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:14px;font-size:12.5px;color:var(--ink-soft)}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:11px;height:11px;border-radius:3px;display:inline-block}
+  .vcard{
+    border:1.5px solid var(--line);
+    border-radius:12px;
+    padding:14px 16px;
+    margin-bottom:10px;
+    background:#fff;
+  }
+  .vcard[data-c="1"]{border-left:5px solid var(--conj1)}
+  .vcard[data-c="2"]{border-left:5px solid var(--conj2)}
+  .vcard[data-c="x"]{border-left:5px solid var(--irr)}
+  .vhead{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:8px;cursor:pointer}
+  .inf{font-family:Georgia,serif;font-size:21px;font-weight:700}
+  .gloss{font-size:13px;color:var(--ink-soft)}
+  .forms{
+    display:grid;grid-template-columns:1fr 1fr;gap:4px 18px;
+    font-size:15.5px;line-height:1.55;
+  }
+  .forms b{font-weight:400;color:var(--ink-soft);display:inline-block;width:58px;font-size:13.5px}
+  .spk{
+    background:none;border:none;padding:0;cursor:pointer;
+    font:inherit;color:inherit;text-align:left;
+    border-radius:6px;
+  }
+  .spk:hover{background:var(--lime)}
+  .spk:focus-visible{outline:2px solid var(--conj1);outline-offset:2px}
+  button.inf{font-family:Georgia,serif;font-size:21px;font-weight:700}
+  .end1{color:var(--conj1);font-weight:700}
+  .end2{color:var(--conj2);font-weight:700}
+  .endx{color:var(--irr);font-weight:700}
+  .mast{font-size:12px;color:var(--ink-soft);white-space:nowrap}
+
+  /* ---------- DRILL ---------- */
+  .drillbox{border:1.5px solid var(--ink);border-radius:14px;background:#fff;padding:26px 22px;text-align:center}
+  .prompt-label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+  .prompt-inf{font-family:Georgia,serif;font-size:20px;color:var(--ink-soft);margin-bottom:4px}
+  .prompt-inf .g{font-family:system-ui;font-size:13px}
+  .prompt-pro{font-family:Georgia,serif;font-size:40px;font-weight:700;margin:10px 0 18px}
+  input[type=text]{
+    width:100%;max-width:340px;
+    font-family:Georgia,serif;font-size:24px;text-align:center;
+    padding:10px 12px;border:2px solid var(--ink);border-radius:10px;
+    background:var(--paper);color:var(--ink);
+  }
+  input[type=text]:focus{outline:3px solid var(--conj1);outline-offset:1px}
+  .feedback{min-height:64px;margin-top:14px;font-size:17px;line-height:1.5}
+  .feedback .big{font-family:Georgia,serif;font-size:26px;font-weight:700}
+  .ok{color:var(--good)} .no{color:var(--bad)} .almost{color:var(--irr)}
+  .btnrow{display:flex;gap:10px;justify-content:center;margin-top:16px}
+  .btn{
+    padding:10px 22px;border:1.5px solid var(--ink);border-radius:999px;
+    background:var(--ink);color:var(--paper);font-size:15px;font-weight:600;cursor:pointer;
+  }
+  .btn.ghost{background:transparent;color:var(--ink)}
+  .btn:focus-visible{outline:3px solid var(--conj1);outline-offset:2px}
+  .choices{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:420px;margin:0 auto}
+  .choice{
+    padding:12px;border:1.5px solid var(--line);border-radius:10px;background:var(--paper);
+    font-family:Georgia,serif;font-size:19px;cursor:pointer;color:var(--ink);
+  }
+  .choice:hover{border-color:var(--ink)}
+  .choice.right{background:var(--good-bg);border-color:var(--good)}
+  .choice.wrong{background:var(--bad-bg);border-color:var(--bad)}
+  .statbar{display:flex;justify-content:space-between;align-items:center;margin:14px 2px 10px;font-size:13px;color:var(--ink-soft)}
+  .progress{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-bottom:16px}
+  .progress i{display:block;height:100%;background:var(--ink);border-radius:99px;transition:width .3s}
+  .modeswitch{display:flex;gap:6px;justify-content:center;margin-bottom:14px}
+  .pill{font-size:12.5px;padding:6px 14px;border-radius:999px;border:1.5px solid var(--line);background:transparent;cursor:pointer;color:var(--ink-soft);font-weight:600}
+  .pill.on{border-color:var(--ink);color:var(--ink);background:var(--lime)}
+  .streak{font-weight:700;color:var(--ink)}
+  @media (max-width:520px){
+    .forms{grid-template-columns:1fr}
+    .prompt-pro{font-size:32px}
+  }
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1><span class="ru">Глаголы</span> · настоящее время</h1>
+    <div class="clock" id="clock">90:00</div>
+  </header>
+
+  <div class="note"><strong>One tense, two English meanings.</strong> Russian present covers both "I read" and "I am reading". Я читаю = both. There is no separate present continuous, so every form you drill here does double duty.</div>
+
+  <div class="tabs" role="tablist">
+    <button class="tab active" id="tabStudy" onclick="showTab('study')">Study</button>
+    <button class="tab" id="tabDrill" onclick="showTab('drill')">Drill</button>
+  </div>
+
+  <!-- STUDY -->
+  <section id="study">
+    <div class="legend">
+      <span><span class="dot" style="background:var(--conj1)"></span>1st conj: -ю -ешь -ет -ем -ете -ют</span>
+      <span><span class="dot" style="background:var(--conj2)"></span>2nd conj: -ю -ишь -ит -им -ите -ят</span>
+      <span><span class="dot" style="background:var(--irr)"></span>stem change / irregular</span>
+      <span>🔊 tap any word to hear it, tap twice for slow</span>
+    </div>
+    <div id="vlist"></div>
+  </section>
+
+  <!-- DRILL -->
+  <section id="drill" hidden>
+    <div class="modeswitch">
+      <button class="pill on" id="pillChoice" onclick="setMode('choice')">Warm-up: pick</button>
+      <button class="pill" id="pillType" onclick="setMode('type')">Real test: type</button>
+    </div>
+    <div class="statbar">
+      <span>Mastered: <b id="mastered">0</b>/<b id="total">0</b> forms</span>
+      <span class="streak">🔥 <span id="streak">0</span></span>
+    </div>
+    <div class="progress"><i id="pbar" style="width:0%"></i></div>
+    <div class="drillbox" id="dbox"></div>
+  </section>
+</div>
+
+<script>
+// ============ AUDIO ============
+// uses the device's built-in Russian voice (Milena on iPhone/Mac, Google русский on Chrome)
+let ruVoice=null;
+function pickVoice(){
+  const vs=speechSynthesis.getVoices().filter(v=>v.lang.toLowerCase().startsWith('ru'));
+  if(!vs.length){ruVoice=null;return;}
+  ruVoice = vs.find(v=>/milena/i.test(v.name))
+         || vs.find(v=>/google/i.test(v.name))
+         || vs.find(v=>v.localService) || vs[0];
+}
+if('speechSynthesis' in window){
+  pickVoice();
+  speechSynthesis.onvoiceschanged=pickVoice;
+}
+function speak(text, slow){
+  if(!('speechSynthesis' in window))return;
+  speechSynthesis.cancel();
+  // strip stress marks; some TTS engines choke on the combining acute
+  const u=new SpeechSynthesisUtterance(text.normalize('NFD').replace(/\u0301/g,'').normalize('NFC'));
+  u.lang='ru-RU';
+  if(ruVoice)u.voice=ruVoice;
+  u.rate = slow ? 0.72 : 0.88;
+  speechSynthesis.speak(u);
+}
+
+// ============ DATA ============
+// stress marked with combining acute (́ ) after the stressed vowel
+const AC='\u0301';
+function s(str){return str.replace(/'/g, AC);}
+const PRON=['я','ты','он / она','мы','вы','они'];
+
+const VERBS=[
+ {inf:s("де'лать"),g:"to do / make",c:1,f:[s("де'лаю"),s("де'лаешь"),s("де'лает"),s("де'лаем"),s("де'лаете"),s("де'лают")]},
+ {inf:s("рабо'тать"),g:"to work",c:1,f:[s("рабо'таю"),s("рабо'таешь"),s("рабо'тает"),s("рабо'таем"),s("рабо'таете"),s("рабо'тают")]},
+ {inf:s("чита'ть"),g:"to read",c:1,f:[s("чита'ю"),s("чита'ешь"),s("чита'ет"),s("чита'ем"),s("чита'ете"),s("чита'ют")]},
+ {inf:s("знать"),g:"to know",c:1,f:[s("зна'ю"),s("зна'ешь"),s("зна'ет"),s("зна'ем"),s("зна'ете"),s("зна'ют")]},
+ {inf:s("понима'ть"),g:"to understand",c:1,f:[s("понима'ю"),s("понима'ешь"),s("понима'ет"),s("понима'ем"),s("понима'ете"),s("понима'ют")]},
+ {inf:s("слу'шать"),g:"to listen",c:1,f:[s("слу'шаю"),s("слу'шаешь"),s("слу'шает"),s("слу'шаем"),s("слу'шаете"),s("слу'шают")]},
+ {inf:s("изуча'ть"),g:"to study (a subject)",c:1,f:[s("изуча'ю"),s("изуча'ешь"),s("изуча'ет"),s("изуча'ем"),s("изуча'ете"),s("изуча'ют")]},
+ {inf:s("отвеча'ть"),g:"to answer",c:1,f:[s("отвеча'ю"),s("отвеча'ешь"),s("отвеча'ет"),s("отвеча'ем"),s("отвеча'ете"),s("отвеча'ют")]},
+ {inf:s("спра'шивать"),g:"to ask",c:1,f:[s("спра'шиваю"),s("спра'шиваешь"),s("спра'шивает"),s("спра'шиваем"),s("спра'шиваете"),s("спра'шивают")]},
+ {inf:s("говори'ть"),g:"to speak / say",c:2,f:[s("говорю'"),s("говори'шь"),s("говори'т"),s("говори'м"),s("говори'те"),s("говоря'т")]},
+ {inf:s("люби'ть"),g:"to love",c:2,f:[s("люблю'"),s("лю'бишь"),s("лю'бит"),s("лю'бим"),s("лю'бите"),s("лю'бят")]},
+ {inf:s("смотре'ть"),g:"to watch / look",c:2,f:[s("смотрю'"),s("смо'тришь"),s("смо'трит"),s("смо'трим"),s("смо'трите"),s("смо'трят")]},
+ {inf:s("жить"),g:"to live",c:'x',f:[s("живу'"),s("живёшь"),s("живёт"),s("живём"),s("живёте"),s("живу'т")]},
+ {inf:s("писа'ть"),g:"to write",c:'x',f:[s("пишу'"),s("пи'шешь"),s("пи'шет"),s("пи'шем"),s("пи'шете"),s("пи'шут")]},
+ {inf:s("идти'"),g:"to go (on foot)",c:'x',f:[s("иду'"),s("идёшь"),s("идёт"),s("идём"),s("идёте"),s("иду'т")]},
+ {inf:s("е'хать"),g:"to go (by vehicle)",c:'x',f:[s("е'ду"),s("е'дешь"),s("е'дет"),s("е'дем"),s("е'дете"),s("е'дут")]},
+ {inf:s("хоте'ть"),g:"to want",c:'x',f:[s("хочу'"),s("хо'чешь"),s("хо'чет"),s("хоти'м"),s("хоти'те"),s("хотя'т")]},
+];
+
+// endings to highlight per conjugation (matched greedily from the end, stress-stripped)
+const ENDINGS=["ешь","ёшь","ишь","ете","ёте","ите","ем","ём","им","ет","ёт","ит","ют","ут","ят","ат","ю","у"];
+function strip(t){return t.normalize('NFD').replace(/\u0301/g,'').normalize('NFC');}
+function hi(form,c){
+  const plain=strip(form);
+  for(const e of ENDINGS){
+    if(plain.endsWith(e)){
+      // count how many visible chars the ending is, walk back through combining marks
+      let need=e.length, i=form.length;
+      while(need>0 && i>0){ i--; if(form[i]!=='\u0301') need--; }
+      const cls = c===1?'end1':(c===2?'end2':'endx');
+      return form.slice(0,i)+'<span class="'+cls+'">'+form.slice(i)+'</span>';
+    }
+  }
+  return form;
+}
+
+// ============ STUDY ============
+const vlist=document.getElementById('vlist');
+VERBS.forEach(v=>{
+  const card=document.createElement('div');
+  card.className='vcard';card.dataset.c=v.c;
+  card.innerHTML='<div class="vhead"><span><button class="inf spk" data-say="'+v.inf+'">'+v.inf+' 🔊</button> <span class="gloss">'+v.g+'</span></span></div>'+
+   '<div class="forms">'+v.f.map((f,i)=>'<span><b>'+PRON[i]+'</b><button class="spk" data-say="'+PRON[i].split(' ')[0]+' '+f+'">'+hi(f,v.c)+'</button></span>').join('')+'</div>';
+  vlist.appendChild(card);
+});
+
+// tap = normal speed, second tap right after = slow
+let lastSaid='', lastAt=0;
+document.addEventListener('click',e=>{
+  const b=e.target.closest('.spk');
+  if(!b)return;
+  const t=b.dataset.say, now=Date.now();
+  const slow=(t===lastSaid && now-lastAt<3000);
+  speak(t, slow);
+  lastSaid=t; lastAt=now;
+});
+
+// ============ DRILL ENGINE ============
+// leitner-lite: every (verb,person) form has a box 0..3; box>=2 counts as mastered
+let cards=[];
+VERBS.forEach((v,vi)=>{ for(let p=0;p<6;p++) cards.push({vi,p,box:0,last:-99}); });
+document.getElementById('total').textContent=cards.length;
+
+let mode='choice', current=null, turn=0, streak=0, locked=false;
+
+function pickCard(){
+  turn++;
+  // eligible: not shown in the last 3 turns
+  const pool=cards.filter(c=>turn-c.last>3);
+  const src=pool.length?pool:cards;
+  const minBox=Math.min(...src.map(c=>c.box));
+  const low=src.filter(c=>c.box===minBox);
+  const c=low[Math.floor(Math.random()*low.length)];
+  c.last=turn;
+  return c;
+}
+function updateStats(){
+  const m=cards.filter(c=>c.box>=2).length;
+  document.getElementById('mastered').textContent=m;
+  document.getElementById('pbar').style.width=(100*m/cards.length)+'%';
+  document.getElementById('streak').textContent=streak;
+  if(m===cards.length){
+    document.getElementById('dbox').innerHTML='<div class="prompt-pro">🎉 Всё!</div><p style="font-size:16px">Every form mastered. Switch to typing mode if you were on warm-up, or go crush the class.</p><div class="btnrow"><button class="btn" onclick="resetBoxes()">Drill again from zero</button></div>';
+    return false;
+  }
+  return true;
+}
+function resetBoxes(){cards.forEach(c=>{c.box=0;c.last=-99});streak=0;next();}
+
+function setMode(m){
+  mode=m;
+  document.getElementById('pillChoice').classList.toggle('on',m==='choice');
+  document.getElementById('pillType').classList.toggle('on',m==='type');
+  next();
+}
+function showTab(t){
+  document.getElementById('study').hidden = t!=='study';
+  document.getElementById('drill').hidden = t!=='drill';
+  document.getElementById('tabStudy').classList.toggle('active',t==='study');
+  document.getElementById('tabDrill').classList.toggle('active',t==='drill');
+  if(t==='drill') next();
+}
+
+function promptHTML(v,p){
+  return '<div class="prompt-label">conjugate in the present</div>'+
+    '<div class="prompt-inf">'+v.inf+' <span class="g">('+v.g+')</span></div>'+
+    '<div class="prompt-pro">'+PRON[p]+' ______</div>';
+}
+
+function next(){
+  locked=false;
+  if(!updateStats()) return;
+  current=pickCard();
+  const v=VERBS[current.vi], p=current.p, box=document.getElementById('dbox');
+  if(mode==='type'){
+    box.innerHTML=promptHTML(v,p)+
+      '<input type="text" id="ans" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type the form">'+
+      '<div class="feedback" id="fb"></div>'+
+      '<div class="btnrow"><button class="btn" onclick="checkType()">Check</button><button class="btn ghost" onclick="reveal()">Show me</button></div>';
+    const inp=document.getElementById('ans');
+    inp.focus();
+    inp.addEventListener('keydown',e=>{if(e.key==='Enter'){locked?next():checkType();}});
+  }else{
+    // choice mode: correct + 3 distractors (other persons of same verb, or same person of other verbs)
+    const correct=v.f[p];
+    const pool=new Set();
+    v.f.forEach((f,i)=>{if(i!==p)pool.add(f);});
+    VERBS.forEach(o=>{if(o!==v)pool.add(o.f[p]);});
+    const distract=[...pool].filter(x=>strip(x)!==strip(correct)).sort(()=>Math.random()-0.5).slice(0,3);
+    const opts=[correct,...distract].sort(()=>Math.random()-0.5);
+    box.innerHTML=promptHTML(v,p)+
+      '<div class="choices">'+opts.map(o=>'<button class="choice" data-v="'+strip(o)+'">'+o+'</button>').join('')+'</div>'+
+      '<div class="feedback" id="fb"></div>';
+    box.querySelectorAll('.choice').forEach(b=>b.addEventListener('click',()=>checkChoice(b, strip(correct))));
+  }
+}
+
+function grade(ok){
+  if(ok){current.box=Math.min(3,current.box+1);streak++;}
+  else{current.box=0;streak=0;}
+}
+
+function checkChoice(btn,correctPlain){
+  if(locked)return; locked=true;
+  const v=VERBS[current.vi];
+  const ok=btn.dataset.v===correctPlain;
+  btn.classList.add(ok?'right':'wrong');
+  if(!ok){
+    document.querySelectorAll('.choice').forEach(b=>{if(b.dataset.v===correctPlain)b.classList.add('right');});
+  }
+  document.getElementById('fb').innerHTML= ok
+    ? '<span class="ok">Да! '+PRON[current.p]+' '+hi(v.f[current.p],v.c)+'</span>'
+    : '<span class="no">'+PRON[current.p]+' '+hi(v.f[current.p],v.c)+'</span>';
+  speak(PRON[current.p].split(' ')[0]+' '+v.f[current.p]);
+  grade(ok);
+  setTimeout(next, ok?1100:2000);
+}
+
+function normAns(t){
+  return strip(t.trim().toLowerCase()).replace(/\s+/g,' ');
+}
+function checkType(){
+  if(locked)return;
+  const v=VERBS[current.vi], correct=v.f[current.p];
+  const inp=document.getElementById('ans');
+  const user=normAns(inp.value);
+  if(!user)return;
+  const target=strip(correct).toLowerCase();
+  const targetE=target.replace(/ё/g,'е');
+  const fb=document.getElementById('fb');
+  locked=true;
+  if(user===target){
+    fb.innerHTML='<span class="ok"><span class="big">'+hi(correct,v.c)+'</span><br>Correct. Enter for next.</span>';
+    grade(true);
+  }else if(user.replace(/ё/g,'е')===targetE){
+    fb.innerHTML='<span class="almost"><span class="big">'+hi(correct,v.c)+'</span><br>Right form, but watch the ё. Counted as correct. Enter for next.</span>';
+    grade(true);
+  }else{
+    fb.innerHTML='<span class="no"><span class="big">'+hi(correct,v.c)+'</span><br>You wrote: '+inp.value+'. It comes back soon. Enter for next.</span>';
+    grade(false);
+  }
+  speak(PRON[current.p].split(' ')[0]+' '+correct);
+  updateStats();
+  inp.blur();
+  document.querySelector('.btnrow').innerHTML='<button class="btn" onclick="next()">Next</button><button class="btn ghost spk" data-say="'+PRON[current.p].split(' ')[0]+' '+correct+'">🔊 Again</button>';
+}
+function reveal(){
+  if(locked)return; locked=true;
+  const v=VERBS[current.vi];
+  document.getElementById('fb').innerHTML='<span class="almost"><span class="big">'+hi(v.f[current.p],v.c)+'</span><br>Shown, so it stays in the low box. Enter for next.</span>';
+  speak(PRON[current.p].split(' ')[0]+' '+v.f[current.p]);
+  grade(false);
+  updateStats();
+  document.querySelector('.btnrow').innerHTML='<button class="btn" onclick="next()">Next</button><button class="btn ghost spk" data-say="'+PRON[current.p].split(' ')[0]+' '+v.f[current.p]+'">🔊 Again</button>';
+}
+
+// countdown from 90:00
+let secs=90*60;
+setInterval(()=>{
+  secs=Math.max(0,secs-1);
+  const m=Math.floor(secs/60), ss=String(secs%60).padStart(2,'0');
+  document.getElementById('clock').textContent=m+':'+ss;
+},1000);
+
+updateStats();
+</script>
+</body>
+</html>
