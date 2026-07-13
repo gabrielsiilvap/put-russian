@@ -1,0 +1,129 @@
+{
+  "day": 26,
+  "week": 4,
+  "theme": "Numbers, age, money (genitive continued)",
+  "function": "Shopping and age: consolidate.",
+  "canDo": "I can ask someone's age, tell mine, and handle prices and numbers.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "Recap: numbers, prices, age",
+    "explanation": "No new grammar — practice speed today. **Сто́ить** for prices (**сто́ит/сто́ят**), **рубль/рубля́/рубле́й** for money, **год/го́да/лет** for age, all following the same 1/2-4/5+ pattern as день and час. Age and liking both use the **dative** (мне, тебе́, ему́, ей).",
+    "examples": [
+      { "ru": "Ско́лько э́то сто́ит?", "en": "How much does this cost?" },
+      { "ru": "Ско́лько тебе́ лет?", "en": "How old are you?" },
+      { "ru": "Э́то сто́ит два́дцать рубле́й.", "en": "This costs twenty rubles." },
+      { "ru": "Мне два́дцать во́семь лет.", "en": "I am twenty-eight." }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0439", "ru": "стоить", "en": "to cost", "pos": "verb", "example": { "ru": "Сколько это стоит?", "en": "How much does this cost?" } },
+    { "id": "w0440", "ru": "рубль", "en": "ruble", "pos": "noun", "gender": "m", "example": { "ru": "Сто рублей.", "en": "One hundred rubles." } },
+    { "id": "w0441", "ru": "дорого", "en": "expensive", "pos": "adv", "example": { "ru": "Это дорого.", "en": "That's expensive." } },
+    { "id": "w0442", "ru": "дёшево", "en": "cheap", "pos": "adv", "example": { "ru": "Это дёшево.", "en": "That's cheap." } },
+    { "id": "w0443", "ru": "год", "en": "year", "pos": "noun", "gender": "m", "example": { "ru": "Один год.", "en": "One year." } },
+    { "id": "w0444", "ru": "мне", "en": "to me", "pos": "pronoun", "example": { "ru": "Мне тридцать лет.", "en": "I am thirty." } },
+    { "id": "w0445", "ru": "магазин", "en": "shop", "pos": "noun", "gender": "m", "example": { "ru": "Магазин здесь.", "en": "The shop is here." } },
+    { "id": "w0446", "ru": "цена", "en": "price", "pos": "noun", "gender": "f", "example": { "ru": "Хорошая цена.", "en": "A good price." } },
+    { "id": "w0447", "ru": "молодой", "en": "young", "pos": "adj", "example": { "ru": "Молодой человек.", "en": "A young person." } },
+    { "id": "w0448", "ru": "старый", "en": "old", "pos": "adj", "example": { "ru": "Старый друг.", "en": "An old friend." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "At the market, full exchange",
+      "note": "Every word here is from this week or before.",
+      "lines": [
+        { "speaker": "A", "ru": "Здравствуйте! Сколько стоит хлеб?", "en": "Hello! How much is the bread?" },
+        { "speaker": "B", "ru": "Тридцать рублей.", "en": "Thirty rubles." },
+        { "speaker": "A", "ru": "А молоко?", "en": "And milk?" },
+        { "speaker": "B", "ru": "Пятьдесят рублей. Это сегодня, не вчера!", "en": "Fifty rubles. This is from today, not yesterday!" },
+        { "speaker": "A", "ru": "Хорошо, беру. Вот деньги.", "en": "Good, I'll take it. Here's the money." },
+        { "speaker": "B", "ru": "Спасибо! Всё хорошо!", "en": "Thank you! All good!" }
+      ]
+    },
+    {
+      "title": "Meeting someone new",
+      "lines": [
+        { "speaker": "A", "ru": "Сколько тебе лет?", "en": "How old are you?" },
+        { "speaker": "B", "ru": "Мне двадцать пять лет. А тебе?", "en": "I'm twenty-five. And you?" },
+        { "speaker": "A", "ru": "Мне тоже двадцать пять!", "en": "I'm also twenty-five!" },
+        { "speaker": "B", "ru": "Отлично! Это интересно.", "en": "Great! That's interesting." }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, how much does the milk cost?", "type": "understand", "answer": "fifty rubles", "acceptable": ["пятьдесят рублей", "50"] },
+    { "q": "In dialogue 2, how old is speaker A?", "type": "understand", "answer": "twenty-five", "acceptable": ["двадцать пять", "25"] },
+    { "q": "Ask how much the bread costs.", "type": "produce", "answer": "Сколько стоит хлеб?", "acceptable": ["сколько стоит хлеб"] },
+    { "q": "Say you're twenty-five years old.", "type": "produce", "answer": "Мне двадцать пять лет.", "acceptable": ["мне двадцать пять лет"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "fill",
+      "prompt": "Fill in the missing word.",
+      "items": [
+        { "q": "Сколько это ___? (costs)", "answer": "стоит" },
+        { "q": "___ тебе лет? (how much/many)", "answer": "Сколько" },
+        { "q": "___ двадцать пять лет. (to me)", "answer": "Мне" }
+      ]
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian — mix words from the whole week.",
+      "items": [
+        { "q": "How much does this cost?", "answer": "Сколько это стоит?" },
+        { "q": "How old are you?", "answer": "Сколько тебе лет?" },
+        { "q": "I am thirty years old.", "answer": "Мне тридцать лет." },
+        { "q": "This is expensive, but good.", "answer": "Это дорого, но хорошо." },
+        { "q": "Twenty rubles, please.", "answer": "Двадцать рублей, пожалуйста." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["лет", "тебе", "сколько"],
+      "answer": "Сколько тебе лет?"
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "How much does the milk cost?", "answer": "Сколько стоит молоко?" },
+      { "en": "I am twenty-eight years old.", "answer": "Мне двадцать восемь лет." },
+      { "en": "This is cheap!", "answer": "Это дёшево!" },
+      { "en": "A good price.", "answer": "Хорошая цена." },
+      { "en": "I have thirty rubles.", "answer": "У меня есть тридцать рублей." }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences mixing prices and ages, using сколько/стоит/лет.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 4-5 sentences: a shopping trip where you also tell someone your age.",
+      "minSentences": 4,
+      "modelAnswer": "Сколько стоит хлеб? Тридцать рублей — хорошо. А молоко? Пятьдесят. Беру! Кстати, мне тридцать два года. А тебе сколько?"
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Ask a real price and react to it today.",
+      "Tell a new person your age, if it comes up naturally."
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "How much does this cost?", "back": "Сколько это стоит?" },
+    { "type": "production", "front": "How old are you?", "back": "Сколько тебе лет?" },
+    { "type": "production", "front": "I am thirty years old.", "back": "Мне тридцать лет." },
+    { "type": "production", "front": "This is cheap!", "back": "Это дёшево!" },
+    { "type": "listening", "front": "[audio] Сколько стоит хлеб?", "back": "Сколько стоит хлеб?" }
+  ]
+}

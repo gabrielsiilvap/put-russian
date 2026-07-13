@@ -1,0 +1,153 @@
+{
+  "day": 23,
+  "week": 4,
+  "theme": "Numbers, age, money (genitive continued)",
+  "function": "Prices and money: numbers 20-1000.",
+  "canDo": "I can ask someone's age, tell mine, and handle prices and numbers.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "Bigger numbers, and сто́ить for prices",
+    "explanation": "Tens: **два́дцать**(20), **три́дцать**(30), **со́рок**(40), **пятьдеся́т**(50), **шестьдеся́т**(60), **се́мьдесят**(70), **во́семьдесят**(80), **девяно́сто**(90), **сто**(100), **ты́сяча**(1000). Combine like English: **два́дцать пять** = 25.\n\n**Сто́ить** (to cost) almost always appears as **сто́ит** (it costs, singular price) or **сто́ят** (they cost). Prices follow the same 1/2-4/5+ rule as день and час: **оди́н рубль, два рубля́, пять рубле́й**.",
+    "examples": [
+      { "ru": "Ско́лько э́то сто́ит?", "en": "How much does this cost?" },
+      { "ru": "Э́то сто́ит два́дцать рубле́й.", "en": "This costs twenty rubles." },
+      { "ru": "Оди́н рубль. Два рубля́. Пять рубле́й.", "en": "One ruble. Two rubles. Five rubles.", "note": "same 1 / 2-4 / 5+ pattern" },
+      { "ru": "Э́то до́рого!", "en": "That's expensive!" }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0398", "ru": "тридцать", "en": "thirty", "pos": "num", "example": { "ru": "Тридцать рублей.", "en": "Thirty rubles." } },
+    { "id": "w0399", "ru": "сорок", "en": "forty", "pos": "num", "example": { "ru": "Сорок рублей.", "en": "Forty rubles." } },
+    { "id": "w0400", "ru": "пятьдесят", "en": "fifty", "pos": "num", "example": { "ru": "Пятьдесят рублей.", "en": "Fifty rubles." } },
+    { "id": "w0401", "ru": "шестьдесят", "en": "sixty", "pos": "num", "example": { "ru": "Шестьдесят рублей.", "en": "Sixty rubles." } },
+    { "id": "w0402", "ru": "семьдесят", "en": "seventy", "pos": "num", "example": { "ru": "Семьдесят рублей.", "en": "Seventy rubles." } },
+    { "id": "w0403", "ru": "восемьдесят", "en": "eighty", "pos": "num", "example": { "ru": "Восемьдесят рублей.", "en": "Eighty rubles." } },
+    { "id": "w0404", "ru": "девяносто", "en": "ninety", "pos": "num", "example": { "ru": "Девяносто рублей.", "en": "Ninety rubles." } },
+    { "id": "w0405", "ru": "сто", "en": "one hundred", "pos": "num", "example": { "ru": "Сто рублей.", "en": "One hundred rubles." } },
+    { "id": "w0406", "ru": "тысяча", "en": "one thousand", "pos": "num", "example": { "ru": "Тысяча рублей.", "en": "A thousand rubles." } },
+    { "id": "w0407", "ru": "рубль", "en": "ruble", "pos": "noun", "gender": "m", "note": "рубль / рубля / рублей (1 / 2-4 / 5+)", "example": { "ru": "Один рубль.", "en": "One ruble." } },
+    { "id": "w0408", "ru": "стоить", "en": "to cost", "pos": "verb", "note": "mostly used as стоит (it costs) / стоят (they cost)", "example": { "ru": "Сколько это стоит?", "en": "How much does this cost?" } },
+    { "id": "w0409", "ru": "дорого", "en": "expensive (predicate)", "pos": "adv", "example": { "ru": "Это дорого!", "en": "That's expensive!" } },
+    { "id": "w0410", "ru": "дёшево", "en": "cheap (predicate)", "pos": "adv", "example": { "ru": "Это дёшево!", "en": "That's cheap!" } },
+    { "id": "w0411", "ru": "цена", "en": "price", "pos": "noun", "gender": "f", "example": { "ru": "Хорошая цена.", "en": "A good price." } },
+    { "id": "w0412", "ru": "карта", "en": "card (payment)", "pos": "noun", "gender": "f", "example": { "ru": "У меня есть карта.", "en": "I have a card." } },
+    { "id": "w0413", "ru": "бесплатно", "en": "free of charge", "pos": "adv", "example": { "ru": "Это бесплатно!", "en": "That's free!" } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "How much is it?",
+      "lines": [
+        { "speaker": "A", "ru": "Сколько это стоит?", "en": "How much does this cost?" },
+        { "speaker": "B", "ru": "Сто рублей.", "en": "One hundred rubles." },
+        { "speaker": "A", "ru": "Это дорого!", "en": "That's expensive!" },
+        { "speaker": "B", "ru": "Понимаю. Есть дешёвый — пятьдесят рублей.", "en": "I understand. There's a cheap one — fifty rubles." },
+        { "speaker": "A", "ru": "Отлично, беру!", "en": "Great, I'll take it!" }
+      ]
+    },
+    {
+      "title": "Paying",
+      "lines": [
+        { "speaker": "A", "ru": "Карта или деньги?", "en": "Card or cash?" },
+        { "speaker": "B", "ru": "У меня есть карта.", "en": "I have a card." },
+        { "speaker": "A", "ru": "Хорошо. Это стоит двадцать рублей.", "en": "Good. This costs twenty rubles." },
+        { "speaker": "B", "ru": "Вот, пожалуйста.", "en": "Here you go." }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, what's the cheaper price?", "type": "understand", "answer": "fifty rubles", "acceptable": ["пятьдесят рублей", "50", "fifty"] },
+    { "q": "In dialogue 2, how does speaker B pay?", "type": "understand", "answer": "by card", "acceptable": ["картой", "карта", "card"] },
+    { "q": "Ask how much something costs.", "type": "produce", "answer": "Сколько это стоит?", "acceptable": ["сколько это стоит"] },
+    { "q": "Say something is expensive.", "type": "produce", "answer": "Это дорого.", "acceptable": ["это дорого"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "fill",
+      "prompt": "Put рубль into the correct form after the number.",
+      "items": [
+        { "q": "Один ___.", "answer": "рубль" },
+        { "q": "Три ___.", "answer": "рубля" },
+        { "q": "Десять ___.", "answer": "рублей" }
+      ]
+    },
+    {
+      "type": "match",
+      "prompt": "Match the number to its Russian.",
+      "items": [
+        { "left": "тридцать", "right": "30" },
+        { "left": "сорок", "right": "40" },
+        { "left": "сто", "right": "100" },
+        { "left": "тысяча", "right": "1000" },
+        { "left": "девяносто", "right": "90" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "\"How much does this cost?\" — which is correct?",
+      "options": ["Сколько это стоишь?", "Сколько это стоит?", "Сколько это стоят?"],
+      "answer": "Сколько это стоит?"
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "How much does this cost?", "answer": "Сколько это стоит?" },
+        { "q": "One hundred rubles.", "answer": "Сто рублей." },
+        { "q": "That's expensive!", "answer": "Это дорого!" },
+        { "q": "That's cheap!", "answer": "Это дёшево!" },
+        { "q": "I have a card.", "answer": "У меня есть карта." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["стоит", "это", "сколько"],
+      "answer": "Сколько это стоит?"
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "How much does the book cost?", "answer": "Сколько стоит книга?" },
+      { "en": "Twenty rubles, please.", "answer": "Двадцать рублей, пожалуйста." },
+      { "en": "That's a good price.", "answer": "Это хорошая цена." },
+      { "en": "Card or cash?", "answer": "Карта или деньги?" },
+      { "en": "That's free!", "answer": "Это бесплатно!" }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences about prices, using сколько/стоит/рубль and numbers.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 4-5 sentences about a shopping trip: ask a price, react to it, pay.",
+      "minSentences": 4,
+      "modelAnswer": "Сколько это стоит? Сто рублей? Это дорого! А дешёвый есть? Пятьдесят рублей — хорошо, беру. Вот карта."
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Ask a real price today: «Сколько это стоит?»",
+      "React to a price with «Это дорого!» or «Это дёшево!»"
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "How much does this cost?", "back": "Сколько это стоит?" },
+    { "type": "production", "front": "One hundred rubles.", "back": "Сто рублей." },
+    { "type": "production", "front": "That's expensive!", "back": "Это дорого!" },
+    { "type": "production", "front": "That's cheap!", "back": "Это дёшево!" },
+    { "type": "production", "front": "Card or cash?", "back": "Карта или деньги?" },
+    { "type": "cloze", "front": "Пять ___. (rubles, 5+ rule)", "back": "Пять рублей." },
+    { "type": "listening", "front": "[audio] Сколько это стоит?", "back": "Сколько это стоит?" },
+    { "type": "listening", "front": "[audio] Это дорого!", "back": "Это дорого!" }
+  ]
+}

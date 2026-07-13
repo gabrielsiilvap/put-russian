@@ -1,0 +1,160 @@
+{
+  "day": 4,
+  "week": 1,
+  "theme": "Survival present + \"I want\" + questions",
+  "function": "Say what you like doing.",
+  "canDo": "I can introduce myself, say what I want, and ask a simple question.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "Люблю + infinitive, and a first look at plurals",
+    "explanation": "**Люби́ть** (to love / like) is followed directly by an infinitive: **Я люблю́ чита́ть** — I like to read / I like reading. It conjugates a little unevenly — **люблю́, лю́бишь, лю́бит, лю́бим, лю́бите, лю́бят** — only the я-form has the extra л.\n\nMost nouns add **-ы** or **-и** for the plural: **фильм → фи́льмы** (film → films), **кни́га → кни́ги** (book → books, spelled with -и after г). You'll get the full pattern later — for now just recognize plurals when you see them.",
+    "examples": [
+      { "ru": "Я люблю́ чита́ть.", "en": "I like to read.", "note": "любить + infinitive" },
+      { "ru": "Ты лю́бишь смотре́ть фи́льмы?", "en": "Do you like watching films?", "note": "фильм → фильмы, plural" },
+      { "ru": "Мы лю́бим гуля́ть вме́сте.", "en": "We like walking together." },
+      { "ru": "Она́ не лю́бит гото́вить.", "en": "She doesn't like cooking.", "note": "не + любит" }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0155", "ru": "любить", "en": "to love / like", "pos": "verb", "note": "люблю, любишь, любит, любим, любите, любят", "example": { "ru": "Я люблю читать.", "en": "I like to read." } },
+    { "id": "w0156", "ru": "читать", "en": "to read", "pos": "verb", "aspectPartner": "прочитать", "example": { "ru": "Я люблю читать книги.", "en": "I like reading books." } },
+    { "id": "w0157", "ru": "слушать", "en": "to listen", "pos": "verb", "aspectPartner": "послушать", "example": { "ru": "Я слушаю музыку.", "en": "I'm listening to music." } },
+    { "id": "w0158", "ru": "смотреть", "en": "to watch / look", "pos": "verb", "aspectPartner": "посмотреть", "note": "смотрю, смотришь, смотрит", "example": { "ru": "Мы смотрим фильм.", "en": "We're watching a film." } },
+    { "id": "w0159", "ru": "играть", "en": "to play", "pos": "verb", "aspectPartner": "поиграть", "example": { "ru": "Дети играют.", "en": "The children are playing." } },
+    { "id": "w0160", "ru": "писать", "en": "to write", "pos": "verb", "aspectPartner": "написать", "note": "пишу, пишешь, пишет", "example": { "ru": "Я пишу книгу.", "en": "I'm writing a book." } },
+    { "id": "w0161", "ru": "петь", "en": "to sing", "pos": "verb", "aspectPartner": "спеть", "note": "пою, поёшь, поёт", "example": { "ru": "Она хорошо поёт.", "en": "She sings well." } },
+    { "id": "w0162", "ru": "танцевать", "en": "to dance", "pos": "verb", "aspectPartner": "потанцевать", "note": "танцую, танцуешь, танцует", "example": { "ru": "Мы любим танцевать.", "en": "We like to dance." } },
+    { "id": "w0163", "ru": "гулять", "en": "to walk / stroll", "pos": "verb", "aspectPartner": "погулять", "example": { "ru": "Ты любишь гулять?", "en": "Do you like walking?" } },
+    { "id": "w0164", "ru": "готовить", "en": "to cook", "pos": "verb", "aspectPartner": "приготовить", "note": "готовлю, готовишь, готовит", "example": { "ru": "Я не люблю готовить.", "en": "I don't like cooking." } },
+    { "id": "w0165", "ru": "музыка", "en": "music", "pos": "noun", "gender": "f", "example": { "ru": "Я люблю музыку.", "en": "I love music." } },
+    { "id": "w0166", "ru": "фильм", "en": "film", "pos": "noun", "gender": "m", "note": "plural: фильмы", "example": { "ru": "Хороший фильм!", "en": "A good film!" } },
+    { "id": "w0167", "ru": "книга", "en": "book", "pos": "noun", "gender": "f", "note": "plural: книги", "example": { "ru": "Книга здесь.", "en": "The book is here." } },
+    { "id": "w0168", "ru": "спорт", "en": "sport", "pos": "noun", "gender": "m", "example": { "ru": "Ты любишь спорт?", "en": "Do you like sport?" } },
+    { "id": "w0169", "ru": "хобби", "en": "hobby", "pos": "noun", "gender": "n", "note": "doesn't change by case or number", "example": { "ru": "Спорт — это хобби.", "en": "Sport is a hobby." } },
+    { "id": "w0170", "ru": "вместе", "en": "together", "pos": "adv", "example": { "ru": "Мы гуляем вместе.", "en": "We walk together." } },
+    { "id": "w0171", "ru": "а", "en": "and / but (contrast)", "pos": "conj", "note": "softer contrast than но", "example": { "ru": "Я читаю, а ты слушаешь музыку.", "en": "I'm reading, and you're listening to music." } },
+    { "id": "w0172", "ru": "хороший", "en": "good", "pos": "adj", "example": { "ru": "Хороший фильм.", "en": "A good film." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "What do you like to do?",
+      "lines": [
+        { "speaker": "A", "ru": "Что ты любишь делать?", "en": "What do you like to do?" },
+        { "speaker": "B", "ru": "Я люблю читать и слушать музыку. А ты?", "en": "I like reading and listening to music. And you?" },
+        { "speaker": "A", "ru": "Я люблю смотреть фильмы и гулять.", "en": "I like watching films and walking." },
+        { "speaker": "B", "ru": "Отлично! Ты любишь готовить?", "en": "Great! Do you like cooking?" },
+        { "speaker": "A", "ru": "Не очень. А ты любишь петь?", "en": "Not really. Do you like singing?" },
+        { "speaker": "B", "ru": "Да, очень люблю!", "en": "Yes, I love it!" }
+      ]
+    },
+    {
+      "title": "A hobby",
+      "lines": [
+        { "speaker": "A", "ru": "Ты любишь спорт?", "en": "Do you like sport?" },
+        { "speaker": "B", "ru": "Да, очень! Спорт — это моё хобби.", "en": "Yes, very much! Sport is my hobby." },
+        { "speaker": "A", "ru": "Здорово! А я люблю читать книги.", "en": "Great! And I like reading books." }
+      ],
+      "glossWords": [ { "ru": "моё", "en": "my (neuter)" }, { "ru": "здорово", "en": "cool / great" } ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, what two things does speaker B like doing?", "type": "understand", "answer": "reading and listening to music", "acceptable": ["читать и слушать музыку", "reading, listening to music"] },
+    { "q": "Does speaker A like cooking?", "type": "understand", "answer": "not really", "acceptable": ["не очень", "no, not really", "not really"] },
+    { "q": "Someone asks «Что ты любишь делать?» — answer that you like reading and dancing.", "type": "produce", "answer": "Я люблю читать и танцевать.", "acceptable": ["люблю читать и танцевать"] },
+    { "q": "Ask someone if they like watching films.", "type": "produce", "answer": "Ты любишь смотреть фильмы?", "acceptable": ["ты любишь смотреть фильмы"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning.",
+      "items": [
+        { "left": "читать", "right": "to read" },
+        { "left": "слушать", "right": "to listen" },
+        { "left": "гулять", "right": "to walk / stroll" },
+        { "left": "готовить", "right": "to cook" },
+        { "left": "петь", "right": "to sing" }
+      ]
+    },
+    {
+      "type": "fill",
+      "prompt": "Conjugate любить for the subject shown.",
+      "items": [
+        { "q": "Я ___ читать. (я)", "answer": "люблю" },
+        { "q": "Ты ___ музыку? (ты)", "answer": "любишь" },
+        { "q": "Мы ___ танцевать. (мы)", "answer": "любим" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "Which is the plural of «книга»?",
+      "options": ["книгы", "книги", "книга", "книгу"],
+      "answer": "книги"
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "I like to read.", "answer": "Я люблю читать." },
+        { "q": "Do you like music?", "answer": "Ты любишь музыку?" },
+        { "q": "We like walking together.", "answer": "Мы любим гулять вместе." },
+        { "q": "She doesn't like cooking.", "answer": "Она не любит готовить." },
+        { "q": "The film is good.", "answer": "Фильм хороший.", "acceptable": ["это хороший фильм"], "note": "хороший matches masculine фильм — feminine/neuter agreement comes later" }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["читать", "я", "люблю"],
+      "answer": "Я люблю читать."
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "I like reading and listening to music.", "answer": "Я люблю читать и слушать музыку." },
+      { "en": "Do you like sport?", "answer": "Ты любишь спорт?" },
+      { "en": "We like dancing together.", "answer": "Мы любим танцевать вместе." },
+      { "en": "We like singing and dancing.", "answer": "Мы любим петь и танцевать." },
+      { "en": "This is a good film.", "answer": "Это хороший фильм." }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences about what you and people you know like doing, using любить + infinitive.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 3–4 sentences about your hobbies: what you like doing, and one thing you don't like doing.",
+      "minSentences": 3,
+      "modelAnswer": "Я люблю читать и слушать музыку. Я тоже люблю гулять. Я не люблю готовить. А ты? Что ты любишь делать?"
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Tell someone one thing you like doing: «Я люблю...»",
+      "Ask someone «Что ты любишь делать?» and understand their answer.",
+      "Ask someone «Ты любишь спорт?» or «Ты любишь читать?»"
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "I like to read.", "back": "Я люблю читать." },
+    { "type": "production", "front": "Do you like music?", "back": "Ты любишь музыку?" },
+    { "type": "production", "front": "We like dancing.", "back": "Мы любим танцевать." },
+    { "type": "production", "front": "Sport is a hobby.", "back": "Спорт — это хобби." },
+    { "type": "production", "front": "What do you like to do?", "back": "Что ты любишь делать?" },
+    { "type": "production", "front": "I like watching films.", "back": "Я люблю смотреть фильмы." },
+    { "type": "production", "front": "She doesn't like cooking.", "back": "Она не любит готовить." },
+    { "type": "cloze", "front": "Я ___ читать. (like)", "back": "Я люблю читать." },
+    { "type": "cloze", "front": "Ты ___ музыку? (like)", "back": "Ты любишь музыку?" },
+    { "type": "listening", "front": "[audio] Что ты любишь делать?", "back": "Что ты любишь делать?" },
+    { "type": "listening", "front": "[audio] Мы любим гулять вместе.", "back": "Мы любим гулять вместе." }
+  ]
+}

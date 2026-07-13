@@ -1,0 +1,153 @@
+{
+  "day": 18,
+  "week": 3,
+  "theme": "Having & not having (genitive)",
+  "function": "Talk about your family.",
+  "canDo": "I can ask if someone has something and say what I don't have.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "Мой / моя / моё: \"my\" changes with the noun's gender",
+    "explanation": "\"My\" isn't one word in Russian — it matches the gender of the thing owned: **мой** (masculine: мой брат), **моя** (feminine: моя сестра), **моё** (neuter: моё письмо). This is the same three-way split you already know from до́брый/hard vs soft endings.\n\nTwo family words are masculine but end in -а like feminine nouns — **па́па** and **де́душка** still take **мой**: **мой па́па**, **мой де́душка**, because grammatical gender (not the ending) decides which \"my\" you use for people.\n\nDescriptive adjectives follow the same 3-gender pattern: большо́й/больша́я/большо́е (big) — большо́й дом, больша́я семья́, большо́е окно́.",
+    "examples": [
+      { "ru": "Э́то мой брат.", "en": "This is my brother.", "note": "брат — masc." },
+      { "ru": "Э́то моя́ сестра́.", "en": "This is my sister.", "note": "сестра — fem." },
+      { "ru": "Э́то моя́ семья́.", "en": "This is my family.", "note": "семья — fem." },
+      { "ru": "Мой па́па и моя́ ма́ма рабо́тают.", "en": "My dad and my mom are working.", "note": "папа is masc. despite the -а ending" }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0345", "ru": "семья", "en": "family", "pos": "noun", "gender": "f", "example": { "ru": "Моя семья здесь.", "en": "My family is here." } },
+    { "id": "w0346", "ru": "мама", "en": "mom", "pos": "noun", "gender": "f", "example": { "ru": "Моя мама работает.", "en": "My mom works." } },
+    { "id": "w0347", "ru": "папа", "en": "dad", "pos": "noun", "gender": "m", "note": "masculine, but declines like a feminine -а noun", "example": { "ru": "Мой папа дома.", "en": "My dad is at home." } },
+    { "id": "w0348", "ru": "родители", "en": "parents", "pos": "noun", "gender": "pl", "example": { "ru": "Родители здесь.", "en": "The parents are here." } },
+    { "id": "w0349", "ru": "сын", "en": "son", "pos": "noun", "gender": "m", "example": { "ru": "Мой сын читает.", "en": "My son is reading." } },
+    { "id": "w0350", "ru": "дочь", "en": "daughter", "pos": "noun", "gender": "f", "example": { "ru": "Моя дочь поёт.", "en": "My daughter sings." } },
+    { "id": "w0351", "ru": "муж", "en": "husband", "pos": "noun", "gender": "m", "example": { "ru": "Мой муж работает.", "en": "My husband works." } },
+    { "id": "w0352", "ru": "жена", "en": "wife", "pos": "noun", "gender": "f", "example": { "ru": "Моя жена дома.", "en": "My wife is at home." } },
+    { "id": "w0353", "ru": "бабушка", "en": "grandmother", "pos": "noun", "gender": "f", "example": { "ru": "Моя бабушка готовит.", "en": "My grandmother is cooking." } },
+    { "id": "w0354", "ru": "дедушка", "en": "grandfather", "pos": "noun", "gender": "m", "note": "masculine, but declines like a feminine -а noun", "example": { "ru": "Мой дедушка отдыхает.", "en": "My grandfather is resting." } },
+    { "id": "w0355", "ru": "тётя", "en": "aunt", "pos": "noun", "gender": "f", "example": { "ru": "Моя тётя живёт здесь.", "en": "My aunt lives here." } },
+    { "id": "w0356", "ru": "дядя", "en": "uncle", "pos": "noun", "gender": "m", "note": "masculine, but declines like a feminine -я noun", "example": { "ru": "Мой дядя работает.", "en": "My uncle works." } },
+    { "id": "w0357", "ru": "дети", "en": "children", "pos": "noun", "gender": "pl", "example": { "ru": "Дети гуляют.", "en": "The children are walking." } },
+    { "id": "w0358", "ru": "большой", "en": "big", "pos": "adj", "note": "большой (m) / большая (f) / большое (n) — matches the noun's gender", "example": { "ru": "Большая семья.", "en": "A big family." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "My family",
+      "lines": [
+        { "speaker": "A", "ru": "Это моя семья. Мой папа, моя мама, и мой брат.", "en": "This is my family. My dad, my mom, and my brother." },
+        { "speaker": "B", "ru": "А это кто?", "en": "And who's this?" },
+        { "speaker": "A", "ru": "Это моя сестра. У неё есть муж и дочь.", "en": "This is my sister. She has a husband and a daughter." },
+        { "speaker": "B", "ru": "Отлично! Хороший день.", "en": "Great! A good day." }
+      ],
+      "glossWords": [ { "ru": "у неё", "en": "she has (она → неё, same pattern as у меня)" } ]
+    },
+    {
+      "title": "Grandparents",
+      "lines": [
+        { "speaker": "A", "ru": "У тебя есть бабушка и дедушка?", "en": "Do you have a grandmother and grandfather?" },
+        { "speaker": "B", "ru": "Да! Мой дедушка живёт здесь, а бабушка — там.", "en": "Yes! My grandfather lives here, and (my) grandmother — there." },
+        { "speaker": "A", "ru": "А дядя и тётя?", "en": "And uncle and aunt?" },
+        { "speaker": "B", "ru": "Тоже здесь. Большая семья!", "en": "Also here. A big family!" }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, who does the sister have?", "type": "understand", "answer": "a husband and a daughter", "acceptable": ["муж и дочь", "husband and daughter"] },
+    { "q": "In dialogue 2, where does the grandmother live?", "type": "understand", "answer": "there", "acceptable": ["там", "there"] },
+    { "q": "Say \"This is my brother\" and \"This is my sister.\"", "type": "produce", "answer": "Это мой брат. Это моя сестра.", "acceptable": ["мой брат моя сестра"] },
+    { "q": "Say you have grandparents (grandmother and grandfather).", "type": "produce", "answer": "У меня есть бабушка и дедушка.", "acceptable": ["у меня есть бабушка и дедушка"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "fill",
+      "prompt": "Fill in мой or моя.",
+      "items": [
+        { "q": "___ брат (brother)", "answer": "Мой" },
+        { "q": "___ сестра (sister)", "answer": "Моя" },
+        { "q": "___ папа (dad — masc.!)", "answer": "Мой" },
+        { "q": "___ семья (family)", "answer": "Моя" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "«Папа» is grammatically...",
+      "options": ["feminine, because it ends in -а", "masculine, despite ending in -а", "neuter"],
+      "answer": "masculine, despite ending in -а"
+    },
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning.",
+      "items": [
+        { "left": "родители", "right": "parents" },
+        { "left": "бабушка", "right": "grandmother" },
+        { "left": "дедушка", "right": "grandfather" },
+        { "left": "муж", "right": "husband" },
+        { "left": "жена", "right": "wife" }
+      ]
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "This is my family.", "answer": "Это моя семья." },
+        { "q": "My dad and my mom.", "answer": "Мой папа и моя мама." },
+        { "q": "My son reads, my daughter sings.", "answer": "Мой сын читает, моя дочь поёт." },
+        { "q": "I have a grandmother and a grandfather.", "answer": "У меня есть бабушка и дедушка." },
+        { "q": "My uncle works, my aunt rests.", "answer": "Мой дядя работает, моя тётя отдыхает." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["сестра", "моя", "это"],
+      "answer": "Это моя сестра."
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "This is my brother and my sister.", "answer": "Это мой брат и моя сестра." },
+      { "en": "My mom cooks, my dad works.", "answer": "Моя мама готовит, мой папа работает." },
+      { "en": "I have a big family.", "answer": "У меня большая семья.", "acceptable": ["у меня есть большая семья"] },
+      { "en": "My grandmother lives here.", "answer": "Моя бабушка живёт здесь." },
+      { "en": "My son and my daughter are at home.", "answer": "Мой сын и моя дочь дома." }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences introducing family members, using мой/моя correctly for each.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 4-5 sentences introducing your family: who they are, and one thing about each.",
+      "minSentences": 4,
+      "modelAnswer": "Это моя семья. Мой папа работает, моя мама готовит. У меня есть брат — он любит спорт. И сестра — она любит читать. Моя семья хорошая."
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Tell someone about one family member: «Это мой... / Это моя...»",
+      "Ask someone if they have brothers or sisters."
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "This is my brother.", "back": "Это мой брат." },
+    { "type": "production", "front": "This is my sister.", "back": "Это моя сестра." },
+    { "type": "production", "front": "This is my family.", "back": "Это моя семья." },
+    { "type": "production", "front": "My dad and my mom.", "back": "Мой папа и моя мама." },
+    { "type": "production", "front": "I have a grandmother and a grandfather.", "back": "У меня есть бабушка и дедушка." },
+    { "type": "cloze", "front": "___ брат. (my — masc.)", "back": "Мой брат." },
+    { "type": "cloze", "front": "___ сестра. (my — fem.)", "back": "Моя сестра." },
+    { "type": "listening", "front": "[audio] Это моя семья.", "back": "Это моя семья." },
+    { "type": "listening", "front": "[audio] Мой папа и моя мама работают.", "back": "Мой папа и моя мама работают." }
+  ]
+}

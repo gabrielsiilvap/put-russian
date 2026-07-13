@@ -1,0 +1,147 @@
+{
+  "day": 24,
+  "week": 4,
+  "theme": "Numbers, age, money (genitive continued)",
+  "function": "Ask and tell age.",
+  "canDo": "I can ask someone's age, tell mine, and handle prices and numbers.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "Сколько тебе лет? — age uses the dative, and год is irregular",
+    "explanation": "Age doesn't use \"I am\" in Russian — it uses the **dative** (\"to me\"): **Мне два́дцать лет** literally \"to me twenty years\" = I am twenty. Dative pronouns: **мне** (to me), **тебе́** (to you), **ему́** (to him), **ей** (to her), **нам** (to us), **вам** (to you, formal), **им** (to them).\n\n**Год** (year) is irregular for counting: **1** → **год**, **2-4** → **го́да**, **5+** → **лет** (not «годов» — «лет» is the word actually used, borrowed from «ле́то»/summer historically). **Мне два́дцать оди́н год. Ему́ три го́да. Ей два́дцать лет.**",
+    "examples": [
+      { "ru": "Ско́лько тебе́ лет?", "en": "How old are you?" },
+      { "ru": "Мне два́дцать пять лет.", "en": "I am twenty-five." },
+      { "ru": "Ему́ оди́н год.", "en": "He is one year old." },
+      { "ru": "Ей три го́да.", "en": "She is three years old." }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0414", "ru": "год", "en": "year", "pos": "noun", "gender": "m", "note": "год / года / лет (1 / 2-4 / 5+, irregular)", "example": { "ru": "Один год.", "en": "One year." } },
+    { "id": "w0415", "ru": "мне", "en": "to me (dative)", "pos": "pronoun", "example": { "ru": "Мне двадцать лет.", "en": "I am twenty." } },
+    { "id": "w0416", "ru": "тебе", "en": "to you (dative)", "pos": "pronoun", "example": { "ru": "Сколько тебе лет?", "en": "How old are you?" } },
+    { "id": "w0417", "ru": "ему", "en": "to him (dative)", "pos": "pronoun", "example": { "ru": "Сколько ему лет?", "en": "How old is he?" } },
+    { "id": "w0418", "ru": "ей", "en": "to her (dative)", "pos": "pronoun", "example": { "ru": "Сколько ей лет?", "en": "How old is she?" } },
+    { "id": "w0419", "ru": "нам", "en": "to us (dative)", "pos": "pronoun", "example": { "ru": "Нам хорошо.", "en": "We're doing well." } },
+    { "id": "w0420", "ru": "вам", "en": "to you (dative, formal)", "pos": "pronoun", "example": { "ru": "Сколько вам лет?", "en": "How old are you (formal)?" } },
+    { "id": "w0421", "ru": "им", "en": "to them (dative)", "pos": "pronoun", "example": { "ru": "Сколько им лет?", "en": "How old are they?" } },
+    { "id": "w0422", "ru": "возраст", "en": "age", "pos": "noun", "gender": "m", "example": { "ru": "Возраст здесь.", "en": "The age is here." } },
+    { "id": "w0423", "ru": "молодой", "en": "young", "pos": "adj", "example": { "ru": "Молодой человек.", "en": "A young person." } },
+    { "id": "w0424", "ru": "старый", "en": "old", "pos": "adj", "example": { "ru": "Старый друг.", "en": "An old friend." } },
+    { "id": "w0425", "ru": "взрослый", "en": "adult, grown-up", "pos": "adj", "example": { "ru": "Взрослый человек.", "en": "An adult person." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "How old are you?",
+      "lines": [
+        { "speaker": "A", "ru": "Сколько тебе лет?", "en": "How old are you?" },
+        { "speaker": "B", "ru": "Мне двадцать восемь лет. А тебе?", "en": "I'm twenty-eight. And you?" },
+        { "speaker": "A", "ru": "Мне тридцать два года.", "en": "I'm thirty-two." },
+        { "speaker": "B", "ru": "Молодой ещё!", "en": "Still young!" }
+      ]
+    },
+    {
+      "title": "The family's ages",
+      "lines": [
+        { "speaker": "A", "ru": "У тебя есть брат. Сколько ему лет?", "en": "You have a brother. How old is he?" },
+        { "speaker": "B", "ru": "Ему пятнадцать лет. А у меня есть сестра — ей десять.", "en": "He's fifteen. And I have a sister — she's ten." },
+        { "speaker": "A", "ru": "А бабушка? Сколько ей лет?", "en": "And grandmother? How old is she?" },
+        { "speaker": "B", "ru": "Ей восемьдесят лет!", "en": "She's eighty!" }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, who is older?", "type": "understand", "answer": "speaker A", "acceptable": ["a", "speaker a", "тридцать два"] },
+    { "q": "In dialogue 2, how old is the grandmother?", "type": "understand", "answer": "eighty", "acceptable": ["восемьдесят", "eighty", "80"] },
+    { "q": "Ask someone how old they are.", "type": "produce", "answer": "Сколько тебе лет?", "acceptable": ["сколько тебе лет"] },
+    { "q": "Say you are twenty-five years old.", "type": "produce", "answer": "Мне двадцать пять лет.", "acceptable": ["мне двадцать пять лет"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "fill",
+      "prompt": "Put год into the correct form for the age.",
+      "items": [
+        { "q": "Мне один ___.", "answer": "год" },
+        { "q": "Ему три ___.", "answer": "года" },
+        { "q": "Ей десять ___.", "answer": "лет" }
+      ]
+    },
+    {
+      "type": "fill",
+      "prompt": "Fill in the dative pronoun.",
+      "items": [
+        { "q": "___ двадцать лет. (to me)", "answer": "Мне" },
+        { "q": "Сколько ___ лет? (to him)", "answer": "ему" },
+        { "q": "Сколько ___ лет? (to her)", "answer": "ей" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "\"I am thirty\" — which is correct?",
+      "options": ["Я тридцать лет.", "Мне тридцать лет.", "Мой тридцать лет."],
+      "answer": "Мне тридцать лет."
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "How old are you?", "answer": "Сколько тебе лет?" },
+        { "q": "I am twenty-five.", "answer": "Мне двадцать пять лет." },
+        { "q": "He is one year old.", "answer": "Ему один год." },
+        { "q": "She is three years old.", "answer": "Ей три года." },
+        { "q": "How old are you (formal)?", "answer": "Сколько вам лет?" }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["лет", "тебе", "сколько"],
+      "answer": "Сколько тебе лет?"
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "How old are you?", "answer": "Сколько тебе лет?" },
+      { "en": "I am twenty-eight.", "answer": "Мне двадцать восемь лет." },
+      { "en": "How old is he?", "answer": "Сколько ему лет?" },
+      { "en": "She is ten years old.", "answer": "Ей десять лет." },
+      { "en": "I am young!", "answer": "Я молодой!" }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences telling the ages of people you know, using мне/тебе/ему/ей + год/года/лет.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 4-5 sentences about the ages of you and your family members.",
+      "minSentences": 4,
+      "modelAnswer": "Мне тридцать два года. У меня есть брат — ему двадцать восемь лет. И сестра — ей тридцать лет. А ещё у меня есть бабушка. Ей восемьдесят!"
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Tell someone your age using «Мне... лет.»",
+      "Ask someone «Сколько тебе лет?» if it's appropriate."
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "How old are you?", "back": "Сколько тебе лет?" },
+    { "type": "production", "front": "I am twenty-five.", "back": "Мне двадцать пять лет." },
+    { "type": "production", "front": "He is one year old.", "back": "Ему один год." },
+    { "type": "production", "front": "She is three years old.", "back": "Ей три года." },
+    { "type": "production", "front": "How old are you (formal)?", "back": "Сколько вам лет?" },
+    { "type": "cloze", "front": "Мне двадцать пять ___. (5+ rule)", "back": "Мне двадцать пять лет." },
+    { "type": "cloze", "front": "Ему три ___. (2-4 rule)", "back": "Ему три года." },
+    { "type": "listening", "front": "[audio] Сколько тебе лет?", "back": "Сколько тебе лет?" },
+    { "type": "listening", "front": "[audio] Мне двадцать восемь лет.", "back": "Мне двадцать восемь лет." }
+  ]
+}

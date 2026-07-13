@@ -1,0 +1,77 @@
+{
+  "id": "test-01",
+  "week": 1,
+  "title": "Week 1 checkpoint",
+  "passThreshold": 0.8,
+  "isMajorMock": false,
+
+  "canDo": [
+    "Greet someone and give my name, formally and informally.",
+    "Say what I want using хочу.",
+    "Ask a simple question with кто / что / где / как / почему.",
+    "Say what I like doing using любить.",
+    "Connect two ideas with и, а, or но."
+  ],
+
+  "exercises": [
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning.",
+      "items": [
+        { "left": "здравствуйте", "right": "hello (formal)" },
+        { "left": "меня зовут", "right": "my name is" },
+        { "left": "кто", "right": "who" },
+        { "left": "хотеть", "right": "to want" },
+        { "left": "любить", "right": "to love / like" },
+        { "left": "почему", "right": "why" }
+      ]
+    },
+    {
+      "type": "fill",
+      "prompt": "Fill in the blank.",
+      "items": [
+        { "q": "___ вас зовут?", "answer": "Как" },
+        { "q": "Я ___ читать. (want)", "answer": "хочу" },
+        { "q": "Мы ___ гулять вместе. (like)", "answer": "любим" },
+        { "q": "Ты ___ по-русски? (understand)", "answer": "понимаешь" },
+        { "q": "Это трудно, ___ интересно. (but)", "answer": "но" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "Choose the correct question word: «___ это?» — asking who someone is.",
+      "options": ["Что", "Кто", "Где", "Как"],
+      "answer": "Кто"
+    },
+    {
+      "type": "mcq",
+      "prompt": "Which conjugation is correct for ты + говорить?",
+      "options": ["говорю", "говоришь", "говорим", "говорят"],
+      "answer": "говоришь"
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "Hello! My name is Anna. Nice to meet you.", "answer": "Здравствуйте! Меня зовут Анна. Очень приятно." },
+        { "q": "I want water, please.", "answer": "Хочу воду, пожалуйста." },
+        { "q": "Do you speak Russian? — Yes, a little.", "answer": "Ты говоришь по-русски? — Да, немного." },
+        { "q": "What do you like to do?", "answer": "Что ты любишь делать?" },
+        { "q": "I want to read, but it's difficult.", "answer": "Я хочу читать, но это трудно." },
+        { "q": "May I ask a question?", "answer": "Можно спросить?" }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["зовут", "меня", "Габриэль"],
+      "answer": "Меня зовут Габриэль."
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["любишь", "делать", "что", "ты"],
+      "answer": "Что ты любишь делать?"
+    }
+  ]
+}

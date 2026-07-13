@@ -1,0 +1,124 @@
+{
+  "day": 27,
+  "week": 4,
+  "theme": "Numbers, age, money (genitive continued)",
+  "function": "Full review: weeks 1-4.",
+  "canDo": "I can ask someone's age, tell mine, and handle prices and numbers.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "One month in: the whole system so far",
+    "explanation": "**Nominative** (dictionary form) for subjects. **Accusative** for things you act on — masc./neut. unchanged, fem. **-а→-у** (Week 2). **Genitive** after **нет**, **мно́го/ма́ло/ско́лько**, and for people after numbers 2+ (Week 3-4). **Мой/моя́/моё** and **большо́й/больша́я/большо́е** both match gender. **Dative pronouns** (мне, тебе́...) for age. Everything since Day 1 is now one connected system — that's the whole point of today.",
+    "examples": [
+      { "ru": "Приве́т! Меня́ зову́т Габриэ́ль, мне три́дцать два го́да.", "en": "Hi! My name is Gabriel, I'm thirty-two." },
+      { "ru": "У меня́ есть больша́я семья́, но ма́ло вре́мени.", "en": "I have a big family, but little time." },
+      { "ru": "Я всегда́ покупа́ю хлеб — сего́дня он сто́ит три́дцать рубле́й.", "en": "I always buy bread — today it costs thirty rubles." },
+      { "ru": "Я никогда́ не рабо́таю в воскресе́нье.", "en": "I never work on Sunday." }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0449", "ru": "привет", "en": "hi", "pos": "phrase", "example": { "ru": "Привет! Как дела?", "en": "Hi! How are you?" } },
+    { "id": "w0450", "ru": "хотеть", "en": "to want", "pos": "verb", "example": { "ru": "Я хочу чай.", "en": "I want tea." } },
+    { "id": "w0451", "ru": "всегда", "en": "always", "pos": "adv", "example": { "ru": "Я всегда встаю рано.", "en": "I always get up early." } },
+    { "id": "w0452", "ru": "никогда", "en": "never", "pos": "adv", "example": { "ru": "Я никогда не ем мясо.", "en": "I never eat meat." } },
+    { "id": "w0453", "ru": "семья", "en": "family", "pos": "noun", "gender": "f", "example": { "ru": "Моя семья здесь.", "en": "My family is here." } },
+    { "id": "w0454", "ru": "много", "en": "much, a lot", "pos": "adv", "example": { "ru": "Много работы.", "en": "A lot of work." } },
+    { "id": "w0455", "ru": "сколько", "en": "how much, how many", "pos": "adv", "example": { "ru": "Сколько это стоит?", "en": "How much does this cost?" } },
+    { "id": "w0456", "ru": "год", "en": "year", "pos": "noun", "gender": "m", "example": { "ru": "Мне тридцать лет.", "en": "I'm thirty." } },
+    { "id": "w0457", "ru": "рубль", "en": "ruble", "pos": "noun", "gender": "m", "example": { "ru": "Сто рублей.", "en": "One hundred rubles." } },
+    { "id": "w0458", "ru": "стоить", "en": "to cost", "pos": "verb", "example": { "ru": "Сколько это стоит?", "en": "How much does this cost?" } },
+    { "id": "w0459", "ru": "большой", "en": "big", "pos": "adj", "note": "большой / большая / большое", "example": { "ru": "Большая семья.", "en": "A big family." } },
+    { "id": "w0460", "ru": "любить", "en": "to love, like", "pos": "verb", "example": { "ru": "Я люблю читать.", "en": "I like to read." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "First conversation, one month in",
+      "note": "This uses grammar from all four weeks — nominative, accusative, genitive, dative age. Read it slowly.",
+      "lines": [
+        { "speaker": "A", "ru": "Привет! Меня зовут Анна. Как тебя зовут?", "en": "Hi! My name is Anna. What's your name?" },
+        { "speaker": "B", "ru": "Меня зовут Габриэль. Очень приятно! Сколько тебе лет?", "en": "My name is Gabriel. Nice to meet you! How old are you?" },
+        { "speaker": "A", "ru": "Мне двадцать восемь лет. А тебе?", "en": "I'm twenty-eight. And you?" },
+        { "speaker": "B", "ru": "Мне тридцать два. У меня большая семья — жена и два сына.", "en": "I'm thirty-two. I have a big family — a wife and two sons." },
+        { "speaker": "A", "ru": "Здорово! Что ты любишь делать?", "en": "Great! What do you like to do?" },
+        { "speaker": "B", "ru": "Я люблю читать и слушать музыку. А ты работаешь каждый день?", "en": "I like reading and listening to music. And do you work every day?" },
+        { "speaker": "A", "ru": "Нет, никогда в выходные. У меня много работы в будни.", "en": "No, never on weekends. I have a lot of work on weekdays." }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "How old is Gabriel?", "type": "understand", "answer": "thirty-two", "acceptable": ["тридцать два", "32"] },
+    { "q": "Who is in Gabriel's family?", "type": "understand", "answer": "wife and two sons", "acceptable": ["жена и два сына", "wife, two sons"] },
+    { "q": "Introduce yourself with name, age, and one thing you like doing.", "type": "produce", "answer": "Меня зовут ..., мне ... лет, я люблю ...", "acceptable": ["меня зовут"] },
+    { "q": "Say you never work on weekends.", "type": "produce", "answer": "Я никогда не работаю в выходные.", "acceptable": ["никогда не работаю в выходные"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "fill",
+      "prompt": "Fill in the missing word (any week).",
+      "items": [
+        { "q": "___ тебе лет? (how much)", "answer": "Сколько" },
+        { "q": "У меня есть ___ семья. (big, fem.)", "answer": "большая" },
+        { "q": "Я ___ не ем мясо. (never — remember не)", "answer": "никогда" },
+        { "q": "Это ___ сто рублей. (costs)", "answer": "стоит" }
+      ]
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian — mix grammar from all four weeks.",
+      "items": [
+        { "q": "Hi! My name is ... How old are you?", "answer": "Привет! Меня зовут ... Сколько тебе лет?" },
+        { "q": "I have a big family.", "answer": "У меня большая семья." },
+        { "q": "I always work, but never on Sunday.", "answer": "Я всегда работаю, но никогда в воскресенье." },
+        { "q": "How much does this cost?", "answer": "Сколько это стоит?" },
+        { "q": "I love reading and listening to music.", "answer": "Я люблю читать и слушать музыку." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order. Watch the год/года/лет rule!",
+      "tokens": ["года", "мне", "два", "тридцать"],
+      "answer": "Мне тридцать два года."
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "Hi! My name is Gabriel, I'm thirty-two.", "answer": "Привет! Меня зовут Габриэль, мне тридцать два." },
+      { "en": "I have a big family and little time.", "answer": "У меня большая семья и мало времени." },
+      { "en": "I always buy bread, it costs thirty rubles.", "answer": "Я всегда покупаю хлеб, он стоит тридцать рублей." },
+      { "en": "I never work on the weekend.", "answer": "Я никогда не работаю в выходные." },
+      { "en": "I love family.", "answer": "Я люблю семью." }
+    ],
+    "buildSentences": {
+      "instruction": "Write 8-10 sentences introducing yourself fully: name, age, family, what you like, your routine, a price you remember.",
+      "count": 8
+    },
+    "freeWrite": {
+      "prompt": "Write your fullest self-introduction yet — a real paragraph covering name, age, family, likes, and routine.",
+      "minSentences": 6,
+      "modelAnswer": "Привет! Меня зовут Габриэль, мне тридцать два года. У меня большая семья: жена и два сына. Я люблю читать, слушать музыку и гулять. Я работаю пять дней, а в выходные отдыхаю. Я всегда встаю рано и завтракаю. Я всегда покупаю хлеб — сегодня он стоит тридцать рублей. Очень приятно познакомиться!"
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Have your fullest conversation yet with a real person: name, age, family, likes.",
+      "Notice one thing that's gotten easier since Day 1."
+    ],
+    "verification": "Did the full conversation hold together? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "Hi! My name is ..., I'm thirty-two.", "back": "Привет! Меня зовут ..., мне тридцать два." },
+    { "type": "production", "front": "I have a big family.", "back": "У меня большая семья." },
+    { "type": "production", "front": "I always work, but never on Sunday.", "back": "Я всегда работаю, но никогда в воскресенье." },
+    { "type": "production", "front": "How much does this cost?", "back": "Сколько это стоит?" },
+    { "type": "listening", "front": "[audio] Сколько тебе лет?", "back": "Сколько тебе лет?" }
+  ]
+}

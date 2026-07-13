@@ -1,0 +1,73 @@
+{
+  "id": "test-03",
+  "week": 3,
+  "title": "Week 3 checkpoint",
+  "passThreshold": 0.8,
+  "isMajorMock": false,
+
+  "canDo": [
+    "Say what I have using У меня есть.",
+    "Ask, formally, if someone has something (У вас есть...?).",
+    "Say what I don't have using У меня нет + genitive.",
+    "Talk about my family using мой/моя correctly.",
+    "Say how much/how little of something I have (много/мало/сколько + genitive)."
+  ],
+
+  "exercises": [
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning.",
+      "items": [
+        { "left": "семья", "right": "family" },
+        { "left": "деньги", "right": "money" },
+        { "left": "сколько", "right": "how much" },
+        { "left": "достаточно", "right": "enough" },
+        { "left": "магазин", "right": "shop" },
+        { "left": "бабушка", "right": "grandmother" }
+      ]
+    },
+    {
+      "type": "fill",
+      "prompt": "Put the noun into the genitive.",
+      "items": [
+        { "q": "У меня нет ___. (машина)", "answer": "машины" },
+        { "q": "Много ___. (время)", "answer": "времени" },
+        { "q": "Мало ___. (сахар)", "answer": "сахара" },
+        { "q": "У нас нет ___. (молоко)", "answer": "молока" }
+      ]
+    },
+    {
+      "type": "fill",
+      "prompt": "Fill in мой or моя.",
+      "items": [
+        { "q": "___ брат (brother)", "answer": "Мой" },
+        { "q": "___ сестра (sister)", "answer": "Моя" },
+        { "q": "___ папа (dad — masc.!)", "answer": "Мой" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "\"I don't have money\" — which is correct?",
+      "options": ["У меня нет деньги.", "У меня нет денег.", "У меня не есть деньги."],
+      "answer": "У меня нет денег."
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "I have a phone and a bicycle.", "answer": "У меня есть телефон и велосипед." },
+        { "q": "Do you have (formal) bread?", "answer": "У вас есть хлеб?" },
+        { "q": "I don't have time.", "answer": "У меня нет времени." },
+        { "q": "This is my family: my brother and my sister.", "answer": "Это моя семья: мой брат и моя сестра." },
+        { "q": "How much money do you have?", "answer": "Сколько у тебя денег?" },
+        { "q": "We have a big family, but little money.", "answer": "У нас большая семья, но мало денег." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["есть", "меня", "семья", "у", "большая"],
+      "answer": "У меня есть большая семья."
+    }
+  ]
+}

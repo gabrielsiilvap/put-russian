@@ -1,0 +1,152 @@
+{
+  "day": 22,
+  "week": 4,
+  "theme": "Numbers, age, money (genitive continued)",
+  "function": "Count things: numbers 1-20.",
+  "canDo": "I can ask someone's age, tell mine, and handle prices and numbers.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "Numbers 1-20, and the noun that follows them",
+    "explanation": "The number changes which case the noun takes: **1** (оди́н) + nominative singular (**оди́н день**). **2, 3, 4** + genitive **singular** (**два дня, три дня, четы́ре дня**). **5-20** + genitive **plural** (**пять дней, де́сять дней**).\n\nSame pattern with **час** (hour): **оди́н час, два часа́, пять часо́в**. Learn these two nouns solidly — день and час — and you have the pattern for everything else later.",
+    "examples": [
+      { "ru": "Оди́н день.", "en": "One day.", "note": "nominative singular" },
+      { "ru": "Два дня. Три дня. Четы́ре дня.", "en": "Two/three/four days.", "note": "genitive singular" },
+      { "ru": "Пять дней. Де́сять дней.", "en": "Five/ten days.", "note": "genitive plural" },
+      { "ru": "Ско́лько мину́т?", "en": "How many minutes?", "note": "same rule works for any counted noun" }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0381", "ru": "один", "en": "one", "pos": "num", "example": { "ru": "Один день.", "en": "One day." } },
+    { "id": "w0382", "ru": "два", "en": "two", "pos": "num", "example": { "ru": "Два дня.", "en": "Two days." } },
+    { "id": "w0383", "ru": "три", "en": "three", "pos": "num", "example": { "ru": "Три часа.", "en": "Three hours." } },
+    { "id": "w0384", "ru": "четыре", "en": "four", "pos": "num", "example": { "ru": "Четыре дня.", "en": "Four days." } },
+    { "id": "w0385", "ru": "пять", "en": "five", "pos": "num", "example": { "ru": "Пять часов.", "en": "Five hours." } },
+    { "id": "w0386", "ru": "шесть", "en": "six", "pos": "num", "example": { "ru": "Шесть дней.", "en": "Six days." } },
+    { "id": "w0387", "ru": "семь", "en": "seven", "pos": "num", "example": { "ru": "Семь дней.", "en": "Seven days." } },
+    { "id": "w0388", "ru": "восемь", "en": "eight", "pos": "num", "example": { "ru": "Восемь часов.", "en": "Eight hours." } },
+    { "id": "w0389", "ru": "девять", "en": "nine", "pos": "num", "example": { "ru": "Девять часов.", "en": "Nine hours." } },
+    { "id": "w0390", "ru": "десять", "en": "ten", "pos": "num", "example": { "ru": "Десять дней.", "en": "Ten days." } },
+    { "id": "w0391", "ru": "одиннадцать", "en": "eleven", "pos": "num", "example": { "ru": "Одиннадцать часов.", "en": "Eleven hours." } },
+    { "id": "w0392", "ru": "двенадцать", "en": "twelve", "pos": "num", "example": { "ru": "Двенадцать часов.", "en": "Twelve hours." } },
+    { "id": "w0393", "ru": "пятнадцать", "en": "fifteen", "pos": "num", "example": { "ru": "Пятнадцать минут.", "en": "Fifteen minutes." } },
+    { "id": "w0394", "ru": "двадцать", "en": "twenty", "pos": "num", "example": { "ru": "Двадцать дней.", "en": "Twenty days." } },
+    { "id": "w0395", "ru": "час", "en": "hour", "pos": "noun", "gender": "m", "note": "час / часа / часов (1 / 2-4 / 5+)", "example": { "ru": "Один час.", "en": "One hour." } },
+    { "id": "w0396", "ru": "минута", "en": "minute", "pos": "noun", "gender": "f", "note": "минута / минуты / минут", "example": { "ru": "Пять минут.", "en": "Five minutes." } },
+    { "id": "w0397", "ru": "считать", "en": "to count", "pos": "verb", "aspectPartner": "посчитать", "example": { "ru": "Ребёнок считает.", "en": "The child is counting." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "How many days?",
+      "lines": [
+        { "speaker": "A", "ru": "Сколько дней ты работаешь?", "en": "How many days do you work?" },
+        { "speaker": "B", "ru": "Пять дней. А ты?", "en": "Five days. And you?" },
+        { "speaker": "A", "ru": "Шесть! Но у меня один свободный день.", "en": "Six! But I have one free day." },
+        { "speaker": "B", "ru": "Только один? Жаль.", "en": "Only one? What a shame." }
+      ]
+    },
+    {
+      "title": "Counting hours",
+      "lines": [
+        { "speaker": "A", "ru": "Сколько часов ты спишь?", "en": "How many hours do you sleep?" },
+        { "speaker": "B", "ru": "Восемь часов. А ты?", "en": "Eight hours. And you?" },
+        { "speaker": "A", "ru": "Только шесть часов. Мало!", "en": "Only six hours. Not enough!" }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, how many days does speaker A work?", "type": "understand", "answer": "six", "acceptable": ["шесть", "six", "6"] },
+    { "q": "In dialogue 2, how many hours does speaker A sleep?", "type": "understand", "answer": "six", "acceptable": ["шесть", "six", "6"] },
+    { "q": "Say you sleep eight hours.", "type": "produce", "answer": "Я сплю восемь часов.", "acceptable": ["сплю восемь часов"] },
+    { "q": "Say you have five days off.", "type": "produce", "answer": "У меня пять дней.", "acceptable": ["у меня пять дней"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "fill",
+      "prompt": "Put день into the correct form after the number.",
+      "items": [
+        { "q": "Один ___.", "answer": "день" },
+        { "q": "Три ___.", "answer": "дня" },
+        { "q": "Семь ___.", "answer": "дней" }
+      ]
+    },
+    {
+      "type": "fill",
+      "prompt": "Put час into the correct form after the number.",
+      "items": [
+        { "q": "Один ___.", "answer": "час" },
+        { "q": "Два ___.", "answer": "часа" },
+        { "q": "Десять ___.", "answer": "часов" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "\"Five hours\" — which is correct?",
+      "options": ["Пять час.", "Пять часа.", "Пять часов."],
+      "answer": "Пять часов."
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "One day.", "answer": "Один день." },
+        { "q": "Two hours.", "answer": "Два часа." },
+        { "q": "Five days.", "answer": "Пять дней." },
+        { "q": "Ten hours.", "answer": "Десять часов." },
+        { "q": "How many minutes?", "answer": "Сколько минут?" }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["дней", "пять", "работаю", "я"],
+      "answer": "Я работаю пять дней."
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "I work five days.", "answer": "Я работаю пять дней." },
+      { "en": "I sleep eight hours.", "answer": "Я сплю восемь часов." },
+      { "en": "One free day.", "answer": "Один свободный день." },
+      { "en": "Twenty minutes.", "answer": "Двадцать минут." },
+      { "en": "How many hours do you work?", "answer": "Сколько часов ты работаешь?" }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences counting days or hours, using numbers 1-20 with день or час.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 4-5 sentences about your week: how many days you work, how many hours you sleep, how many free days you have.",
+      "minSentences": 4,
+      "modelAnswer": "Я работаю пять дней. У меня два дня дома. Я сплю восемь часов, но иногда только шесть. Это мало!"
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Tell someone how many hours you sleep, using the right form of час.",
+      "Count something out loud today using numbers 1-10."
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "One day.", "back": "Один день." },
+    { "type": "production", "front": "Two hours.", "back": "Два часа." },
+    { "type": "production", "front": "Five days.", "back": "Пять дней." },
+    { "type": "production", "front": "Ten hours.", "back": "Десять часов." },
+    { "type": "production", "front": "I work five days.", "back": "Я работаю пять дней." },
+    { "type": "production", "front": "I sleep eight hours.", "back": "Я сплю восемь часов." },
+    { "type": "cloze", "front": "Три ___. (day, 2-4 rule)", "back": "Три дня." },
+    { "type": "cloze", "front": "Десять ___. (hour, 5+ rule)", "back": "Десять часов." },
+    { "type": "listening", "front": "[audio] Сколько часов ты спишь?", "back": "Сколько часов ты спишь?" },
+    { "type": "listening", "front": "[audio] Я работаю пять дней.", "back": "Я работаю пять дней." }
+  ]
+}

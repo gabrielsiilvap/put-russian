@@ -1,0 +1,152 @@
+{
+  "day": 11,
+  "week": 2,
+  "theme": "Doing things / daily life (accusative)",
+  "function": "Talk about how often you do things.",
+  "canDo": "I can talk about my daily activities and what I like.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "Frequency words, and Russian's double negative",
+    "explanation": "Frequency words go right before the verb: **всегда́** (always) → **ре́дко** (rarely) → **никогда́** (never). \n\nRussian *requires* **не** together with a negative word — this isn't a mistake, it's the rule: **Я никогда́ не ем мя́со** literally \"I never not eat meat\" = I never eat meat. Drop the **не** and the sentence is wrong.",
+    "examples": [
+      { "ru": "Я всегда́ пью ко́фе у́тром.", "en": "I always drink coffee in the morning." },
+      { "ru": "Ты ча́сто чита́ешь?", "en": "Do you read often?" },
+      { "ru": "Я иногда́ смотрю́ телеви́зор.", "en": "I sometimes watch television." },
+      { "ru": "Я никогда́ не ем мя́со.", "en": "I never eat meat.", "note": "никогда + не, both required" }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0265", "ru": "всегда", "en": "always", "pos": "adv", "example": { "ru": "Я всегда встаю рано.", "en": "I always get up early." } },
+    { "id": "w0266", "ru": "часто", "en": "often", "pos": "adv", "example": { "ru": "Ты часто гуляешь?", "en": "Do you walk often?" } },
+    { "id": "w0267", "ru": "иногда", "en": "sometimes", "pos": "adv", "example": { "ru": "Иногда я читаю вечером.", "en": "Sometimes I read in the evening." } },
+    { "id": "w0268", "ru": "редко", "en": "rarely", "pos": "adv", "example": { "ru": "Я редко смотрю телевизор.", "en": "I rarely watch television." } },
+    { "id": "w0269", "ru": "никогда", "en": "never", "pos": "adv", "note": "always paired with не before the verb", "example": { "ru": "Я никогда не ем мясо.", "en": "I never eat meat." } },
+    { "id": "w0270", "ru": "каждый", "en": "each, every", "pos": "adj", "example": { "ru": "Каждый день я работаю.", "en": "Every day I work." } },
+    { "id": "w0271", "ru": "неделя", "en": "week", "pos": "noun", "gender": "f", "example": { "ru": "Хороший день сегодня.", "en": "A good day today." } },
+    { "id": "w0272", "ru": "месяц", "en": "month", "pos": "noun", "gender": "m", "example": { "ru": "Каждый месяц.", "en": "Every month." } },
+    { "id": "w0273", "ru": "раз", "en": "time, occasion", "pos": "noun", "gender": "m", "example": { "ru": "Один раз в неделю.", "en": "Once a week." } },
+    { "id": "w0274", "ru": "заниматься спортом", "en": "to do sports, exercise", "pos": "phrase", "note": "занимаюсь, занимаешься, занимается — learn «заниматься спортом» as one fixed chunk for now", "example": { "ru": "Я занимаюсь спортом.", "en": "I do sports." } },
+    { "id": "w0275", "ru": "убирать", "en": "to clean, tidy up", "pos": "verb", "aspectPartner": "убрать", "example": { "ru": "Я убираю дом.", "en": "I clean the house." } },
+    { "id": "w0276", "ru": "отдыхать", "en": "to rest", "pos": "verb", "aspectPartner": "отдохнуть", "example": { "ru": "Вечером я отдыхаю.", "en": "In the evening I rest." } },
+    { "id": "w0277", "ru": "свободный", "en": "free (time, person)", "pos": "adj", "example": { "ru": "Свободный день!", "en": "A free day!" } },
+    { "id": "w0278", "ru": "занятый", "en": "busy", "pos": "adj", "example": { "ru": "Я занятый человек.", "en": "I'm a busy person." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "How often?",
+      "lines": [
+        { "speaker": "A", "ru": "Ты часто занимаешься спортом?", "en": "Do you do sports often?" },
+        { "speaker": "B", "ru": "Да, каждый день! А ты?", "en": "Yes, every day! And you?" },
+        { "speaker": "A", "ru": "Я редко. Иногда гуляю, но это всё.", "en": "I rarely do. Sometimes I walk, but that's all." },
+        { "speaker": "B", "ru": "Понимаю, ты занятый человек.", "en": "I understand, you're a busy person." }
+      ]
+    },
+    {
+      "title": "Never on Sunday",
+      "lines": [
+        { "speaker": "A", "ru": "Ты работаешь каждый день?", "en": "Do you work every day?" },
+        { "speaker": "B", "ru": "Нет, никогда не работаю в выходной.", "en": "No, I never work on a day off." },
+        { "speaker": "A", "ru": "Что ты делаешь?", "en": "What do you do?" },
+        { "speaker": "B", "ru": "Отдыхаю! Убираю дом, иногда читаю.", "en": "I rest! I clean the house, sometimes I read." }
+      ],
+      "glossWords": [ { "ru": "выходной", "en": "day off" } ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, how often does speaker A do sports?", "type": "understand", "answer": "rarely", "acceptable": ["редко", "rarely"] },
+    { "q": "In dialogue 2, what does speaker B never do?", "type": "understand", "answer": "work on a day off", "acceptable": ["работать в выходной", "work on day off"] },
+    { "q": "Say you always get up early.", "type": "produce", "answer": "Я всегда встаю рано.", "acceptable": ["всегда встаю рано"] },
+    { "q": "Say you never eat meat.", "type": "produce", "answer": "Я никогда не ем мясо.", "acceptable": ["никогда не ем мясо"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning.",
+      "items": [
+        { "left": "всегда", "right": "always" },
+        { "left": "иногда", "right": "sometimes" },
+        { "left": "редко", "right": "rarely" },
+        { "left": "никогда", "right": "never" },
+        { "left": "часто", "right": "often" }
+      ]
+    },
+    {
+      "type": "fill",
+      "prompt": "Fill in the frequency word.",
+      "items": [
+        { "q": "Я ___ ем мясо. (never — remember не too)", "answer": "никогда" },
+        { "q": "Ты ___ занимаешься спортом? (often)", "answer": "часто" },
+        { "q": "Я никогда ___ работаю в выходной. (не)", "answer": "не" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "Which is correct for \"I never watch television\"?",
+      "options": ["Я никогда смотрю телевизор.", "Я никогда не смотрю телевизор.", "Я не никогда смотрю телевизор."],
+      "answer": "Я никогда не смотрю телевизор."
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "I always drink tea in the morning.", "answer": "Я всегда пью чай утром." },
+        { "q": "Do you often read?", "answer": "Ты часто читаешь?" },
+        { "q": "I sometimes rest in the evening.", "answer": "Я иногда отдыхаю вечером." },
+        { "q": "I never work on a day off.", "answer": "Я никогда не работаю в выходной." },
+        { "q": "Once a week.", "answer": "Один раз в неделю." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["мясо", "не", "ем", "никогда", "я"],
+      "answer": "Я никогда не ем мясо."
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "I always get up early and go to bed late.", "answer": "Я всегда встаю рано и ложусь поздно." },
+      { "en": "I rarely watch television.", "answer": "Я редко смотрю телевизор." },
+      { "en": "Sometimes I clean the house.", "answer": "Иногда я убираю дом." },
+      { "en": "I never eat fish.", "answer": "Я никогда не ем рыбу." },
+      { "en": "I'm a busy person, but today is a free day.", "answer": "Я занятый человек, но сегодня свободный день." }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences about your habits using всегда/часто/иногда/редко/никогда.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 4-5 sentences about how often you do things: work, rest, sports, reading.",
+      "minSentences": 4,
+      "modelAnswer": "Я всегда встаю рано и завтракаю. Я часто работаю, но иногда отдыхаю. Я редко смотрю телевизор. Я никогда не работаю в выходной."
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Tell someone how often you do one activity, using часто/иногда/редко/никогда.",
+      "Ask someone «Ты часто...?» about something they do."
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "I always get up early.", "back": "Я всегда встаю рано." },
+    { "type": "production", "front": "Do you often read?", "back": "Ты часто читаешь?" },
+    { "type": "production", "front": "I sometimes rest in the evening.", "back": "Я иногда отдыхаю вечером." },
+    { "type": "production", "front": "I never eat meat.", "back": "Я никогда не ем мясо." },
+    { "type": "production", "front": "I rarely watch television.", "back": "Я редко смотрю телевизор." },
+    { "type": "production", "front": "Once a week.", "back": "Один раз в неделю." },
+    { "type": "cloze", "front": "Я никогда ___ ем мясо. (не — the required negative)", "back": "Я никогда не ем мясо." },
+    { "type": "listening", "front": "[audio] Ты часто занимаешься спортом?", "back": "Ты часто занимаешься спортом?" },
+    { "type": "listening", "front": "[audio] Я никогда не работаю в выходной.", "back": "Я никогда не работаю в выходной." }
+  ]
+}

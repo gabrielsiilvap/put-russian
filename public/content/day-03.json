@@ -1,0 +1,174 @@
+{
+  "day": 3,
+  "week": 1,
+  "theme": "Survival present + \"I want\" + questions",
+  "function": "Ask someone about themselves with кто/как/почему.",
+  "canDo": "I can introduce myself, say what I want, and ask a simple question.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "Asking ты: the -ешь / -ишь endings",
+    "explanation": "For **ты**, most verbs take **-ешь** (1st conjugation: рабо́тать → рабо́таешь, знать → зна́ешь) or **-ишь** (2nd conjugation: говори́ть → говори́шь). A few common verbs don't end in -ить but still take -ишь — **ви́деть → ви́дишь** and **слы́шать → слы́шишь** are two you'll use constantly.\n\nQuestion words go first in the sentence, same as English: **Кто э́то?** Who is this? **Почему́ ты не отвеча́ешь?** Why aren't you answering?",
+    "examples": [
+      { "ru": "Ты рабо́таешь здесь?", "en": "Do you work here?", "note": "работать → -ешь" },
+      { "ru": "Ты говори́шь по-ру́сски?", "en": "Do you speak Russian?", "note": "говорить → -ишь" },
+      { "ru": "Ты ви́дишь?", "en": "Do you see?", "note": "-еть verb that still takes -ишь" },
+      { "ru": "Почему́ ты не отвеча́ешь?", "en": "Why aren't you answering?", "note": "отвечать → -ешь" }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0135", "ru": "кто", "en": "who", "pos": "pronoun", "example": { "ru": "Кто это?", "en": "Who is this?" } },
+    { "id": "w0136", "ru": "вы", "en": "you (formal / plural)", "pos": "pronoun", "example": { "ru": "Вы говорите по-русски?", "en": "Do you (formal) speak Russian?" } },
+    { "id": "w0137", "ru": "он", "en": "he", "pos": "pronoun", "example": { "ru": "Он мой друг.", "en": "He is my friend." } },
+    { "id": "w0138", "ru": "она", "en": "she", "pos": "pronoun", "example": { "ru": "Она здесь.", "en": "She is here." } },
+    { "id": "w0139", "ru": "как", "en": "how", "pos": "adv", "example": { "ru": "Как ты?", "en": "How are you?" } },
+    { "id": "w0140", "ru": "почему", "en": "why", "pos": "adv", "example": { "ru": "Почему нет?", "en": "Why not?" } },
+    { "id": "w0141", "ru": "спрашивать", "en": "to ask", "pos": "verb", "aspectPartner": "спросить", "example": { "ru": "Я спрашиваю, а ты отвечаешь.", "en": "I ask, and you answer." } },
+    { "id": "w0142", "ru": "отвечать", "en": "to answer", "pos": "verb", "aspectPartner": "ответить", "example": { "ru": "Почему ты не отвечаешь?", "en": "Why aren't you answering?" } },
+    { "id": "w0143", "ru": "слышать", "en": "to hear", "pos": "verb", "aspectPartner": "услышать", "example": { "ru": "Ты слышишь?", "en": "Do you hear (that)?" } },
+    { "id": "w0144", "ru": "видеть", "en": "to see", "pos": "verb", "aspectPartner": "увидеть", "example": { "ru": "Я не вижу.", "en": "I don't see." } },
+    { "id": "w0145", "ru": "можно", "en": "may I / is it okay", "pos": "particle", "example": { "ru": "Можно?", "en": "May I?" } },
+    { "id": "w0146", "ru": "нельзя", "en": "not allowed", "pos": "particle", "example": { "ru": "Здесь нельзя.", "en": "Not allowed here." } },
+    { "id": "w0147", "ru": "всё", "en": "everything, all", "pos": "pronoun", "example": { "ru": "Всё хорошо.", "en": "Everything's good." } },
+    { "id": "w0148", "ru": "ничего", "en": "nothing / it's fine", "pos": "pronoun", "example": { "ru": "Ничего страшного.", "en": "It's nothing / no problem." } },
+    { "id": "w0149", "ru": "быстро", "en": "quickly", "pos": "adv", "example": { "ru": "Ты говоришь быстро.", "en": "You speak quickly." } },
+    { "id": "w0150", "ru": "медленно", "en": "slowly", "pos": "adv", "example": { "ru": "Говорите медленно, пожалуйста.", "en": "Speak slowly, please." } },
+    { "id": "w0151", "ru": "трудно", "en": "difficult", "pos": "adv", "example": { "ru": "Это трудно.", "en": "This is difficult." } },
+    { "id": "w0152", "ru": "легко", "en": "easy", "pos": "adv", "example": { "ru": "Это легко!", "en": "This is easy!" } },
+    { "id": "w0153", "ru": "интересно", "en": "interesting", "pos": "adv", "example": { "ru": "Очень интересно.", "en": "Very interesting." } },
+    { "id": "w0154", "ru": "не", "en": "not", "pos": "particle", "note": "goes right before the word it negates", "example": { "ru": "Я не понимаю.", "en": "I don't understand." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "Excuse me, a question",
+      "lines": [
+        { "speaker": "A", "ru": "Извините, вы говорите по-русски?", "en": "Excuse me, do you speak Russian?" },
+        { "speaker": "B", "ru": "Да, немного.", "en": "Yes, a little." },
+        { "speaker": "A", "ru": "Вы хорошо понимаете?", "en": "Do you understand well?" },
+        { "speaker": "B", "ru": "Да, я понимаю хорошо. Спасибо!", "en": "Yes, I understand well. Thank you!" },
+        { "speaker": "A", "ru": "Пожалуйста!", "en": "You're welcome!" }
+      ]
+    },
+    {
+      "title": "Who is this?",
+      "lines": [
+        { "speaker": "A", "ru": "Кто это?", "en": "Who is this?" },
+        { "speaker": "B", "ru": "Это друг. Он говорит по-русски.", "en": "This is a friend. He speaks Russian." },
+        { "speaker": "A", "ru": "А она? Она тоже говорит по-русски?", "en": "And her? Does she speak Russian too?" },
+        { "speaker": "B", "ru": "Да, очень хорошо!", "en": "Yes, very well!" }
+      ]
+    },
+    {
+      "title": "Slowly, please",
+      "note": "«Можно» and «нельзя» work on their own — no extra words needed.",
+      "lines": [
+        { "speaker": "A", "ru": "Ты говоришь быстро. Это трудно!", "en": "You speak quickly. This is difficult!" },
+        { "speaker": "B", "ru": "Извините! Медленно — можно?", "en": "Sorry! Slowly — is that okay?" },
+        { "speaker": "A", "ru": "Да, можно. Спасибо.", "en": "Yes, that's fine. Thank you." },
+        { "speaker": "B", "ru": "Ничего! Всё хорошо.", "en": "No problem! Everything's good." }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, does the stranger understand Russian well?", "type": "understand", "answer": "yes, well", "acceptable": ["да, хорошо", "yes", "well", "хорошо"] },
+    { "q": "In dialogue 2, who is \"he\"?", "type": "understand", "answer": "a friend", "acceptable": ["друг", "a friend", "friend"] },
+    { "q": "Someone asks «Вы понимаете хорошо?» — write a reply saying you understand well.", "type": "produce", "answer": "Я понимаю хорошо.", "acceptable": ["понимаю хорошо", "да, я понимаю хорошо"] },
+    { "q": "Ask a stranger, formally, if they speak Russian.", "type": "produce", "answer": "Вы говорите по-русски?", "acceptable": ["вы говорите по-русски"] },
+    { "q": "Ask someone to speak slowly.", "type": "produce", "answer": "Медленно, пожалуйста.", "acceptable": ["говорите медленно, пожалуйста", "медленно пожалуйста"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning.",
+      "items": [
+        { "left": "кто", "right": "who" },
+        { "left": "почему", "right": "why" },
+        { "left": "можно", "right": "may I" },
+        { "left": "нельзя", "right": "not allowed" },
+        { "left": "всё", "right": "everything" }
+      ]
+    },
+    {
+      "type": "fill",
+      "prompt": "Conjugate the verb for ты.",
+      "items": [
+        { "q": "Ты ___ по-русски? (говорить)", "answer": "говоришь" },
+        { "q": "Ты ___ здесь? (работать)", "answer": "работаешь" },
+        { "q": "Почему ты не ___? (отвечать)", "answer": "отвечаешь" },
+        { "q": "Ты ___? (слышать)", "answer": "слышишь" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "Choose the correct word: «___ это?» — asking who someone is.",
+      "options": ["Что", "Кто", "Где", "Как"],
+      "answer": "Кто"
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "Who is this?", "answer": "Кто это?" },
+        { "q": "Why not?", "answer": "Почему нет?" },
+        { "q": "Do you (formal) speak Russian?", "answer": "Вы говорите по-русски?" },
+        { "q": "Speak slowly, please.", "answer": "Говорите медленно, пожалуйста.", "acceptable": ["медленно, пожалуйста"] },
+        { "q": "This is easy.", "answer": "Это легко." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["по-русски", "говоришь", "ты"],
+      "answer": "Ты говоришь по-русски."
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "Who is this? — This is a friend.", "answer": "Кто это? — Это друг." },
+      { "en": "Do you understand? — Yes, a little.", "answer": "Ты понимаешь? — Да, немного." },
+      { "en": "Why are you not answering?", "answer": "Почему ты не отвечаешь?" },
+      { "en": "May I? — Yes, that's fine.", "answer": "Можно? — Да, можно." },
+      { "en": "This is difficult, but interesting.", "answer": "Это трудно, но интересно." }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 questions using кто, как, or почему.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 3–4 sentences: introduce a friend (name, that they speak a little Russian) and ask them one question.",
+      "minSentences": 3,
+      "modelAnswer": "Это мой друг. Его зовут Игорь. Он немного говорит по-русски. Игорь, ты понимаешь меня?"
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Ask someone «Как дела?» and actually listen for their answer.",
+      "Ask «Можно?» before doing something small today — sitting down, taking a photo, anything.",
+      "If someone speaks too fast, ask «Медленно, пожалуйста»."
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "Who is this?", "back": "Кто это?" },
+    { "type": "production", "front": "Do you (formal) speak Russian?", "back": "Вы говорите по-русски?" },
+    { "type": "production", "front": "Why not?", "back": "Почему нет?" },
+    { "type": "production", "front": "May I? / Is that okay?", "back": "Можно?" },
+    { "type": "production", "front": "Not allowed.", "back": "Нельзя." },
+    { "type": "production", "front": "Speak slowly, please.", "back": "Медленно, пожалуйста." },
+    { "type": "production", "front": "This is difficult.", "back": "Это трудно." },
+    { "type": "production", "front": "Everything's good.", "back": "Всё хорошо." },
+    { "type": "cloze", "front": "Ты ___ по-русски? (speak)", "back": "Ты говоришь по-русски?" },
+    { "type": "cloze", "front": "Ты ___? (hear)", "back": "Ты слышишь?" },
+    { "type": "listening", "front": "[audio] Кто это?", "back": "Кто это?" },
+    { "type": "listening", "front": "[audio] Почему ты не отвечаешь?", "back": "Почему ты не отвечаешь?" }
+  ]
+}

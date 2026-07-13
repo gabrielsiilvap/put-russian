@@ -123,7 +123,7 @@ const WEEKS = [
   ]],
 ];
 
-const AVAILABLE = new Set([1, 2]);
+const AVAILABLE = new Set(Array.from({ length: 28 }, (_, i) => i + 1));
 
 const days = [];
 let dayNum = 0;

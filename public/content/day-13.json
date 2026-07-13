@@ -1,0 +1,124 @@
+{
+  "day": 13,
+  "week": 2,
+  "theme": "Doing things / daily life (accusative)",
+  "function": "Consolidate the week: recycle, no new grammar.",
+  "canDo": "I can talk about my daily activities and what I like.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "Week 2 recap: accusative + routine + frequency",
+    "explanation": "No new grammar today. Recap: **things** stay the same in the accusative unless feminine (**газе́та → газе́ту**); **people** (masculine) take **-а/-я** (**брат → бра́та**). Time-of-day words (**у́тром, ве́чером**) and frequency words (**всегда́, ча́сто, никогда́ не...**) both go right before the verb. Run through it fast today — speed is the goal.",
+    "examples": [
+      { "ru": "Я всегда́ чита́ю газе́ту у́тром.", "en": "I always read a newspaper in the morning." },
+      { "ru": "Ве́чером я встреча́ю дру́га.", "en": "In the evening I meet a friend." },
+      { "ru": "Я никогда́ не ем мя́со.", "en": "I never eat meat." },
+      { "ru": "Ты ча́сто убира́ешь дом?", "en": "Do you clean the house often?" }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0291", "ru": "смотреть", "en": "to watch", "pos": "verb", "example": { "ru": "Я смотрю телевизор.", "en": "I watch television." } },
+    { "id": "w0292", "ru": "покупать", "en": "to buy", "pos": "verb", "example": { "ru": "Я покупаю хлеб.", "en": "I'm buying bread." } },
+    { "id": "w0293", "ru": "встречать", "en": "to meet", "pos": "verb", "example": { "ru": "Я встречаю сестру.", "en": "I'm meeting (my) sister." } },
+    { "id": "w0294", "ru": "вставать", "en": "to get up", "pos": "verb", "example": { "ru": "Я встаю рано.", "en": "I get up early." } },
+    { "id": "w0295", "ru": "завтракать", "en": "to have breakfast", "pos": "verb", "example": { "ru": "Я завтракаю утром.", "en": "I have breakfast in the morning." } },
+    { "id": "w0296", "ru": "отдыхать", "en": "to rest", "pos": "verb", "example": { "ru": "Вечером я отдыхаю.", "en": "In the evening I rest." } },
+    { "id": "w0297", "ru": "всегда", "en": "always", "pos": "adv", "example": { "ru": "Я всегда встаю рано.", "en": "I always get up early." } },
+    { "id": "w0298", "ru": "никогда", "en": "never", "pos": "adv", "example": { "ru": "Я никогда не ем мясо.", "en": "I never eat meat." } },
+    { "id": "w0299", "ru": "утром", "en": "in the morning", "pos": "adv", "example": { "ru": "Утром я пью чай.", "en": "In the morning I drink tea." } },
+    { "id": "w0300", "ru": "вечером", "en": "in the evening", "pos": "adv", "example": { "ru": "Вечером я читаю.", "en": "In the evening I read." } },
+    { "id": "w0301", "ru": "брат", "en": "brother", "pos": "noun", "gender": "m", "example": { "ru": "Это брат.", "en": "This is (my) brother." } },
+    { "id": "w0302", "ru": "газета", "en": "newspaper", "pos": "noun", "gender": "f", "example": { "ru": "Я читаю газету.", "en": "I'm reading a newspaper." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "A full day",
+      "note": "Every word here is from this week or last. Read once, then shadow it.",
+      "lines": [
+        { "speaker": "A", "ru": "Во сколько ты встаёшь?", "en": "What time do you get up?" },
+        { "speaker": "B", "ru": "Я всегда встаю рано. Завтракаю, потом работаю.", "en": "I always get up early. I have breakfast, then I work." },
+        { "speaker": "A", "ru": "А вечером?", "en": "And in the evening?" },
+        { "speaker": "B", "ru": "Вечером я встречаю брата. Мы гуляем и говорим.", "en": "In the evening I meet my brother. We walk and talk." },
+        { "speaker": "A", "ru": "Ты часто покупаешь газету?", "en": "Do you often buy a newspaper?" },
+        { "speaker": "B", "ru": "Нет, никогда. Я смотрю новости на телевизоре.", "en": "No, never. I watch the news on television." }
+      ],
+      "glossWords": [ { "ru": "новости", "en": "the news" } ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "What does speaker B do right after getting up?", "type": "understand", "answer": "has breakfast", "acceptable": ["завтракает", "breakfast", "has breakfast"] },
+    { "q": "Does speaker B buy a newspaper often?", "type": "understand", "answer": "no, never", "acceptable": ["нет никогда", "no, never"] },
+    { "q": "Say what time you get up and what you do first.", "type": "produce", "answer": "Я встаю рано и завтракаю.", "acceptable": ["встаю рано"] },
+    { "q": "Say you never buy a newspaper.", "type": "produce", "answer": "Я никогда не покупаю газету.", "acceptable": ["никогда не покупаю газету"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "fill",
+      "prompt": "Fill in the missing word from this week.",
+      "items": [
+        { "q": "Я ___ встаю рано. (always)", "answer": "всегда" },
+        { "q": "Я вижу ___. (brother, accusative)", "answer": "брата" },
+        { "q": "Я читаю ___. (newspaper, accusative)", "answer": "газету" },
+        { "q": "Я ___ не ем мясо. (never)", "answer": "никогда" }
+      ]
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian — mix words from the whole week.",
+      "items": [
+        { "q": "I always get up early and have breakfast.", "answer": "Я всегда встаю рано и завтракаю." },
+        { "q": "In the evening I meet my brother.", "answer": "Вечером я встречаю брата." },
+        { "q": "Do you often watch television?", "answer": "Ты часто смотришь телевизор?" },
+        { "q": "I never buy a newspaper.", "answer": "Я никогда не покупаю газету." },
+        { "q": "I rest in the evening.", "answer": "Вечером я отдыхаю." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["брата", "вечером", "встречаю", "я"],
+      "answer": "Вечером я встречаю брата."
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "I always get up early.", "answer": "Я всегда встаю рано." },
+      { "en": "In the evening I meet (my) brother.", "answer": "Вечером я встречаю брата." },
+      { "en": "I never eat meat, but I eat fish.", "answer": "Я никогда не ем мясо, но ем рыбу." },
+      { "en": "Do you often clean the house?", "answer": "Ты часто убираешь дом?" },
+      { "en": "I rest, read, and listen to music.", "answer": "Я отдыхаю, читаю и слушаю музыку." }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences describing a full day, mixing routine verbs, time words, and frequency words.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write your fullest daily-routine description yet: morning to evening, with at least one frequency word (всегда/часто/иногда/никогда).",
+      "minSentences": 5,
+      "modelAnswer": "Я всегда встаю рано и завтракаю. Днём я работаю, а иногда обедаю с другом. Вечером я встречаю брата, мы гуляем и говорим. Я редко смотрю телевизор, но люблю читать. Ночью я сплю."
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Describe your whole day to someone, start to finish, in real time.",
+      "Use at least one frequency word (всегда/часто/иногда/никогда) in a real sentence today."
+    ],
+    "verification": "Did the description hold together, start to finish? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "I always get up early and have breakfast.", "back": "Я всегда встаю рано и завтракаю." },
+    { "type": "production", "front": "In the evening I meet (my) brother.", "back": "Вечером я встречаю брата." },
+    { "type": "production", "front": "I never buy a newspaper.", "back": "Я никогда не покупаю газету." },
+    { "type": "production", "front": "I rest in the evening.", "back": "Вечером я отдыхаю." },
+    { "type": "listening", "front": "[audio] Ты часто покупаешь газету?", "back": "Ты часто покупаешь газету?" }
+  ]
+}

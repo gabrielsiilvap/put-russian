@@ -1,0 +1,139 @@
+{
+  "day": 12,
+  "week": 2,
+  "theme": "Doing things / daily life (accusative)",
+  "function": "Ask and answer yes/no questions about daily life.",
+  "canDo": "I can talk about my daily activities and what I like.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "Yes/no questions: just your voice, no word order change",
+    "explanation": "English needs \"do/does\" to ask a yes/no question. Russian needs nothing extra — the word order stays exactly the same as a statement, and you just raise your pitch on the key word: **Ты рабо́таешь?** (statement word order, question intonation) means both \"You work\" *and* \"Do you work?\" depending only on how you say it.\n\nThe word being questioned usually goes first: **Ты рабо́таешь сего́дня?** asks about *today* specifically; **Сего́дня ты рабо́таешь?** puts the emphasis on *you*.",
+    "examples": [
+      { "ru": "Ты лю́бишь чита́ть?", "en": "Do you like reading?", "note": "same word order as a statement" },
+      { "ru": "Э́то люби́мое заня́тие?", "en": "Is this a favorite activity?" },
+      { "ru": "Ты рабо́таешь ка́ждый день?", "en": "Do you work every day?" },
+      { "ru": "Договори́лись?", "en": "Deal? / Agreed?" }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0279", "ru": "любимый", "en": "favorite", "pos": "adj", "example": { "ru": "Любимое занятие — читать.", "en": "Favorite activity — reading." } },
+    { "id": "w0280", "ru": "занятие", "en": "activity", "pos": "noun", "gender": "n", "example": { "ru": "Хорошее занятие!", "en": "A good activity!" } },
+    { "id": "w0281", "ru": "привычка", "en": "habit", "pos": "noun", "gender": "f", "example": { "ru": "Это привычка.", "en": "It's a habit." } },
+    { "id": "w0282", "ru": "режим", "en": "routine, regimen", "pos": "noun", "gender": "m", "example": { "ru": "Режим простой.", "en": "The routine is simple." } },
+    { "id": "w0283", "ru": "точно", "en": "exactly, for sure", "pos": "adv", "example": { "ru": "Да, точно!", "en": "Yes, for sure!" } },
+    { "id": "w0284", "ru": "может быть", "en": "maybe", "pos": "phrase", "example": { "ru": "Может быть, потом.", "en": "Maybe, later." } },
+    { "id": "w0285", "ru": "договорились", "en": "agreed, deal", "pos": "phrase", "example": { "ru": "Договорились?", "en": "Deal?" } },
+    { "id": "w0286", "ru": "обычный", "en": "usual, ordinary", "pos": "adj", "example": { "ru": "Обычный день.", "en": "An ordinary day." } },
+    { "id": "w0287", "ru": "типичный", "en": "typical", "pos": "adj", "example": { "ru": "Типичный вопрос!", "en": "A typical question!" } },
+    { "id": "w0288", "ru": "выходной", "en": "day off", "pos": "noun", "gender": "m", "example": { "ru": "Сегодня выходной.", "en": "Today is a day off." } },
+    { "id": "w0289", "ru": "будний день", "en": "weekday", "pos": "phrase", "example": { "ru": "Это будний день.", "en": "This is a weekday." } },
+    { "id": "w0290", "ru": "расписание", "en": "schedule", "pos": "noun", "gender": "n", "example": { "ru": "Расписание здесь.", "en": "The schedule is here." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "A typical day?",
+      "lines": [
+        { "speaker": "A", "ru": "Ты работаешь каждый будний день?", "en": "Do you work every weekday?" },
+        { "speaker": "B", "ru": "Да, точно. Это режим.", "en": "Yes, exactly. That's the routine." },
+        { "speaker": "A", "ru": "А в выходной?", "en": "And on a day off?" },
+        { "speaker": "B", "ru": "Отдыхаю! Это любимое занятие.", "en": "I rest! It's a favorite activity." }
+      ]
+    },
+    {
+      "title": "Making a plan",
+      "lines": [
+        { "speaker": "A", "ru": "Хочешь гулять сегодня?", "en": "Do you want to walk today?" },
+        { "speaker": "B", "ru": "Может быть. Ты занятый вечером?", "en": "Maybe. Are you busy in the evening?" },
+        { "speaker": "A", "ru": "Да! Договорились?", "en": "Yes! Deal?" },
+        { "speaker": "B", "ru": "Договорились!", "en": "Deal!" }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, what does speaker B do on a day off?", "type": "understand", "answer": "rests", "acceptable": ["отдыхает", "rests", "rest"] },
+    { "q": "In dialogue 2, do A and B agree to walk together?", "type": "understand", "answer": "yes", "acceptable": ["да", "yes"] },
+    { "q": "Ask, with just intonation, if someone works today.", "type": "produce", "answer": "Ты работаешь сегодня?", "acceptable": ["ты работаешь сегодня"] },
+    { "q": "Say \"Deal?\" / \"Agreed?\"", "type": "produce", "answer": "Договорились?", "acceptable": ["договорились"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning.",
+      "items": [
+        { "left": "привычка", "right": "habit" },
+        { "left": "расписание", "right": "schedule" },
+        { "left": "выходной", "right": "day off" },
+        { "left": "может быть", "right": "maybe" },
+        { "left": "точно", "right": "exactly, for sure" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "How do you turn «Ты работаешь.» into a question in Russian?",
+      "options": ["Add \"do\" before the verb", "Change the word order", "Just use question intonation — nothing changes in writing"],
+      "answer": "Just use question intonation — nothing changes in writing"
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "Do you work every weekday?", "answer": "Ты работаешь каждый будний день?" },
+        { "q": "It's a habit.", "answer": "Это привычка." },
+        { "q": "Maybe later.", "answer": "Может быть, потом." },
+        { "q": "Deal?", "answer": "Договорились?" },
+        { "q": "Today is a day off.", "answer": "Сегодня выходной." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["ты", "сегодня", "работаешь"],
+      "answer": "Ты работаешь сегодня?"
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "Do you like the routine?", "answer": "Ты любишь режим?" },
+      { "en": "It's an ordinary day.", "answer": "Это обычный день." },
+      { "en": "A typical question.", "answer": "Типичный вопрос." },
+      { "en": "The schedule is here.", "answer": "Расписание здесь." },
+      { "en": "Deal? — Deal!", "answer": "Договорились? — Договорились!" }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 yes/no questions about someone's daily life, using only intonation (no extra question words).",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 4-5 sentences: describe your routine and ask the reader one yes/no question about theirs.",
+      "minSentences": 4,
+      "modelAnswer": "Мой режим обычный. Я работаю каждый будний день, а в выходной отдыхаю. Это привычка. А ты? Ты тоже работаешь каждый день?"
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Ask someone a yes/no question using only intonation — no extra words.",
+      "Say «Договорились?» to confirm a small plan with someone."
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "Do you work every weekday?", "back": "Ты работаешь каждый будний день?" },
+    { "type": "production", "front": "It's a habit.", "back": "Это привычка." },
+    { "type": "production", "front": "Maybe, later.", "back": "Может быть, потом." },
+    { "type": "production", "front": "Deal?", "back": "Договорились?" },
+    { "type": "production", "front": "Today is a day off.", "back": "Сегодня выходной." },
+    { "type": "production", "front": "An ordinary day.", "back": "Обычный день." },
+    { "type": "listening", "front": "[audio] Ты работаешь сегодня?", "back": "Ты работаешь сегодня?" },
+    { "type": "listening", "front": "[audio] Хочешь гулять сегодня?", "back": "Хочешь гулять сегодня?" }
+  ]
+}

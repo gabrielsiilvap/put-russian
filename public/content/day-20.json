@@ -1,0 +1,121 @@
+{
+  "day": 20,
+  "week": 3,
+  "theme": "Having & not having (genitive)",
+  "function": "Consolidate the week: recycle, no new grammar.",
+  "canDo": "I can ask if someone has something and say what I don't have.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "Week 3 recap: у меня есть / нет + genitive",
+    "explanation": "No new grammar today. Recap: **У меня́ есть X** keeps X in the nominative. **У меня́ нет X** and **мно́го/ма́ло/ско́лько X** all put X in the **genitive**: masc. **-а/-я**, neut. **-о/-е → -а/-я**, fem. **-а/-я → -ы/-и**. And **мой/моя́/моё** matches gender, not the noun's ending — «мой па́па» is still masculine.",
+    "examples": [
+      { "ru": "У меня́ есть семья́, но ма́ло вре́мени.", "en": "I have a family, but little time." },
+      { "ru": "Ско́лько у тебя́ вре́мени?", "en": "How much time do you have?" },
+      { "ru": "Мой брат и моя́ сестра́ живу́т здесь.", "en": "My brother and my sister live here." },
+      { "ru": "У нас нет са́хара, но есть хлеб.", "en": "We don't have sugar, but we have bread." }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0371", "ru": "семья", "en": "family", "pos": "noun", "gender": "f", "example": { "ru": "Моя семья здесь.", "en": "My family is here." } },
+    { "id": "w0372", "ru": "брат", "en": "brother", "pos": "noun", "gender": "m", "example": { "ru": "Мой брат работает.", "en": "My brother works." } },
+    { "id": "w0373", "ru": "сестра", "en": "sister", "pos": "noun", "gender": "f", "example": { "ru": "Моя сестра дома.", "en": "My sister is at home." } },
+    { "id": "w0374", "ru": "деньги", "en": "money", "pos": "noun", "gender": "pl", "example": { "ru": "У меня есть деньги.", "en": "I have money." } },
+    { "id": "w0375", "ru": "время", "en": "time", "pos": "noun", "gender": "n", "note": "genitive: времени", "example": { "ru": "Мало времени.", "en": "Not much time." } },
+    { "id": "w0376", "ru": "много", "en": "much, a lot, many", "pos": "adv", "example": { "ru": "Много работы.", "en": "A lot of work." } },
+    { "id": "w0377", "ru": "мало", "en": "little, not enough", "pos": "adv", "example": { "ru": "Мало сахара.", "en": "Not much sugar." } },
+    { "id": "w0378", "ru": "сколько", "en": "how much, how many", "pos": "adv", "example": { "ru": "Сколько времени?", "en": "How much time?" } },
+    { "id": "w0379", "ru": "большой", "en": "big", "pos": "adj", "note": "большой / большая / большое", "example": { "ru": "Большая семья.", "en": "A big family." } },
+    { "id": "w0380", "ru": "хлеб", "en": "bread", "pos": "noun", "gender": "m", "example": { "ru": "У нас есть хлеб.", "en": "We have bread." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "A full conversation",
+      "note": "Every word here is from this week or before. Read once, then shadow it.",
+      "lines": [
+        { "speaker": "A", "ru": "У тебя есть большая семья?", "en": "Do you have a big family?" },
+        { "speaker": "B", "ru": "Да! Мой брат, моя сестра, и родители.", "en": "Yes! My brother, my sister, and (my) parents." },
+        { "speaker": "A", "ru": "Здорово. У тебя много времени сегодня?", "en": "Great. Do you have a lot of time today?" },
+        { "speaker": "B", "ru": "Иногда мало, но сегодня много!", "en": "Sometimes not much, but today a lot!" },
+        { "speaker": "A", "ru": "У вас есть хлеб?", "en": "Do you have bread?" },
+        { "speaker": "B", "ru": "Да, есть. И сыр, и молоко. Достаточно!", "en": "Yes, we do. And cheese, and milk. Enough!" }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "Who is in speaker B's family?", "type": "understand", "answer": "brother, sister, parents", "acceptable": ["брат сестра родители", "brother, sister, and parents"] },
+    { "q": "Does speaker B usually have a lot of time with family?", "type": "understand", "answer": "sometimes not much", "acceptable": ["иногда мало", "not always", "sometimes little"] },
+    { "q": "Say you have a big family.", "type": "produce", "answer": "У меня большая семья.", "acceptable": ["у меня большая семья"] },
+    { "q": "Say you don't have much time today.", "type": "produce", "answer": "У меня мало времени сегодня.", "acceptable": ["мало времени сегодня"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "fill",
+      "prompt": "Fill in the missing word from this week.",
+      "items": [
+        { "q": "___ есть машина. (I have)", "answer": "У меня" },
+        { "q": "У меня ___ времени. (нет — genitive follows)", "answer": "нет" },
+        { "q": "___ семья. (my — fem.)", "answer": "Моя" },
+        { "q": "Мало ___. (сахар, genitive)", "answer": "сахара" }
+      ]
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian — mix words from the whole week.",
+      "items": [
+        { "q": "I have a big family.", "answer": "У меня большая семья." },
+        { "q": "My brother and my sister.", "answer": "Мой брат и моя сестра." },
+        { "q": "I don't have money.", "answer": "У меня нет денег." },
+        { "q": "How much time do you have?", "answer": "Сколько у тебя времени?" },
+        { "q": "We have bread and cheese, enough.", "answer": "У нас есть хлеб и сыр, достаточно." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["семья", "большая", "моя"],
+      "answer": "Моя большая семья."
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "I have a family, but little time.", "answer": "У меня есть семья, но мало времени." },
+      { "en": "My sister has money, but I don't.", "answer": "У сестры есть деньги, а у меня нет.", "acceptable": ["у моей сестры есть деньги"] },
+      { "en": "How much bread do you have?", "answer": "Сколько у тебя хлеба?" },
+      { "en": "A big family, a lot of work.", "answer": "Большая семья, много работы." },
+      { "en": "Enough time today.", "answer": "Достаточно времени сегодня." }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences mixing family words, есть/нет, and much/little/how much.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write your fullest paragraph yet: your family, what you have and don't have, and how much time/money you have today.",
+      "minSentences": 5,
+      "modelAnswer": "У меня большая семья: мама, папа, брат и сестра. У меня есть телефон и велосипед, но нет машины. Сегодня много работы, но у меня достаточно времени. У меня мало денег, но у меня есть семья. Это хорошо."
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Describe your family and one thing you have or don't have, to a real person.",
+      "Ask someone «Сколько у тебя...?» about something real."
+    ],
+    "verification": "Did the description hold together, start to finish? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "I have a big family.", "back": "У меня большая семья." },
+    { "type": "production", "front": "My brother and my sister.", "back": "Мой брат и моя сестра." },
+    { "type": "production", "front": "I don't have money.", "back": "У меня нет денег." },
+    { "type": "production", "front": "How much time do you have?", "back": "Сколько у тебя времени?" },
+    { "type": "listening", "front": "[audio] У тебя есть большая семья?", "back": "У тебя есть большая семья?" }
+  ]
+}

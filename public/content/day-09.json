@@ -1,0 +1,158 @@
+{
+  "day": 9,
+  "week": 2,
+  "theme": "Doing things / daily life (accusative)",
+  "function": "More daily actions: eating, drinking, buying, meeting people.",
+  "canDo": "I can talk about my daily activities and what I like.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "Accusative for people: animate masculine nouns change too",
+    "explanation": "Yesterday, masculine *things* stayed the same in the accusative (телеви́зор → телеви́зор). But masculine nouns for **people** work differently: they take **-а** (or **-я** after a soft consonant), same as the genitive. **брат → бра́та**, **друг → дру́га**: **Я ви́жу бра́та** — I see my brother.\n\nFeminine nouns keep the same -а→-у rule regardless of person or thing: **сестра́ → сестру́**.",
+    "examples": [
+      { "ru": "Я ви́жу бра́та.", "en": "I see (my) brother.", "note": "animate masc. → -а" },
+      { "ru": "Я встреча́ю сестру́.", "en": "I'm meeting (my) sister.", "note": "fem. -а → -у, same as things" },
+      { "ru": "Я покупа́ю хлеб.", "en": "I'm buying bread.", "note": "inanimate masc., unchanged" },
+      { "ru": "Я ем я́блоко.", "en": "I'm eating an apple.", "note": "neuter, unchanged" }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0220", "ru": "покупать", "en": "to buy", "pos": "verb", "aspectPartner": "купить", "example": { "ru": "Я покупаю хлеб.", "en": "I'm buying bread." } },
+    { "id": "w0221", "ru": "есть", "en": "to eat", "pos": "verb", "note": "ем, ешь, ест, едим, едите, едят — same spelling as «there is», different word", "example": { "ru": "Я ем мясо.", "en": "I'm eating meat." } },
+    { "id": "w0222", "ru": "пить", "en": "to drink", "pos": "verb", "note": "пью, пьёшь, пьёт", "example": { "ru": "Я пью чай.", "en": "I'm drinking tea." } },
+    { "id": "w0223", "ru": "встречать", "en": "to meet", "pos": "verb", "aspectPartner": "встретить", "example": { "ru": "Я встречаю друга.", "en": "I'm meeting a friend." } },
+    { "id": "w0224", "ru": "хлеб", "en": "bread", "pos": "noun", "gender": "m", "example": { "ru": "Свежий хлеб.", "en": "Fresh bread." } },
+    { "id": "w0225", "ru": "мясо", "en": "meat", "pos": "noun", "gender": "n", "example": { "ru": "Я не ем мясо.", "en": "I don't eat meat." } },
+    { "id": "w0226", "ru": "рыба", "en": "fish", "pos": "noun", "gender": "f", "note": "accusative: рыбу", "example": { "ru": "Ты ешь рыбу?", "en": "Do you eat fish?" } },
+    { "id": "w0227", "ru": "яблоко", "en": "apple", "pos": "noun", "gender": "n", "example": { "ru": "Я ем яблоко.", "en": "I'm eating an apple." } },
+    { "id": "w0228", "ru": "чай", "en": "tea", "pos": "noun", "gender": "m", "example": { "ru": "Хочешь чай?", "en": "Do you want tea?" } },
+    { "id": "w0229", "ru": "кофе", "en": "coffee", "pos": "noun", "gender": "m", "note": "doesn't change by case or number", "example": { "ru": "Я пью кофе утром.", "en": "I drink coffee in the morning." } },
+    { "id": "w0230", "ru": "молоко", "en": "milk", "pos": "noun", "gender": "n", "example": { "ru": "Молоко здесь.", "en": "The milk is here." } },
+    { "id": "w0231", "ru": "сестра", "en": "sister", "pos": "noun", "gender": "f", "note": "accusative: сестру", "example": { "ru": "Это сестра.", "en": "This is (my) sister." } },
+    { "id": "w0232", "ru": "брат", "en": "brother", "pos": "noun", "gender": "m", "note": "accusative (animate): брата", "example": { "ru": "Это брат.", "en": "This is (my) brother." } },
+    { "id": "w0233", "ru": "вилка", "en": "fork", "pos": "noun", "gender": "f", "example": { "ru": "Где вилка?", "en": "Where's the fork?" } },
+    { "id": "w0234", "ru": "ложка", "en": "spoon", "pos": "noun", "gender": "f", "example": { "ru": "Ложка здесь.", "en": "The spoon is here." } },
+    { "id": "w0235", "ru": "нож", "en": "knife", "pos": "noun", "gender": "m", "example": { "ru": "Нож здесь.", "en": "The knife is here." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "At the shop",
+      "lines": [
+        { "speaker": "A", "ru": "Что ты покупаешь?", "en": "What are you buying?" },
+        { "speaker": "B", "ru": "Хлеб, молоко и яблоко. А ты?", "en": "Bread, milk, and an apple. And you?" },
+        { "speaker": "A", "ru": "Я покупаю рыбу и чай.", "en": "I'm buying fish and tea." },
+        { "speaker": "B", "ru": "Ты ешь рыбу каждый день?", "en": "Do you eat fish every day?" },
+        { "speaker": "A", "ru": "Нет, не каждый день. Но люблю рыбу.", "en": "No, not every day. But I love fish." }
+      ],
+      "glossWords": [ { "ru": "каждый день", "en": "every day" } ]
+    },
+    {
+      "title": "Meeting family",
+      "lines": [
+        { "speaker": "A", "ru": "Кого ты встречаешь?", "en": "Who are you meeting?" },
+        { "speaker": "B", "ru": "Я встречаю брата и сестру.", "en": "I'm meeting my brother and sister." },
+        { "speaker": "A", "ru": "Здорово! Пьёте кофе вместе?", "en": "Great! Are you drinking coffee together?" },
+        { "speaker": "B", "ru": "Да, конечно!", "en": "Yes, of course!" }
+      ],
+      "glossWords": [ { "ru": "кого", "en": "whom (accusative of кто)" } ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, what three things does speaker B buy?", "type": "understand", "answer": "bread, milk, apple", "acceptable": ["хлеб молоко яблоко", "bread milk and apple"] },
+    { "q": "In dialogue 2, who does speaker B meet?", "type": "understand", "answer": "brother and sister", "acceptable": ["брата и сестру", "brother and sister"] },
+    { "q": "Say you're buying bread and milk.", "type": "produce", "answer": "Я покупаю хлеб и молоко.", "acceptable": ["покупаю хлеб и молоко"] },
+    { "q": "Say you're meeting a friend.", "type": "produce", "answer": "Я встречаю друга.", "acceptable": ["встречаю друга"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "fill",
+      "prompt": "Put the noun into the accusative.",
+      "items": [
+        { "q": "Я вижу ___. (брат — a person!)", "answer": "брата" },
+        { "q": "Я встречаю ___. (сестра)", "answer": "сестру" },
+        { "q": "Я покупаю ___. (хлеб — a thing)", "answer": "хлеб" },
+        { "q": "Я ем ___. (яблоко)", "answer": "яблоко" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "\"I see (my) brother\" — which is correct?",
+      "options": ["Я вижу брат.", "Я вижу брата.", "Я вижу брату."],
+      "answer": "Я вижу брата."
+    },
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning.",
+      "items": [
+        { "left": "покупать", "right": "to buy" },
+        { "left": "встречать", "right": "to meet" },
+        { "left": "есть", "right": "to eat" },
+        { "left": "пить", "right": "to drink" },
+        { "left": "рыба", "right": "fish" }
+      ]
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "I'm buying bread and tea.", "answer": "Я покупаю хлеб и чай." },
+        { "q": "I see (my) sister.", "answer": "Я вижу сестру." },
+        { "q": "Do you eat fish?", "answer": "Ты ешь рыбу?" },
+        { "q": "I'm meeting a friend.", "answer": "Я встречаю друга." },
+        { "q": "I drink coffee in the morning.", "answer": "Я пью кофе утром." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["брата", "я", "встречаю"],
+      "answer": "Я встречаю брата."
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "I'm buying milk and an apple.", "answer": "Я покупаю молоко и яблоко." },
+      { "en": "I see a friend.", "answer": "Я вижу друга." },
+      { "en": "We're meeting (my) brother.", "answer": "Мы встречаем брата." },
+      { "en": "I don't eat meat.", "answer": "Я не ем мясо." },
+      { "en": "Do you want tea or coffee?", "answer": "Ты хочешь чай или кофе?" }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences: 3 about things you buy/eat/drink, 2 about people you see or meet (remember -а/-я for people!).",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 4 sentences about what you typically buy and eat, and one person you meet regularly.",
+      "minSentences": 4,
+      "modelAnswer": "Я обычно покупаю хлеб, молоко и рыбу. Я ем мясо, но не каждый день. Я люблю пить чай утром. Каждый день я встречаю друга."
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "At a shop, name at least two things you're buying out loud.",
+      "Tell someone «Я встречаю...» a person you're meeting today, using the -а/-я ending."
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "I'm buying bread.", "back": "Я покупаю хлеб." },
+    { "type": "production", "front": "I see (my) brother.", "back": "Я вижу брата." },
+    { "type": "production", "front": "I'm meeting (my) sister.", "back": "Я встречаю сестру." },
+    { "type": "production", "front": "Do you eat fish?", "back": "Ты ешь рыбу?" },
+    { "type": "production", "front": "I drink tea in the morning.", "back": "Я пью чай утром." },
+    { "type": "production", "front": "I don't eat meat.", "back": "Я не ем мясо." },
+    { "type": "cloze", "front": "Я вижу ___. (brother, accusative)", "back": "Я вижу брата." },
+    { "type": "cloze", "front": "Я встречаю ___. (sister, accusative)", "back": "Я встречаю сестру." },
+    { "type": "listening", "front": "[audio] Кого ты встречаешь?", "back": "Кого ты встречаешь?" },
+    { "type": "listening", "front": "[audio] Я покупаю хлеб и молоко.", "back": "Я покупаю хлеб и молоко." }
+  ]
+}

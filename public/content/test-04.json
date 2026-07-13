@@ -1,0 +1,77 @@
+{
+  "id": "test-04",
+  "week": 4,
+  "title": "Month 1 major mock: the market",
+  "passThreshold": 0.8,
+  "isMajorMock": true,
+
+  "canDo": [
+    "Introduce myself: name, greeting, what I want (Week 1).",
+    "Talk about daily actions and objects using the accusative (Week 2).",
+    "Say what I have and don't have using genitive (Week 3).",
+    "Talk about my family using мой/моя (Week 3).",
+    "Count, ask prices, and tell my age (Week 4)."
+  ],
+
+  "exercises": [
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning — one from each week.",
+      "items": [
+        { "left": "меня зовут", "right": "my name is" },
+        { "left": "покупаю", "right": "I'm buying" },
+        { "left": "у меня есть", "right": "I have" },
+        { "left": "моя семья", "right": "my family" },
+        { "left": "сколько стоит", "right": "how much does it cost" },
+        { "left": "мне лет", "right": "I am ... years old" }
+      ]
+    },
+    {
+      "type": "fill",
+      "prompt": "Fill in the correct case-marked form.",
+      "items": [
+        { "q": "Я читаю ___. (газета — accusative)", "answer": "газету" },
+        { "q": "У меня нет ___. (время — genitive)", "answer": "времени" },
+        { "q": "Пять ___. (рубль — genitive plural)", "answer": "рублей" },
+        { "q": "Мне двадцать пять ___. (year, 5+ rule)", "answer": "лет" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "\"I see (my) brother\" — animate accusative:",
+      "options": ["Я вижу брат.", "Я вижу брата.", "Я вижу брату."],
+      "answer": "Я вижу брата."
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "Hello! My name is ... Nice to meet you.", "answer": "Здравствуйте! Меня зовут ... Очень приятно." },
+        { "q": "I always buy bread and milk.", "answer": "Я всегда покупаю хлеб и молоко." },
+        { "q": "I have a big family, but little money.", "answer": "У меня большая семья, но мало денег." },
+        { "q": "How much does this cost? — Fifty rubles.", "answer": "Сколько это стоит? — Пятьдесят рублей." },
+        { "q": "How old are you? — I'm thirty.", "answer": "Сколько тебе лет? — Мне тридцать." },
+        { "q": "I never work on the weekend.", "answer": "Я никогда не работаю в выходные." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["стоит", "хлеб", "сколько"],
+      "answer": "Сколько стоит хлеб?"
+    }
+  ],
+
+  "speakingTask": {
+    "prompt": "Roleplay a market visit, out loud, as if to a real shopkeeper. Cover all four: (1) greet them and ask what they have — «У вас есть...?», (2) ask the price of at least two items — «Сколько стоит...?», (3) react to a price and ask for a quantity — «Дайте, пожалуйста, два...» or similar, (4) somewhere in the conversation, mention your age naturally, the way it might come up in small talk.",
+    "targetSeconds": 90,
+    "rubric": [
+      "Greeted naturally and asked if the shop has something specific",
+      "Asked at least two prices using сколько стоит",
+      "Reacted to a price (дорого/дёшево) at least once",
+      "Used a number + noun correctly (watch the 1/2-4/5+ endings)",
+      "Mentioned age using мне ... лет",
+      "Whole exchange held together as one continuous conversation, not disconnected sentences"
+    ]
+  }
+}

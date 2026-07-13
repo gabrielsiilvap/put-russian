@@ -1,0 +1,143 @@
+{
+  "day": 16,
+  "week": 3,
+  "theme": "Having & not having (genitive)",
+  "function": "Ask if someone has something, formally.",
+  "canDo": "I can ask if someone has something and say what I don't have.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "У вас есть...? — the shop question",
+    "explanation": "**У вас есть...?** is the single most useful phrase for any shop, market, or pharmacy: \"Do you have...?\" (formal/plural — вы, genitive of вы is **вас**). It's the exact same pattern as **у тебя есть**, just with вас instead of тебя.\n\n**У вас есть хлеб?** works whether you're asking one shopkeeper or a whole counter of them.",
+    "examples": [
+      { "ru": "У вас есть хлеб?", "en": "Do you have bread?" },
+      { "ru": "У вас есть свежий хлеб?", "en": "Do you have fresh bread?" },
+      { "ru": "У вас есть размер...?", "en": "Do you have the size...?" },
+      { "ru": "Да, есть. Вот, пожалуйста.", "en": "Yes, we do. Here you go." }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0319", "ru": "магазин", "en": "shop, store", "pos": "noun", "gender": "m", "example": { "ru": "Магазин здесь.", "en": "The shop is here." } },
+    { "id": "w0320", "ru": "продавец", "en": "salesperson", "pos": "noun", "gender": "m", "example": { "ru": "Продавец отвечает.", "en": "The salesperson answers." } },
+    { "id": "w0321", "ru": "касса", "en": "checkout, cash register", "pos": "noun", "gender": "f", "example": { "ru": "Касса там.", "en": "The checkout is there." } },
+    { "id": "w0322", "ru": "чек", "en": "receipt", "pos": "noun", "gender": "m", "example": { "ru": "Вот чек.", "en": "Here's the receipt." } },
+    { "id": "w0323", "ru": "пакет", "en": "bag, package", "pos": "noun", "gender": "m", "example": { "ru": "У вас есть пакет?", "en": "Do you have a bag?" } },
+    { "id": "w0324", "ru": "очередь", "en": "line, queue", "pos": "noun", "gender": "f", "example": { "ru": "Большая очередь.", "en": "A big line." } },
+    { "id": "w0325", "ru": "рынок", "en": "market", "pos": "noun", "gender": "m", "example": { "ru": "Рынок здесь.", "en": "The market is here." } },
+    { "id": "w0326", "ru": "аптека", "en": "pharmacy", "pos": "noun", "gender": "f", "example": { "ru": "Где аптека?", "en": "Where's the pharmacy?" } },
+    { "id": "w0327", "ru": "лекарство", "en": "medicine", "pos": "noun", "gender": "n", "example": { "ru": "У вас есть лекарство?", "en": "Do you have medicine?" } },
+    { "id": "w0328", "ru": "размер", "en": "size", "pos": "noun", "gender": "m", "example": { "ru": "Размер здесь.", "en": "The size is here." } },
+    { "id": "w0329", "ru": "цвет", "en": "color", "pos": "noun", "gender": "m", "example": { "ru": "Хороший цвет.", "en": "A good color." } },
+    { "id": "w0330", "ru": "свежий", "en": "fresh", "pos": "adj", "example": { "ru": "Свежий хлеб.", "en": "Fresh bread." } },
+    { "id": "w0331", "ru": "дешёвый", "en": "cheap", "pos": "adj", "example": { "ru": "Дешёвый билет.", "en": "A cheap ticket." } },
+    { "id": "w0332", "ru": "дорогой", "en": "expensive", "pos": "adj", "example": { "ru": "Дорогой телефон.", "en": "An expensive phone." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "At the shop",
+      "lines": [
+        { "speaker": "A", "ru": "Здравствуйте! У вас есть свежий хлеб?", "en": "Hello! Do you have fresh bread?" },
+        { "speaker": "B", "ru": "Да, есть. Вот, пожалуйста.", "en": "Yes, we do. Here you go." },
+        { "speaker": "A", "ru": "Спасибо! А у вас есть пакет?", "en": "Thank you! And do you have a bag?" },
+        { "speaker": "B", "ru": "Да, конечно. Вот чек и пакет.", "en": "Yes, of course. Here's the receipt and bag." }
+      ]
+    },
+    {
+      "title": "At the pharmacy",
+      "lines": [
+        { "speaker": "A", "ru": "Извините, у вас есть лекарство?", "en": "Excuse me, do you have medicine?" },
+        { "speaker": "B", "ru": "Да, есть. Но большая очередь.", "en": "Yes, we do. But there's a big line." },
+        { "speaker": "A", "ru": "Ничего! Всё хорошо.", "en": "No problem! It's all good." }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, does the shop have fresh bread?", "type": "understand", "answer": "yes", "acceptable": ["да", "yes"] },
+    { "q": "In dialogue 2, why might there be a wait?", "type": "understand", "answer": "a big line", "acceptable": ["большая очередь", "big line", "queue"] },
+    { "q": "Ask, formally, if a shop has fresh bread.", "type": "produce", "answer": "У вас есть свежий хлеб?", "acceptable": ["у вас есть свежий хлеб", "у вас есть хлеб"] },
+    { "q": "Ask for a bag.", "type": "produce", "answer": "У вас есть пакет?", "acceptable": ["у вас есть пакет"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning.",
+      "items": [
+        { "left": "магазин", "right": "shop" },
+        { "left": "касса", "right": "checkout" },
+        { "left": "очередь", "right": "line, queue" },
+        { "left": "дешёвый", "right": "cheap" },
+        { "left": "дорогой", "right": "expensive" }
+      ]
+    },
+    {
+      "type": "fill",
+      "prompt": "Fill in the blank.",
+      "items": [
+        { "q": "___ вас есть хлеб? (do you have)", "answer": "У" },
+        { "q": "У вас есть ___? (bag)", "answer": "пакет" }
+      ]
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "Do you have bread?", "answer": "У вас есть хлеб?" },
+        { "q": "Do you have a bag?", "answer": "У вас есть пакет?" },
+        { "q": "A cheap ticket.", "answer": "Дешёвый билет." },
+        { "q": "An expensive phone.", "answer": "Дорогой телефон." },
+        { "q": "Here's the receipt.", "answer": "Вот чек." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["хлеб", "вас", "есть", "у"],
+      "answer": "У вас есть хлеб?"
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "Excuse me, do you have medicine?", "answer": "Извините, у вас есть лекарство?" },
+      { "en": "Do you have a receipt?", "answer": "У вас есть чек?" },
+      { "en": "A big line at the shop.", "answer": "Большая очередь в магазине.", "acceptable": ["большая очередь магазин"] },
+      { "en": "A good color.", "answer": "Хороший цвет." },
+      { "en": "Fresh bread, please.", "answer": "Свежий хлеб, пожалуйста." }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 questions you could ask at a shop, market, or pharmacy using «У вас есть...?».",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 4-5 sentences: describe a shop visit — greet, ask if they have something, thank them.",
+      "minSentences": 4,
+      "modelAnswer": "Здравствуйте! У вас есть свежий хлеб и молоко? Да? Отлично. А у вас есть пакет? Спасибо большое!"
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Ask a real shopkeeper «У вас есть...?» for something you actually want.",
+      "Ask for a bag or receipt using today's words."
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "Do you have bread?", "back": "У вас есть хлеб?" },
+    { "type": "production", "front": "Do you have a bag?", "back": "У вас есть пакет?" },
+    { "type": "production", "front": "Do you have medicine?", "back": "У вас есть лекарство?" },
+    { "type": "production", "front": "Here's the receipt.", "back": "Вот чек." },
+    { "type": "production", "front": "A cheap ticket.", "back": "Дешёвый билет." },
+    { "type": "production", "front": "An expensive phone.", "back": "Дорогой телефон." },
+    { "type": "cloze", "front": "___ вас есть хлеб? (do you have — formal)", "back": "У вас есть хлеб?" },
+    { "type": "listening", "front": "[audio] У вас есть свежий хлеб?", "back": "У вас есть свежий хлеб?" },
+    { "type": "listening", "front": "[audio] Большая очередь.", "back": "Большая очередь." }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "day": 8,
+  "week": 2,
+  "theme": "Doing things / daily life (accusative)",
+  "function": "Talk about objects you act on.",
+  "canDo": "I can talk about my daily activities and what I like.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "The accusative case: the object of an action",
+    "explanation": "The accusative marks the thing an action is done **to** — what you watch, read, open. For **masculine and neuter inanimate nouns**, accusative looks exactly like the dictionary form: **я смотрю́ телеви́зор** (television doesn't change). For **feminine nouns ending in -а/-я**, the ending becomes **-у/-ю**: **газе́та → Я чита́ю газе́ту** (newspaper → I read a newspaper).\n\nYou already did this without knowing it — **Хочу́ во́ду** from Day 1 is exactly this rule (вода́ → во́ду).",
+    "examples": [
+      { "ru": "Я смотрю́ телеви́зор.", "en": "I watch television.", "note": "masc., unchanged" },
+      { "ru": "Я чита́ю газе́ту.", "en": "I read a newspaper.", "note": "fem. -а → -у" },
+      { "ru": "Я открыва́ю окно́.", "en": "I open the window.", "note": "neut., unchanged" },
+      { "ru": "Ты берёшь кни́гу?", "en": "Are you taking the book?", "note": "fem. -а → -у" }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0204", "ru": "телевизор", "en": "television", "pos": "noun", "gender": "m", "example": { "ru": "Я смотрю телевизор.", "en": "I watch television." } },
+    { "id": "w0205", "ru": "журнал", "en": "magazine", "pos": "noun", "gender": "m", "example": { "ru": "Ты читаешь журнал?", "en": "Are you reading a magazine?" } },
+    { "id": "w0206", "ru": "компьютер", "en": "computer", "pos": "noun", "gender": "m", "example": { "ru": "Я работаю за компьютером.", "en": "I work at the computer." } },
+    { "id": "w0207", "ru": "стол", "en": "table", "pos": "noun", "gender": "m", "example": { "ru": "Книга на столе.", "en": "The book is on the table." } },
+    { "id": "w0208", "ru": "дом", "en": "house / home", "pos": "noun", "gender": "m", "example": { "ru": "Дом здесь.", "en": "The house is here." } },
+    { "id": "w0209", "ru": "письмо", "en": "letter", "pos": "noun", "gender": "n", "example": { "ru": "Я пишу письмо.", "en": "I'm writing a letter." } },
+    { "id": "w0210", "ru": "окно", "en": "window", "pos": "noun", "gender": "n", "example": { "ru": "Я открываю окно.", "en": "I open the window." } },
+    { "id": "w0211", "ru": "радио", "en": "radio", "pos": "noun", "gender": "n", "note": "doesn't change by case or number", "example": { "ru": "Я слушаю радио.", "en": "I listen to the radio." } },
+    { "id": "w0212", "ru": "газета", "en": "newspaper", "pos": "noun", "gender": "f", "note": "accusative: газету", "example": { "ru": "Я читаю газету.", "en": "I read a newspaper." } },
+    { "id": "w0213", "ru": "картина", "en": "picture, painting", "pos": "noun", "gender": "f", "note": "accusative: картину", "example": { "ru": "Ты смотришь картину?", "en": "Are you looking at the picture?" } },
+    { "id": "w0214", "ru": "работа", "en": "work, job", "pos": "noun", "gender": "f", "note": "accusative: работу", "example": { "ru": "Работа здесь.", "en": "The job is here." } },
+    { "id": "w0215", "ru": "история", "en": "story, history", "pos": "noun", "gender": "f", "note": "accusative: историю", "example": { "ru": "Это история.", "en": "This is a story." } },
+    { "id": "w0216", "ru": "открывать", "en": "to open", "pos": "verb", "aspectPartner": "открыть", "example": { "ru": "Можно открыть окно?", "en": "May I open the window?" } },
+    { "id": "w0217", "ru": "закрывать", "en": "to close", "pos": "verb", "aspectPartner": "закрыть", "example": { "ru": "Я закрываю письмо.", "en": "I'm sealing (closing) the letter." } },
+    { "id": "w0218", "ru": "брать", "en": "to take", "pos": "verb", "aspectPartner": "взять", "note": "беру, берёшь, берёт", "example": { "ru": "Ты берёшь книгу?", "en": "Are you taking the book?" } },
+    { "id": "w0219", "ru": "давать", "en": "to give", "pos": "verb", "aspectPartner": "дать", "note": "даю, даёшь, даёт", "example": { "ru": "Я даю тебе журнал.", "en": "I'm giving you the magazine." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "What are you doing?",
+      "lines": [
+        { "speaker": "A", "ru": "Что ты делаешь?", "en": "What are you doing?" },
+        { "speaker": "B", "ru": "Я смотрю телевизор. А ты?", "en": "I'm watching television. And you?" },
+        { "speaker": "A", "ru": "Я читаю газету и слушаю радио.", "en": "I'm reading a newspaper and listening to the radio." },
+        { "speaker": "B", "ru": "Интересно! Можно взять журнал?", "en": "Interesting! May I take the magazine?" },
+        { "speaker": "A", "ru": "Да, конечно. Вот, пожалуйста.", "en": "Yes, of course. Here you go." }
+      ],
+      "glossWords": [ { "ru": "вот", "en": "here you go" } ]
+    },
+    {
+      "title": "At home",
+      "lines": [
+        { "speaker": "A", "ru": "Можно открыть окно? Хочу слушать город.", "en": "May I open the window? I want to listen to the city." },
+        { "speaker": "B", "ru": "Да, можно! А я хочу читать книгу.", "en": "Yes, go ahead! And I want to read a book." },
+        { "speaker": "A", "ru": "Интересно?", "en": "Is it interesting?" },
+        { "speaker": "B", "ru": "Да, очень! Но это трудно.", "en": "Yes, very! But it's difficult." }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, what two things is speaker A doing?", "type": "understand", "answer": "reading a newspaper and listening to the radio", "acceptable": ["читает газету и слушает радио", "reading newspaper, listening radio"] },
+    { "q": "In dialogue 2, what does speaker B want to do?", "type": "understand", "answer": "read a book", "acceptable": ["читать книгу", "read a book"] },
+    { "q": "Say you're watching television.", "type": "produce", "answer": "Я смотрю телевизор.", "acceptable": ["смотрю телевизор"] },
+    { "q": "Ask if you may open the window.", "type": "produce", "answer": "Можно открыть окно?", "acceptable": ["можно открыть окно"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "fill",
+      "prompt": "Put the noun into the accusative.",
+      "items": [
+        { "q": "Я читаю ___. (газета)", "answer": "газету" },
+        { "q": "Ты смотришь ___. (картина)", "answer": "картину" },
+        { "q": "Я слушаю ___. (радио — no change)", "answer": "радио" },
+        { "q": "Мы открываем ___. (окно — no change)", "answer": "окно" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "Which sentence is correct for \"I'm reading a magazine\"?",
+      "options": ["Я читаю журнал.", "Я читаю журналу.", "Я читаю журнала."],
+      "answer": "Я читаю журнал."
+    },
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning.",
+      "items": [
+        { "left": "открывать", "right": "to open" },
+        { "left": "закрывать", "right": "to close" },
+        { "left": "брать", "right": "to take" },
+        { "left": "давать", "right": "to give" },
+        { "left": "история", "right": "story" }
+      ]
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "I watch television.", "answer": "Я смотрю телевизор." },
+        { "q": "I read a newspaper.", "answer": "Я читаю газету." },
+        { "q": "May I open the window?", "answer": "Можно открыть окно?" },
+        { "q": "Are you taking the book?", "answer": "Ты берёшь книгу?" },
+        { "q": "I'm giving you the magazine.", "answer": "Я даю тебе журнал." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["газету", "читаю", "я"],
+      "answer": "Я читаю газету."
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "I'm watching a film. (film, accusative — no change)", "answer": "Я смотрю фильм." },
+      { "en": "She's reading a book.", "answer": "Она читает книгу." },
+      { "en": "We're listening to music.", "answer": "Мы слушаем музыку." },
+      { "en": "May I take the newspaper?", "answer": "Можно взять газету?" },
+      { "en": "I'm opening the letter.", "answer": "Я открываю письмо." }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences with an action verb + an object in the accusative (смотрю/читаю/слушаю/беру + noun).",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 4 sentences about a typical evening at home: what you watch, read, or listen to.",
+      "minSentences": 4,
+      "modelAnswer": "Вечером я обычно смотрю телевизор. Иногда я читаю книгу или журнал. Я люблю слушать музыку. А ты? Что ты делаешь вечером?"
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Say what you're doing right now using смотрю / читаю / слушаю + an object.",
+      "Ask someone «Можно взять...?» for something small."
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "I watch television.", "back": "Я смотрю телевизор." },
+    { "type": "production", "front": "I read a newspaper.", "back": "Я читаю газету." },
+    { "type": "production", "front": "May I open the window?", "back": "Можно открыть окно?" },
+    { "type": "production", "front": "Are you taking the book?", "back": "Ты берёшь книгу?" },
+    { "type": "production", "front": "I'm giving you the magazine.", "back": "Я даю тебе журнал." },
+    { "type": "production", "front": "I listen to the radio.", "back": "Я слушаю радио." },
+    { "type": "cloze", "front": "Я читаю ___. (newspaper, accusative)", "back": "Я читаю газету." },
+    { "type": "cloze", "front": "Ты смотришь ___? (picture, accusative)", "back": "Ты смотришь картину?" },
+    { "type": "listening", "front": "[audio] Можно открыть окно?", "back": "Можно открыть окно?" },
+    { "type": "listening", "front": "[audio] Я читаю газету и слушаю радио.", "back": "Я читаю газету и слушаю радио." }
+  ]
+}

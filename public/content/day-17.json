@@ -1,0 +1,153 @@
+{
+  "day": 17,
+  "week": 3,
+  "theme": "Having & not having (genitive)",
+  "function": "Say what you don't have or don't want.",
+  "canDo": "I can ask if someone has something and say what I don't have.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "У меня нет...: the genitive shows up for real",
+    "explanation": "**Нет** (there isn't) + a noun in the **genitive** is how you say you don't have something: **У меня́ нет вре́мени** — I don't have time. Unlike «есть» sentences (object stays nominative), «нет» sentences always put the object in the genitive.\n\nEndings: masculine adds **-а/-я** (сыр → сы́ра), neuter changes **-о/-е → -а/-я** (молоко́ → молока́), feminine changes **-а/-я → -ы/-и** (вода́ → воды́).",
+    "examples": [
+      { "ru": "У меня́ нет вре́мени.", "en": "I don't have time.", "note": "время → времени (irregular-ish neuter)" },
+      { "ru": "У меня́ нет молока́.", "en": "I don't have milk.", "note": "молоко → молока" },
+      { "ru": "У тебя́ нет маши́ны?", "en": "You don't have a car?", "note": "машина → машины" },
+      { "ru": "У нас нет сы́ра, но есть хлеб.", "en": "We don't have cheese, but we have bread.", "note": "у нас — same pattern, мы → нас" }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0333", "ru": "совсем", "en": "completely, at all", "pos": "adv", "example": { "ru": "Совсем нет!", "en": "Not at all!" } },
+    { "id": "w0334", "ru": "уже", "en": "already", "pos": "adv", "example": { "ru": "Я уже знаю.", "en": "I already know." } },
+    { "id": "w0335", "ru": "ещё", "en": "still, yet, more", "pos": "adv", "example": { "ru": "Ещё есть время.", "en": "There's still time." } },
+    { "id": "w0336", "ru": "сахар", "en": "sugar", "pos": "noun", "gender": "m", "note": "genitive: сахара", "example": { "ru": "У меня нет сахара.", "en": "I don't have sugar." } },
+    { "id": "w0337", "ru": "масло", "en": "butter, oil", "pos": "noun", "gender": "n", "note": "genitive: масла", "example": { "ru": "У вас есть масло?", "en": "Do you have butter?" } },
+    { "id": "w0338", "ru": "сыр", "en": "cheese", "pos": "noun", "gender": "m", "note": "genitive: сыра", "example": { "ru": "У меня нет сыра.", "en": "I don't have cheese." } },
+    { "id": "w0339", "ru": "перец", "en": "pepper", "pos": "noun", "gender": "m", "note": "genitive: перца", "example": { "ru": "У вас есть перец?", "en": "Do you have pepper?" } },
+    { "id": "w0340", "ru": "наконец", "en": "finally", "pos": "adv", "example": { "ru": "Наконец!", "en": "Finally!" } },
+    { "id": "w0341", "ru": "жаль", "en": "a pity, too bad", "pos": "particle", "example": { "ru": "Жаль!", "en": "What a shame!" } },
+    { "id": "w0342", "ru": "конец", "en": "end", "pos": "noun", "gender": "m", "example": { "ru": "Это конец.", "en": "This is the end." } },
+    { "id": "w0343", "ru": "начало", "en": "beginning", "pos": "noun", "gender": "n", "example": { "ru": "Хорошее начало!", "en": "A good beginning!" } },
+    { "id": "w0344", "ru": "дальше", "en": "further, next", "pos": "adv", "example": { "ru": "Что дальше?", "en": "What's next?" } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "In the kitchen",
+      "lines": [
+        { "speaker": "A", "ru": "У нас есть хлеб и масло. А сыр?", "en": "We have bread and butter. And cheese?" },
+        { "speaker": "B", "ru": "Сыра нет. И сахара тоже нет.", "en": "No cheese. And no sugar either." },
+        { "speaker": "A", "ru": "Жаль! А молоко есть?", "en": "What a shame! Is there milk?" },
+        { "speaker": "B", "ru": "Да, молоко ещё есть.", "en": "Yes, there's still milk." }
+      ],
+      "glossWords": [ { "ru": "у нас", "en": "we have (same pattern as у меня)" } ]
+    },
+    {
+      "title": "Almost ready",
+      "lines": [
+        { "speaker": "A", "ru": "У тебя есть время сейчас?", "en": "Do you have time now?" },
+        { "speaker": "B", "ru": "Совсем нет времени! Но скоро.", "en": "No time at all! But soon." },
+        { "speaker": "A", "ru": "Хорошо, я понимаю.", "en": "Okay, I understand." }
+      ],
+      "glossWords": [ { "ru": "скоро", "en": "soon" } ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, what two things are missing from the kitchen?", "type": "understand", "answer": "cheese and sugar", "acceptable": ["сыр и сахар", "cheese, sugar"] },
+    { "q": "In dialogue 1, is there still milk?", "type": "understand", "answer": "yes", "acceptable": ["да", "yes"] },
+    { "q": "Say you don't have time.", "type": "produce", "answer": "У меня нет времени.", "acceptable": ["у меня нет времени"] },
+    { "q": "Say you don't have cheese.", "type": "produce", "answer": "У меня нет сыра.", "acceptable": ["у меня нет сыра"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "fill",
+      "prompt": "Put the noun into the genitive after нет.",
+      "items": [
+        { "q": "У меня нет ___. (сахар)", "answer": "сахара" },
+        { "q": "У тебя нет ___. (машина)", "answer": "машины" },
+        { "q": "У нас нет ___. (молоко)", "answer": "молока" },
+        { "q": "У меня нет ___. (время)", "answer": "времени" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "\"I don't have money\" — which is correct?",
+      "options": ["У меня нет деньги.", "У меня нет денег.", "У меня не деньги."],
+      "answer": "У меня нет денег.",
+      "note": "деньги is plural-only, so its genitive plural (денег) is irregular — recognize it for now."
+    },
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning.",
+      "items": [
+        { "left": "уже", "right": "already" },
+        { "left": "ещё", "right": "still, yet" },
+        { "left": "совсем", "right": "completely, at all" },
+        { "left": "жаль", "right": "a pity" },
+        { "left": "наконец", "right": "finally" }
+      ]
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "I don't have sugar.", "answer": "У меня нет сахара." },
+        { "q": "Do you have cheese?", "answer": "У вас есть сыр?" },
+        { "q": "There's still time.", "answer": "Ещё есть время." },
+        { "q": "I already know.", "answer": "Я уже знаю." },
+        { "q": "Not at all!", "answer": "Совсем нет!" }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["времени", "у", "нет", "меня"],
+      "answer": "У меня нет времени."
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "I don't have a car, but I have a bicycle.", "answer": "У меня нет машины, но у меня есть велосипед." },
+      { "en": "We don't have cheese.", "answer": "У нас нет сыра." },
+      { "en": "Do you have butter?", "answer": "У вас есть масло?" },
+      { "en": "There's still bread.", "answer": "Ещё есть хлеб." },
+      { "en": "What a shame, no time!", "answer": "Жаль, нет времени!" }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences: 3 saying what you don't have (У меня нет...), 2 saying what you do have.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 4-5 sentences about what's in your kitchen right now: what you have and what you don't.",
+      "minSentences": 4,
+      "modelAnswer": "У меня есть хлеб, масло и молоко. Но сыра нет. И сахара тоже нет. Жаль! Но у меня есть чай, и это хорошо."
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Tell someone «У меня нет...» about something real, today.",
+      "Ask a shopkeeper if they have something, and understand if the answer is «нет»."
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "I don't have time.", "back": "У меня нет времени." },
+    { "type": "production", "front": "I don't have cheese.", "back": "У меня нет сыра." },
+    { "type": "production", "front": "Do you have sugar?", "back": "У вас есть сахар?" },
+    { "type": "production", "front": "There's still milk.", "back": "Ещё есть молоко." },
+    { "type": "production", "front": "I already know.", "back": "Я уже знаю." },
+    { "type": "production", "front": "Not at all!", "back": "Совсем нет!" },
+    { "type": "cloze", "front": "У меня нет ___. (time, genitive)", "back": "У меня нет времени." },
+    { "type": "cloze", "front": "У тебя нет ___? (car, genitive)", "back": "У тебя нет машины?" },
+    { "type": "listening", "front": "[audio] У меня нет сахара.", "back": "У меня нет сахара." },
+    { "type": "listening", "front": "[audio] Ещё есть время.", "back": "Ещё есть время." }
+  ]
+}

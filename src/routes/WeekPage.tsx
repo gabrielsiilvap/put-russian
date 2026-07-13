@@ -40,10 +40,11 @@ export function WeekPage() {
         {days.map((d) => {
           const isDone = doneDays.has(d.day);
           const isCheckpoint = Boolean(d.test);
+          const href = isCheckpoint ? `/test/${d.test}` : `/day/${d.day}`;
           return (
             <Link
               key={d.day}
-              to={d.available ? `/day/${d.day}` : "#"}
+              to={d.available ? href : "#"}
               aria-disabled={!d.available}
               onClick={(e) => {
                 if (!d.available) e.preventDefault();

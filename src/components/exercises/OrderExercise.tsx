@@ -7,7 +7,9 @@ export function OrderExercise({ tokens, answer }: { tokens: string[]; answer: st
   const [checked, setChecked] = useState(false);
 
   const built = picked.map((i) => scrambled[i]).join(" ");
-  const ok = checked && normalize(built + ".") === normalize(answer);
+  // Tokens can never reproduce internal punctuation (commas, etc.), so strip
+  // all of it from the target answer too, not just the trailing period.
+  const ok = checked && normalize(built) === normalize(answer).replace(/[.,!?;:]/g, "").replace(/\s+/g, " ").trim();
 
   const pick = (i: number) => {
     if (picked.includes(i)) return;

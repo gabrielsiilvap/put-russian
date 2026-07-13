@@ -1,0 +1,144 @@
+{
+  "day": 19,
+  "week": 3,
+  "theme": "Having & not having (genitive)",
+  "function": "Talk about quantities: how much, how little.",
+  "canDo": "I can ask if someone has something and say what I don't have.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "Много / мало / сколько + genitive",
+    "explanation": "**Мно́го** (much, a lot), **ма́ло** (little, not enough), and **ско́лько** (how much) all work like **нет** — the noun that follows goes into the **genitive**: **мно́го вре́мени** (a lot of time), **ма́ло де́нег** (little money), **ско́лько са́хара?** (how much sugar?).\n\nFor now, stick to quantities of things you can't count one-by-one (time, money, bread, rice) — those use the genitive singular you already know. Counting actual items (много книг) needs a plural ending you'll get later.",
+    "examples": [
+      { "ru": "У меня́ мно́го вре́мени сего́дня.", "en": "I have a lot of time today." },
+      { "ru": "У нас ма́ло са́хара.", "en": "We have little sugar." },
+      { "ru": "Ско́лько молока́ у тебя́?", "en": "How much milk do you have?" },
+      { "ru": "Доста́точно хле́ба.", "en": "Enough bread." }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0359", "ru": "много", "en": "much, a lot, many", "pos": "adv", "example": { "ru": "Много времени.", "en": "A lot of time." } },
+    { "id": "w0360", "ru": "мало", "en": "little, not enough", "pos": "adv", "example": { "ru": "Мало денег.", "en": "Little money." } },
+    { "id": "w0361", "ru": "столько", "en": "so much, so many", "pos": "adv", "example": { "ru": "Столько работы!", "en": "So much work!" } },
+    { "id": "w0362", "ru": "сколько", "en": "how much, how many", "pos": "adv", "example": { "ru": "Сколько времени у тебя?", "en": "How much time do you have?" } },
+    { "id": "w0363", "ru": "достаточно", "en": "enough", "pos": "adv", "example": { "ru": "Достаточно хлеба.", "en": "Enough bread." } },
+    { "id": "w0364", "ru": "соль", "en": "salt", "pos": "noun", "gender": "f", "example": { "ru": "У вас есть соль?", "en": "Do you have salt?" } },
+    { "id": "w0365", "ru": "рис", "en": "rice", "pos": "noun", "gender": "m", "note": "genitive: риса", "example": { "ru": "Много риса.", "en": "A lot of rice." } },
+    { "id": "w0366", "ru": "картошка", "en": "potato", "pos": "noun", "gender": "f", "example": { "ru": "У нас есть картошка.", "en": "We have potatoes." } },
+    { "id": "w0367", "ru": "лук", "en": "onion", "pos": "noun", "gender": "m", "note": "genitive: лука", "example": { "ru": "Мало лука.", "en": "Not much onion." } },
+    { "id": "w0368", "ru": "овощи", "en": "vegetables", "pos": "noun", "gender": "pl", "example": { "ru": "Овощи здесь.", "en": "The vegetables are here." } },
+    { "id": "w0369", "ru": "фрукты", "en": "fruits", "pos": "noun", "gender": "pl", "example": { "ru": "Я люблю фрукты.", "en": "I love fruits." } },
+    { "id": "w0370", "ru": "литр", "en": "liter", "pos": "noun", "gender": "m", "example": { "ru": "Один литр молока.", "en": "One liter of milk." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "How much time do you have?",
+      "lines": [
+        { "speaker": "A", "ru": "Сколько времени у тебя сегодня?", "en": "How much time do you have today?" },
+        { "speaker": "B", "ru": "Много! А у тебя?", "en": "A lot! And you?" },
+        { "speaker": "A", "ru": "Мало. Очень много работы.", "en": "Not much. So much work." },
+        { "speaker": "B", "ru": "Жаль! Может быть, завтра.", "en": "What a shame! Maybe tomorrow." }
+      ]
+    },
+    {
+      "title": "Cooking",
+      "lines": [
+        { "speaker": "A", "ru": "У нас есть рис и картошка. А лук?", "en": "We have rice and potatoes. And onion?" },
+        { "speaker": "B", "ru": "Мало лука, но достаточно соли.", "en": "Not much onion, but enough salt." },
+        { "speaker": "A", "ru": "Хорошо. А сколько молока?", "en": "Good. And how much milk?" },
+        { "speaker": "B", "ru": "Один литр. Достаточно!", "en": "One liter. Enough!" }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, how much time does speaker A have?", "type": "understand", "answer": "not much / little", "acceptable": ["мало", "not much", "little"] },
+    { "q": "In dialogue 2, is there enough onion?", "type": "understand", "answer": "no, not much", "acceptable": ["мало лука", "no", "not much"] },
+    { "q": "Ask someone how much time they have.", "type": "produce", "answer": "Сколько времени у тебя?", "acceptable": ["сколько времени у тебя"] },
+    { "q": "Say you have a lot of work.", "type": "produce", "answer": "У меня много работы.", "acceptable": ["у меня много работы"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "fill",
+      "prompt": "Put the noun into the genitive after много/мало/сколько.",
+      "items": [
+        { "q": "Много ___. (время)", "answer": "времени" },
+        { "q": "Мало ___. (сахар)", "answer": "сахара" },
+        { "q": "Сколько ___? (молоко)", "answer": "молока" },
+        { "q": "Достаточно ___. (хлеб)", "answer": "хлеба" }
+      ]
+    },
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning.",
+      "items": [
+        { "left": "много", "right": "a lot, much" },
+        { "left": "мало", "right": "little, not enough" },
+        { "left": "сколько", "right": "how much" },
+        { "left": "достаточно", "right": "enough" },
+        { "left": "столько", "right": "so much" }
+      ]
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "A lot of time.", "answer": "Много времени." },
+        { "q": "Little money.", "answer": "Мало денег." },
+        { "q": "How much sugar?", "answer": "Сколько сахара?" },
+        { "q": "Enough bread.", "answer": "Достаточно хлеба." },
+        { "q": "So much work!", "answer": "Столько работы!" }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["времени", "много", "у", "меня"],
+      "answer": "У меня много времени."
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "I have a lot of work today.", "answer": "У меня много работы сегодня." },
+      { "en": "We have little money.", "answer": "У нас мало денег." },
+      { "en": "How much rice do you have?", "answer": "Сколько риса у тебя?" },
+      { "en": "Enough salt, but not much onion.", "answer": "Достаточно соли, но мало лука." },
+      { "en": "One liter of milk.", "answer": "Один литр молока." }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences using много/мало/сколько/достаточно + a noun in the genitive.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 4-5 sentences about quantities in your kitchen or your day: what you have a lot of, what you have little of.",
+      "minSentences": 4,
+      "modelAnswer": "У меня много хлеба и молока. Но мало сахара и лука. Сегодня много работы, но у меня достаточно времени. Сколько у тебя времени?"
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Ask someone «Сколько...?» about something real (time, money, work).",
+      "Say «У меня много...» or «У меня мало...» about something true today."
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "A lot of time.", "back": "Много времени." },
+    { "type": "production", "front": "Little money.", "back": "Мало денег." },
+    { "type": "production", "front": "How much sugar?", "back": "Сколько сахара?" },
+    { "type": "production", "front": "Enough bread.", "back": "Достаточно хлеба." },
+    { "type": "production", "front": "I have a lot of work today.", "back": "У меня много работы сегодня." },
+    { "type": "cloze", "front": "Много ___. (time, genitive)", "back": "Много времени." },
+    { "type": "cloze", "front": "Сколько ___? (milk, genitive)", "back": "Сколько молока?" },
+    { "type": "listening", "front": "[audio] Сколько времени у тебя?", "back": "Сколько времени у тебя?" },
+    { "type": "listening", "front": "[audio] У нас мало сахара.", "back": "У нас мало сахара." }
+  ]
+}

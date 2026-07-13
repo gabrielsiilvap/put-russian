@@ -1,0 +1,68 @@
+{
+  "id": "test-02",
+  "week": 2,
+  "title": "Week 2 checkpoint",
+  "passThreshold": 0.8,
+  "isMajorMock": false,
+
+  "canDo": [
+    "Say what I'm doing using an object in the accusative (things).",
+    "Talk about people I see or meet using the animate accusative (-а/-я).",
+    "Describe my routine with утром/днём/вечером/ночью.",
+    "Say how often I do things with всегда/часто/иногда/редко/никогда."
+  ],
+
+  "exercises": [
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning.",
+      "items": [
+        { "left": "покупать", "right": "to buy" },
+        { "left": "встречать", "right": "to meet" },
+        { "left": "вставать", "right": "to get up" },
+        { "left": "всегда", "right": "always" },
+        { "left": "никогда", "right": "never" },
+        { "left": "иногда", "right": "sometimes" }
+      ]
+    },
+    {
+      "type": "fill",
+      "prompt": "Put the noun into the accusative.",
+      "items": [
+        { "q": "Я читаю ___. (газета)", "answer": "газету" },
+        { "q": "Я вижу ___. (брат — a person)", "answer": "брата" },
+        { "q": "Я покупаю ___. (хлеб — a thing)", "answer": "хлеб" },
+        { "q": "Я встречаю ___. (сестра)", "answer": "сестру" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "\"I see a friend\" — which is correct?",
+      "options": ["Я вижу друг.", "Я вижу друга.", "Я вижу другу."],
+      "answer": "Я вижу друга."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Which sentence correctly uses the double negative?",
+      "options": ["Я никогда ем мясо.", "Я никогда не ем мясо.", "Я не никогда ем мясо."],
+      "answer": "Я никогда не ем мясо."
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "I watch television in the evening.", "answer": "Вечером я смотрю телевизор." },
+        { "q": "I always get up early.", "answer": "Я всегда встаю рано." },
+        { "q": "I never eat meat.", "answer": "Я никогда не ем мясо." },
+        { "q": "Do you often meet (your) brother?", "answer": "Ты часто встречаешь брата?" },
+        { "q": "I'm buying bread and milk.", "answer": "Я покупаю хлеб и молоко." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["брата", "я", "вечером", "встречаю"],
+      "answer": "Вечером я встречаю брата."
+    }
+  ]
+}

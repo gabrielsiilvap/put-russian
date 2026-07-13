@@ -1,0 +1,159 @@
+{
+  "day": 5,
+  "week": 1,
+  "theme": "Survival present + \"I want\" + questions",
+  "function": "Full present-tense control: want, connect ideas with и / а / но.",
+  "canDo": "I can introduce myself, say what I want, and ask a simple question.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "Хоте́ть in full, and но vs а",
+    "explanation": "**Хоте́ть** (to want) is irregular — it switches conjugation halfway through: **хочу́, хо́чешь, хо́чет** (like a 1st-conjugation verb) but **хоти́м, хоти́те, хотя́т** (like a 2nd-conjugation verb). You already know хочу́ from Day 1 — now you have the whole set.\n\nYou know **и** (and, simple addition) and **а** (and/but, a soft contrast — \"I do X, and you do Y\"). **Но** is a *stronger* but — a real contradiction: **Я хочу́ чита́ть, но э́то тру́дно** — I want to read, but it's difficult.",
+    "examples": [
+      { "ru": "Мы хоти́м гуля́ть.", "en": "We want to walk.", "note": "хотим — 2nd-conj-style ending" },
+      { "ru": "Вы хоти́те чай?", "en": "Do you (formal) want tea?" },
+      { "ru": "Я чита́ю, а ты слу́шаешь.", "en": "I'm reading, and you're listening.", "note": "а — soft contrast" },
+      { "ru": "Я хочу́ чита́ть, но э́то тру́дно.", "en": "I want to read, but it's difficult.", "note": "но — real contradiction" }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0173", "ru": "но", "en": "but", "pos": "conj", "note": "stronger contrast than а", "example": { "ru": "Я хочу, но это трудно.", "en": "I want to, but it's difficult." } },
+    { "id": "w0174", "ru": "хотеть", "en": "to want", "pos": "verb", "note": "хочу, хочешь, хочет, хотим, хотите, хотят", "example": { "ru": "Мы хотим гулять.", "en": "We want to walk." } },
+    { "id": "w0175", "ru": "время", "en": "time", "pos": "noun", "gender": "n", "example": { "ru": "Время идёт быстро.", "en": "Time goes quickly." } },
+    { "id": "w0176", "ru": "день", "en": "day", "pos": "noun", "gender": "m", "example": { "ru": "Хороший день!", "en": "A good day!" } },
+    { "id": "w0177", "ru": "человек", "en": "person", "pos": "noun", "gender": "m", "example": { "ru": "Это интересный человек.", "en": "This is an interesting person." } },
+    { "id": "w0178", "ru": "вопрос", "en": "question", "pos": "noun", "gender": "m", "example": { "ru": "Это трудный вопрос.", "en": "This is a difficult question." } },
+    { "id": "w0179", "ru": "ответ", "en": "answer", "pos": "noun", "gender": "m", "example": { "ru": "Правильный ответ!", "en": "The right answer!" } },
+    { "id": "w0180", "ru": "слово", "en": "word", "pos": "noun", "gender": "n", "example": { "ru": "Новое слово.", "en": "A new word." } },
+    { "id": "w0181", "ru": "язык", "en": "language", "pos": "noun", "gender": "m", "example": { "ru": "Русский язык — трудно и интересно.", "en": "The Russian language — difficult and interesting." } },
+    { "id": "w0182", "ru": "жизнь", "en": "life", "pos": "noun", "gender": "f", "example": { "ru": "Это жизнь!", "en": "That's life!" } },
+    { "id": "w0183", "ru": "правда", "en": "truth / really?", "pos": "noun", "gender": "f", "note": "«Правда?» = \"Really?\"", "example": { "ru": "Правда? Это интересно!", "en": "Really? That's interesting!" } },
+    { "id": "w0184", "ru": "конечно", "en": "of course", "pos": "adv", "example": { "ru": "Да, конечно!", "en": "Yes, of course!" } },
+    { "id": "w0185", "ru": "наверное", "en": "probably", "pos": "adv", "example": { "ru": "Наверное, да.", "en": "Probably, yes." } },
+    { "id": "w0186", "ru": "обычно", "en": "usually", "pos": "adv", "example": { "ru": "Я обычно читаю вечером.", "en": "I usually read in the evening." } },
+    { "id": "w0187", "ru": "новый", "en": "new", "pos": "adj", "example": { "ru": "Новый вопрос.", "en": "A new question." } },
+    { "id": "w0188", "ru": "правильный", "en": "correct, right", "pos": "adj", "example": { "ru": "Правильный ответ.", "en": "The correct answer." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "What do you want?",
+      "lines": [
+        { "speaker": "A", "ru": "Что ты хочешь?", "en": "What do you want?" },
+        { "speaker": "B", "ru": "Я хочу воду. А ты?", "en": "I want water. And you?" },
+        { "speaker": "A", "ru": "Мы хотим гулять. Хочешь вместе?", "en": "We want to walk. Want to come along?" },
+        { "speaker": "B", "ru": "Да, конечно!", "en": "Yes, of course!" }
+      ]
+    },
+    {
+      "title": "A question",
+      "lines": [
+        { "speaker": "A", "ru": "Я хочу спросить. Можно?", "en": "I want to ask. May I?" },
+        { "speaker": "B", "ru": "Да, можно! Отвечаю.", "en": "Yes, go ahead! I'm listening (lit. answering)." },
+        { "speaker": "A", "ru": "Ты хочешь читать книги по-русски?", "en": "Do you want to read books in Russian?" },
+        { "speaker": "B", "ru": "Да, но это трудно.", "en": "Yes, but it's difficult." },
+        { "speaker": "A", "ru": "Правда? Но это интересно!", "en": "Really? But it's interesting!" },
+        { "speaker": "B", "ru": "Да, конечно.", "en": "Yes, of course." }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, what does speaker A want to do?", "type": "understand", "answer": "walk", "acceptable": ["гулять", "walk", "to walk"] },
+    { "q": "In dialogue 2, does speaker B think Russian books are easy?", "type": "understand", "answer": "no, difficult", "acceptable": ["нет, трудно", "no", "difficult", "трудно"] },
+    { "q": "Someone asks «Что ты хочешь?» — answer that you want to read.", "type": "produce", "answer": "Я хочу читать.", "acceptable": ["хочу читать"] },
+    { "q": "Say \"Yes, but it's difficult.\"", "type": "produce", "answer": "Да, но это трудно.", "acceptable": ["да но это трудно"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "fill",
+      "prompt": "Conjugate хотеть for the subject shown.",
+      "items": [
+        { "q": "Я ___ читать. (я)", "answer": "хочу" },
+        { "q": "Ты ___ гулять? (ты)", "answer": "хочешь" },
+        { "q": "Мы ___ говорить по-русски. (мы)", "answer": "хотим" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "Choose the right connector: «Я читаю, ___ это трудно» (a real contradiction).",
+      "options": ["и", "а", "но"],
+      "answer": "но"
+    },
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning.",
+      "items": [
+        { "left": "вопрос", "right": "question" },
+        { "left": "ответ", "right": "answer" },
+        { "left": "слово", "right": "word" },
+        { "left": "правда", "right": "truth / really?" },
+        { "left": "конечно", "right": "of course" }
+      ]
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "I want to read, but it's difficult.", "answer": "Я хочу читать, но это трудно." },
+        { "q": "We want to walk together.", "answer": "Мы хотим гулять вместе." },
+        { "q": "Do you want water?", "answer": "Ты хочешь воду?" },
+        { "q": "Really? That's interesting.", "answer": "Правда? Это интересно." },
+        { "q": "Yes, of course.", "answer": "Да, конечно." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["трудно", "но", "хочу", "я", "читать"],
+      "answer": "Я хочу читать, но трудно."
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "I want to ask a question.", "answer": "Я хочу спросить." },
+      { "en": "We want to speak Russian well.", "answer": "Мы хотим хорошо говорить по-русски." },
+      { "en": "A new word.", "answer": "Новое слово.", "acceptable": ["новый слово"] },
+      { "en": "The correct answer.", "answer": "Правильный ответ." },
+      { "en": "This is difficult, but interesting.", "answer": "Это трудно, но интересно." }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences using и, а, or но to connect two ideas.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 3–4 sentences about what you want to do today, using хочу and at least one connector (и/а/но).",
+      "minSentences": 3,
+      "modelAnswer": "Сегодня я хочу читать и слушать музыку. Я хочу говорить по-русски, но это трудно. Наверное, это нормально — я учусь."
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Say what you want using «Я хочу...» to someone today.",
+      "Ask someone a question and answer «Правда?» to something they say.",
+      "Use «но» once in a real sentence, even a simple one."
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "I want to read.", "back": "Я хочу читать." },
+    { "type": "production", "front": "We want to walk.", "back": "Мы хотим гулять." },
+    { "type": "production", "front": "Do you want water?", "back": "Ты хочешь воду?" },
+    { "type": "production", "front": "I want to, but it's difficult.", "back": "Я хочу, но это трудно." },
+    { "type": "production", "front": "Really?", "back": "Правда?" },
+    { "type": "production", "front": "Of course.", "back": "Конечно." },
+    { "type": "production", "front": "A new word.", "back": "Новое слово." },
+    { "type": "production", "front": "The correct answer.", "back": "Правильный ответ." },
+    { "type": "cloze", "front": "Мы ___ говорить по-русски. (want)", "back": "Мы хотим говорить по-русски." },
+    { "type": "cloze", "front": "Я хочу читать, ___ это трудно. (but)", "back": "Я хочу читать, но это трудно." },
+    { "type": "listening", "front": "[audio] Что ты хочешь?", "back": "Что ты хочешь?" },
+    { "type": "listening", "front": "[audio] Да, но это трудно.", "back": "Да, но это трудно." }
+  ]
+}

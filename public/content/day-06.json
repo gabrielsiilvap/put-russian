@@ -1,0 +1,128 @@
+{
+  "day": 6,
+  "week": 1,
+  "theme": "Survival present + \"I want\" + questions",
+  "function": "Consolidate the week: recycle, no new grammar.",
+  "canDo": "I can introduce myself, say what I want, and ask a simple question.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "Week 1 recap: no new grammar today",
+    "explanation": "No new grammar — today is about **speed and confidence** with what you already have. Run back through the present tense: **я/ты/мы** endings (-ю/-ешь/-ем or -ю/-ишь/-им), **хоте́ть**'s irregular pattern, and **кто/что/где/как/почему** for questions. If any of this still feels slow, that's exactly what today is for.",
+    "examples": [
+      { "ru": "Я хочу́ говори́ть по-ру́сски.", "en": "I want to speak Russian.", "note": "хочу + infinitive" },
+      { "ru": "Ты понима́ешь? Да, немно́го.", "en": "Do you understand? Yes, a little." },
+      { "ru": "Кто э́то? Э́то друг.", "en": "Who is this? This is a friend." },
+      { "ru": "Я чита́ю, но э́то тру́дно.", "en": "I'm reading, but it's difficult." }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0189", "ru": "здравствуйте", "en": "hello (formal)", "pos": "phrase", "example": { "ru": "Здравствуйте! Как дела?", "en": "Hello! How are you?" } },
+    { "id": "w0190", "ru": "спасибо", "en": "thank you", "pos": "phrase", "example": { "ru": "Спасибо большое!", "en": "Thank you very much!" } },
+    { "id": "w0191", "ru": "меня зовут", "en": "my name is", "pos": "phrase", "example": { "ru": "Меня зовут Габриэль.", "en": "My name is Gabriel." } },
+    { "id": "w0192", "ru": "жить", "en": "to live", "pos": "verb", "note": "живу, живёшь, живёт", "example": { "ru": "Я живу здесь.", "en": "I live here." } },
+    { "id": "w0193", "ru": "работать", "en": "to work", "pos": "verb", "example": { "ru": "Ты работаешь дома?", "en": "Do you work from home?" } },
+    { "id": "w0194", "ru": "понимать", "en": "to understand", "pos": "verb", "example": { "ru": "Я понимаю немного.", "en": "I understand a little." } },
+    { "id": "w0195", "ru": "кто", "en": "who", "pos": "pronoun", "example": { "ru": "Кто это?", "en": "Who is this?" } },
+    { "id": "w0196", "ru": "почему", "en": "why", "pos": "adv", "example": { "ru": "Почему нет?", "en": "Why not?" } },
+    { "id": "w0197", "ru": "можно", "en": "may I / is it okay", "pos": "particle", "example": { "ru": "Можно спросить?", "en": "May I ask?" } },
+    { "id": "w0198", "ru": "любить", "en": "to love / like", "pos": "verb", "note": "люблю, любишь, любит", "example": { "ru": "Я люблю читать.", "en": "I like to read." } },
+    { "id": "w0199", "ru": "слушать", "en": "to listen", "pos": "verb", "example": { "ru": "Я слушаю музыку.", "en": "I'm listening to music." } },
+    { "id": "w0200", "ru": "гулять", "en": "to walk / stroll", "pos": "verb", "example": { "ru": "Мы гуляем вместе.", "en": "We're walking together." } },
+    { "id": "w0201", "ru": "хотеть", "en": "to want", "pos": "verb", "note": "хочу, хочешь, хочет, хотим, хотите, хотят", "example": { "ru": "Что ты хочешь?", "en": "What do you want?" } },
+    { "id": "w0202", "ru": "но", "en": "but", "pos": "conj", "example": { "ru": "Легко, но интересно.", "en": "Easy, but interesting." } },
+    { "id": "w0203", "ru": "конечно", "en": "of course", "pos": "adv", "example": { "ru": "Да, конечно!", "en": "Yes, of course!" } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "A full first conversation",
+      "note": "Every word here came from this week. Read it once, then shadow it out loud.",
+      "lines": [
+        { "speaker": "A", "ru": "Здравствуйте! Меня зовут Анна. Как вас зовут?", "en": "Hello! My name is Anna. What's your name?" },
+        { "speaker": "B", "ru": "Здравствуйте! Меня зовут Габриэль. Очень приятно.", "en": "Hello! My name is Gabriel. Nice to meet you." },
+        { "speaker": "A", "ru": "Очень приятно! Вы говорите по-русски?", "en": "Nice to meet you! Do you speak Russian?" },
+        { "speaker": "B", "ru": "Немного. Я хочу говорить по-русски, но это трудно.", "en": "A little. I want to speak Russian, but it's difficult." },
+        { "speaker": "A", "ru": "Понимаю! А что вы любите делать?", "en": "I understand! And what do you like to do?" },
+        { "speaker": "B", "ru": "Я люблю читать и слушать музыку. А вы?", "en": "I like reading and listening to music. And you?" },
+        { "speaker": "A", "ru": "Я люблю гулять. Можно вместе?", "en": "I like walking. Can we go together?" },
+        { "speaker": "B", "ru": "Да, конечно! Спасибо.", "en": "Yes, of course! Thank you." }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "What does Gabriel say is difficult?", "type": "understand", "answer": "speaking Russian", "acceptable": ["говорить по-русски", "speaking russian", "russian"] },
+    { "q": "What does Anna like doing?", "type": "understand", "answer": "walking", "acceptable": ["гулять", "walking", "to walk"] },
+    { "q": "Introduce yourself in one sentence: name and one thing you like doing.", "type": "produce", "answer": "Меня зовут ..., я люблю ...", "acceptable": ["меня зовут"] },
+    { "q": "Say \"I want to speak Russian, but it's difficult.\"", "type": "produce", "answer": "Я хочу говорить по-русски, но это трудно.", "acceptable": ["хочу говорить по-русски но это трудно"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "fill",
+      "prompt": "Fill in the missing word from this week.",
+      "items": [
+        { "q": "Меня ___ Габриэль. (name is)", "answer": "зовут" },
+        { "q": "___ это? (who)", "answer": "Кто" },
+        { "q": "Я ___ читать, но это трудно. (want)", "answer": "хочу" },
+        { "q": "Мы ___ гулять вместе. (like)", "answer": "любим" }
+      ]
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian — mix words from the whole week.",
+      "items": [
+        { "q": "What is your name? — My name is ...", "answer": "Как вас зовут? — Меня зовут ..." },
+        { "q": "I understand a little.", "answer": "Я понимаю немного." },
+        { "q": "Do you like reading?", "answer": "Ты любишь читать?" },
+        { "q": "Yes, of course!", "answer": "Да, конечно!" },
+        { "q": "This is difficult, but interesting.", "answer": "Это трудно, но интересно." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["по-русски", "хочу", "говорить", "я"],
+      "answer": "Я хочу говорить по-русски."
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "Hello! My name is ... Nice to meet you.", "answer": "Здравствуйте! Меня зовут ... Очень приятно." },
+      { "en": "I want to speak Russian, but it's difficult.", "answer": "Я хочу говорить по-русски, но это трудно." },
+      { "en": "What do you like to do?", "answer": "Что ты любишь делать?" },
+      { "en": "I understand a little.", "answer": "Я понимаю немного." },
+      { "en": "Thank you very much!", "answer": "Спасибо большое!" }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences that could all appear in one real conversation: greet, give your name, say what you want or like, ask a question.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write your fullest self-introduction yet: greeting, name, what you want or like doing, and one question for the other person. Aim for 4+ sentences.",
+      "minSentences": 4,
+      "modelAnswer": "Здравствуйте! Меня зовут Габриэль. Я немного говорю по-русски, но я хочу говорить лучше. Я люблю читать и слушать музыку. А что вы любите делать?"
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Have one full exchange today: greet, name, one question, goodbye — start to finish.",
+      "Say one full sentence combining хочу and но, out loud, to a real person."
+    ],
+    "verification": "Did the conversation hold together start to finish? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "Hello! My name is ... Nice to meet you.", "back": "Здравствуйте! Меня зовут ... Очень приятно." },
+    { "type": "production", "front": "I want to speak Russian, but it's difficult.", "back": "Я хочу говорить по-русски, но это трудно." },
+    { "type": "production", "front": "What do you like to do?", "back": "Что ты любишь делать?" },
+    { "type": "production", "front": "I like reading and listening to music.", "back": "Я люблю читать и слушать музыку." },
+    { "type": "listening", "front": "[audio] Можно вместе?", "back": "Можно вместе?" }
+  ]
+}

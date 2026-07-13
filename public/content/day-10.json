@@ -1,0 +1,486 @@
+{
+  "day": 10,
+  "week": 2,
+  "theme": "Doing things / daily life (accusative)",
+  "function": "Describe your daily routine.",
+  "canDo": "I can talk about my daily activities and what I like.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+  "grammarPoint": {
+    "title": "Time of day, and your first -ся verbs",
+    "explanation": "**У́тром, днём, ве́чером, но́чью** — \"in the morning/afternoon/evening/at night\" — are fixed adverb forms. Just learn them as chunks for now.\n\nSome verbs end in **-ся** (просыпа́ться — to wake (oneself) up). They conjugate exactly like normal verbs, you just keep **-ся** (after a consonant) or **-сь** (after a vowel) stuck on the end: **я просыпа́юсь, ты просыпа́ешься**.",
+    "examples": [
+      {
+        "ru": "У́тром я просыпа́юсь ра́но.",
+        "en": "In the morning I wake up early.",
+        "note": "-ся stays attached"
+      },
+      {
+        "ru": "Днём я обе́даю.",
+        "en": "In the afternoon I have lunch."
+      },
+      {
+        "ru": "Ве́чером я ужина́ю и чита́ю.",
+        "en": "In the evening I have dinner and read."
+      },
+      {
+        "ru": "Снача́ла за́втрак, пото́м рабо́та.",
+        "en": "First breakfast, then work."
+      }
+    ]
+  },
+  "vocab": [
+    {
+      "id": "w0247",
+      "ru": "сегодня",
+      "en": "today",
+      "pos": "adv",
+      "example": {
+        "ru": "Что ты делаешь сегодня?",
+        "en": "What are you doing today?"
+      }
+    },
+    {
+      "id": "w0248",
+      "ru": "сейчас",
+      "en": "now",
+      "pos": "adv",
+      "example": {
+        "ru": "Я работаю сейчас.",
+        "en": "I'm working now."
+      }
+    },
+    {
+      "id": "w0249",
+      "ru": "утром",
+      "en": "in the morning",
+      "pos": "adv",
+      "example": {
+        "ru": "Утром я пью чай.",
+        "en": "In the morning I drink tea."
+      }
+    },
+    {
+      "id": "w0250",
+      "ru": "днём",
+      "en": "in the afternoon",
+      "pos": "adv",
+      "example": {
+        "ru": "Днём я работаю.",
+        "en": "In the afternoon I work."
+      }
+    },
+    {
+      "id": "w0251",
+      "ru": "вечером",
+      "en": "in the evening",
+      "pos": "adv",
+      "example": {
+        "ru": "Вечером я читаю.",
+        "en": "In the evening I read."
+      }
+    },
+    {
+      "id": "w0252",
+      "ru": "ночью",
+      "en": "at night",
+      "pos": "adv",
+      "example": {
+        "ru": "Ночью я сплю.",
+        "en": "At night I sleep."
+      }
+    },
+    {
+      "id": "w0253",
+      "ru": "вставать",
+      "en": "to get up",
+      "pos": "verb",
+      "aspectPartner": "встать",
+      "note": "встаю, встаёшь, встаёт",
+      "example": {
+        "ru": "Я встаю рано.",
+        "en": "I get up early."
+      }
+    },
+    {
+      "id": "w0254",
+      "ru": "просыпаться",
+      "en": "to wake up",
+      "pos": "verb",
+      "aspectPartner": "проснуться",
+      "note": "просыпаюсь, просыпаешься, просыпается",
+      "example": {
+        "ru": "Я просыпаюсь рано.",
+        "en": "I wake up early."
+      }
+    },
+    {
+      "id": "w0255",
+      "ru": "завтракать",
+      "en": "to have breakfast",
+      "pos": "verb",
+      "aspectPartner": "позавтракать",
+      "example": {
+        "ru": "Я завтракаю утром.",
+        "en": "I have breakfast in the morning."
+      }
+    },
+    {
+      "id": "w0256",
+      "ru": "обедать",
+      "en": "to have lunch",
+      "pos": "verb",
+      "aspectPartner": "пообедать",
+      "example": {
+        "ru": "Мы обедаем вместе.",
+        "en": "We have lunch together."
+      }
+    },
+    {
+      "id": "w0257",
+      "ru": "ужинать",
+      "en": "to have dinner",
+      "pos": "verb",
+      "aspectPartner": "поужинать",
+      "example": {
+        "ru": "Я ужинаю дома.",
+        "en": "I have dinner at home."
+      }
+    },
+    {
+      "id": "w0258",
+      "ru": "спать",
+      "en": "to sleep",
+      "pos": "verb",
+      "note": "сплю, спишь, спит",
+      "example": {
+        "ru": "Я хочу спать.",
+        "en": "I want to sleep."
+      }
+    },
+    {
+      "id": "w0259",
+      "ru": "ложиться",
+      "en": "to lie down, go to bed",
+      "pos": "verb",
+      "aspectPartner": "лечь",
+      "note": "ложусь, ложишься, ложится — also a -ся verb",
+      "example": {
+        "ru": "Я ложусь поздно.",
+        "en": "I go to bed late."
+      }
+    },
+    {
+      "id": "w0260",
+      "ru": "рано",
+      "en": "early",
+      "pos": "adv",
+      "example": {
+        "ru": "Я встаю рано.",
+        "en": "I get up early."
+      }
+    },
+    {
+      "id": "w0261",
+      "ru": "поздно",
+      "en": "late",
+      "pos": "adv",
+      "example": {
+        "ru": "Ты ложишься поздно?",
+        "en": "Do you go to bed late?"
+      }
+    },
+    {
+      "id": "w0262",
+      "ru": "потом",
+      "en": "then, afterward",
+      "pos": "adv",
+      "example": {
+        "ru": "Сначала работа, потом дом.",
+        "en": "First work, then home."
+      }
+    },
+    {
+      "id": "w0263",
+      "ru": "сначала",
+      "en": "at first, first",
+      "pos": "adv",
+      "example": {
+        "ru": "Сначала завтрак.",
+        "en": "First, breakfast."
+      }
+    },
+    {
+      "id": "w0264",
+      "ru": "завтрак",
+      "en": "breakfast",
+      "pos": "noun",
+      "gender": "m",
+      "example": {
+        "ru": "Хороший завтрак!",
+        "en": "A good breakfast!"
+      }
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "Your day",
+      "lines": [
+        {
+          "speaker": "A",
+          "ru": "Во сколько ты встаёшь?",
+          "en": "What time do you get up?"
+        },
+        {
+          "speaker": "B",
+          "ru": "Я встаю рано. Сначала завтрак, потом работа.",
+          "en": "I get up early. First breakfast, then work."
+        },
+        {
+          "speaker": "A",
+          "ru": "А вечером?",
+          "en": "And in the evening?"
+        },
+        {
+          "speaker": "B",
+          "ru": "Вечером я ужинаю и читаю. Потом сплю.",
+          "en": "In the evening I have dinner and read. Then I sleep."
+        }
+      ],
+      "glossWords": [
+        {
+          "ru": "во сколько",
+          "en": "at what time"
+        }
+      ]
+    },
+    {
+      "title": "Right now",
+      "lines": [
+        {
+          "speaker": "A",
+          "ru": "Что ты делаешь сейчас?",
+          "en": "What are you doing now?"
+        },
+        {
+          "speaker": "B",
+          "ru": "Сейчас я обедаю. А ты?",
+          "en": "Right now I'm having lunch. And you?"
+        },
+        {
+          "speaker": "A",
+          "ru": "Я тоже! Сегодня я обедаю поздно.",
+          "en": "Me too! Today I'm having lunch late."
+        }
+      ]
+    }
+  ],
+  "comprehension": [
+    {
+      "q": "In dialogue 1, what does speaker B do first in the morning?",
+      "type": "understand",
+      "answer": "breakfast",
+      "acceptable": [
+        "завтрак",
+        "breakfast",
+        "eats breakfast"
+      ]
+    },
+    {
+      "q": "In dialogue 2, is speaker A having lunch early or late today?",
+      "type": "understand",
+      "answer": "late",
+      "acceptable": [
+        "поздно",
+        "late"
+      ]
+    },
+    {
+      "q": "Say you get up early and go to sleep late.",
+      "type": "produce",
+      "answer": "Я встаю рано и ложусь поздно.",
+      "acceptable": [
+        "встаю рано",
+        "рано... поздно"
+      ]
+    },
+    {
+      "q": "Ask someone what they're doing right now.",
+      "type": "produce",
+      "answer": "Что ты делаешь сейчас?",
+      "acceptable": [
+        "что ты делаешь сейчас"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning.",
+      "items": [
+        {
+          "left": "утром",
+          "right": "in the morning"
+        },
+        {
+          "left": "вечером",
+          "right": "in the evening"
+        },
+        {
+          "left": "сначала",
+          "right": "at first"
+        },
+        {
+          "left": "потом",
+          "right": "then"
+        },
+        {
+          "left": "сейчас",
+          "right": "now"
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "prompt": "Conjugate the verb.",
+      "items": [
+        {
+          "q": "Я ___ рано. (вставать)",
+          "answer": "встаю"
+        },
+        {
+          "q": "Ты ___ поздно? (ложиться)",
+          "answer": "ложишься"
+        },
+        {
+          "q": "Мы ___ вместе. (обедать)",
+          "answer": "обедаем"
+        }
+      ]
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        {
+          "q": "I get up early.",
+          "answer": "Я встаю рано."
+        },
+        {
+          "q": "In the evening I have dinner and read.",
+          "answer": "Вечером я ужинаю и читаю."
+        },
+        {
+          "q": "What are you doing now?",
+          "answer": "Что ты делаешь сейчас?"
+        },
+        {
+          "q": "First breakfast, then work.",
+          "answer": "Сначала завтрак, потом работа."
+        },
+        {
+          "q": "I want to sleep.",
+          "answer": "Я хочу спать."
+        }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": [
+        "рано",
+        "встаю",
+        "я"
+      ],
+      "answer": "Я встаю рано."
+    }
+  ],
+  "writing": {
+    "translate": [
+      {
+        "en": "In the morning I have breakfast, then I work.",
+        "answer": "Утром я завтракаю, потом я работаю."
+      },
+      {
+        "en": "In the evening we have dinner together.",
+        "answer": "Вечером мы ужинаем вместе."
+      },
+      {
+        "en": "I get up early and go to bed late.",
+        "answer": "Я встаю рано и ложусь поздно."
+      },
+      {
+        "en": "What are you doing today?",
+        "answer": "Что ты делаешь сегодня?"
+      },
+      {
+        "en": "At night I sleep.",
+        "answer": "Ночью я сплю."
+      }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences describing your day, using утром/днём/вечером/ночью.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 4-5 sentences describing a typical day from morning to night.",
+      "minSentences": 4,
+      "modelAnswer": "Утром я встаю рано и завтракаю. Днём я работаю и обедаю. Вечером я ужинаю, читаю и слушаю музыку. Ночью я сплю."
+    }
+  },
+  "mission": {
+    "tasks": [
+      "Tell someone what time you get up and go to sleep.",
+      "Describe your day in 2-3 sentences using утром/днём/вечером."
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+  "srsCards": [
+    {
+      "type": "production",
+      "front": "I get up early.",
+      "back": "Я встаю рано."
+    },
+    {
+      "type": "production",
+      "front": "In the evening I have dinner.",
+      "back": "Вечером я ужинаю."
+    },
+    {
+      "type": "production",
+      "front": "What are you doing now?",
+      "back": "Что ты делаешь сейчас?"
+    },
+    {
+      "type": "production",
+      "front": "First breakfast, then work.",
+      "back": "Сначала завтрак, потом работа."
+    },
+    {
+      "type": "production",
+      "front": "I want to sleep.",
+      "back": "Я хочу спать."
+    },
+    {
+      "type": "production",
+      "front": "At night I sleep.",
+      "back": "Ночью я сплю."
+    },
+    {
+      "type": "cloze",
+      "front": "Я ___ рано. (get up)",
+      "back": "Я встаю рано."
+    },
+    {
+      "type": "listening",
+      "front": "[audio] Во сколько ты встаёшь?",
+      "back": "Во сколько ты встаёшь?"
+    },
+    {
+      "type": "listening",
+      "front": "[audio] Утром я завтракаю, потом работаю.",
+      "back": "Утром я завтракаю, потом работаю."
+    }
+  ]
+}

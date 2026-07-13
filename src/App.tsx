@@ -4,6 +4,7 @@ import { SpeechProvider } from "./lib/SpeechProvider";
 import { DashboardPage } from "./routes/DashboardPage";
 import { WeekPage } from "./routes/WeekPage";
 import { DayPage } from "./routes/DayPage";
+import { TestPage } from "./routes/TestPage";
 import { ComingSoonPage } from "./routes/ComingSoonPage";
 import { NotFoundPage } from "./routes/NotFoundPage";
 
@@ -34,15 +35,7 @@ export default function App() {
                 />
               }
             />
-            <Route
-              path="test/:testId"
-              element={
-                <ComingSoonPage
-                  title="Checkpoint test"
-                  body="Checkpoint and mock tests arrive in Phase 4, once all days for this week have content."
-                />
-              }
-            />
+            <Route path="test/:testId" element={<TestPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>

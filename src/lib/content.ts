@@ -1,4 +1,5 @@
 import type { ContentIndex, Day } from "../types/day";
+import type { Test } from "../types/test";
 
 const base = import.meta.env.BASE_URL;
 
@@ -25,4 +26,17 @@ export function loadDay(n: number): Promise<Day | null> {
     dayCache.set(n, p);
   }
   return dayCache.get(n)!;
+}
+
+const testCache = new Map<string, Promise<Test | null>>();
+
+export function loadTest(id: string): Promise<Test | null> {
+  if (!testCache.has(id)) {
+    const p = fetch(`${base}content/${id}.json`).then((r) => {
+      if (!r.ok) return null;
+      return r.json();
+    });
+    testCache.set(id, p);
+  }
+  return testCache.get(id)!;
 }

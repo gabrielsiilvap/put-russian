@@ -1,0 +1,148 @@
+{
+  "day": 25,
+  "week": 4,
+  "theme": "Numbers, age, money (genitive continued)",
+  "function": "Days of the week, and a light touch of telling time.",
+  "canDo": "I can ask someone's age, tell mine, and handle prices and numbers.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "Days of the week with в, and telling the hour",
+    "explanation": "\"On [day]\" uses **в** + a special form: **в понеде́льник, во вто́рник** (в → во before this consonant cluster), **в сре́ду, в четве́рг, в пя́тницу, в суббо́ту, в воскресе́нье**. Feminine days (среда́, пя́тница, суббо́та) change **-а → -у**, same accusative pattern from Week 2.\n\nFor the hour, reuse **час** from Day 1 of this week: **Ско́лько вре́мени?** (What time is it?) → **Сейча́с три часа́.** (It's three o'clock.) Same 1/2-4/5+ rule as always.",
+    "examples": [
+      { "ru": "В понеде́льник я рабо́таю.", "en": "On Monday I work." },
+      { "ru": "Во вто́рник он отдыха́ет.", "en": "On Tuesday he rests." },
+      { "ru": "В сре́ду мы гуля́ем.", "en": "On Wednesday we walk.", "note": "среда → среду, accusative" },
+      { "ru": "Ско́лько вре́мени? — Сейча́с пять часо́в.", "en": "What time is it? — It's five o'clock." }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0426", "ru": "понедельник", "en": "Monday", "pos": "noun", "gender": "m", "example": { "ru": "В понедельник я работаю.", "en": "On Monday I work." } },
+    { "id": "w0427", "ru": "вторник", "en": "Tuesday", "pos": "noun", "gender": "m", "example": { "ru": "Во вторник я отдыхаю.", "en": "On Tuesday I rest." } },
+    { "id": "w0428", "ru": "среда", "en": "Wednesday", "pos": "noun", "gender": "f", "note": "в среду (accusative)", "example": { "ru": "В среду мы встречаемся.", "en": "On Wednesday we meet." } },
+    { "id": "w0429", "ru": "четверг", "en": "Thursday", "pos": "noun", "gender": "m", "example": { "ru": "В четверг я занят.", "en": "On Thursday I'm busy." } },
+    { "id": "w0430", "ru": "пятница", "en": "Friday", "pos": "noun", "gender": "f", "note": "в пятницу (accusative)", "example": { "ru": "В пятницу мы гуляем.", "en": "On Friday we walk." } },
+    { "id": "w0431", "ru": "суббота", "en": "Saturday", "pos": "noun", "gender": "f", "note": "в субботу (accusative)", "example": { "ru": "В субботу я отдыхаю.", "en": "On Saturday I rest." } },
+    { "id": "w0432", "ru": "воскресенье", "en": "Sunday", "pos": "noun", "gender": "n", "example": { "ru": "В воскресенье мы дома.", "en": "On Sunday we're at home." } },
+    { "id": "w0433", "ru": "завтра", "en": "tomorrow", "pos": "adv", "example": { "ru": "Завтра я работаю.", "en": "Tomorrow I work." } },
+    { "id": "w0434", "ru": "вчера", "en": "yesterday", "pos": "adv", "example": { "ru": "Вчера — среда. Сегодня — четверг.", "en": "Yesterday — Wednesday. Today — Thursday." } },
+    { "id": "w0435", "ru": "выходные", "en": "the weekend", "pos": "noun", "gender": "pl", "example": { "ru": "Выходные здесь.", "en": "The weekend is here." } },
+    { "id": "w0436", "ru": "будни", "en": "weekdays", "pos": "noun", "gender": "pl", "example": { "ru": "Будни здесь.", "en": "The weekdays are here." } },
+    { "id": "w0437", "ru": "дата", "en": "date", "pos": "noun", "gender": "f", "example": { "ru": "Дата здесь.", "en": "The date is here." } },
+    { "id": "w0438", "ru": "когда", "en": "when", "pos": "adv", "example": { "ru": "Когда ты работаешь?", "en": "When do you work?" } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "Your week",
+      "lines": [
+        { "speaker": "A", "ru": "Когда ты работаешь?", "en": "When do you work?" },
+        { "speaker": "B", "ru": "В понедельник, вторник и четверг.", "en": "On Monday, Tuesday, and Thursday." },
+        { "speaker": "A", "ru": "А в среду?", "en": "And on Wednesday?" },
+        { "speaker": "B", "ru": "В среду я отдыхаю. И в выходные тоже.", "en": "On Wednesday I rest. And on the weekend too." }
+      ]
+    },
+    {
+      "title": "What time is it?",
+      "lines": [
+        { "speaker": "A", "ru": "Сколько времени?", "en": "What time is it?" },
+        { "speaker": "B", "ru": "Сейчас пять часов.", "en": "It's five o'clock now." },
+        { "speaker": "A", "ru": "Уже? Спасибо!", "en": "Already? Thanks!" }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, which three days does speaker B work?", "type": "understand", "answer": "Monday, Tuesday, Thursday", "acceptable": ["понедельник вторник четверг", "monday tuesday thursday"] },
+    { "q": "In dialogue 2, what time is it?", "type": "understand", "answer": "five o'clock", "acceptable": ["пять часов", "five", "5"] },
+    { "q": "Say you work on Monday and Friday.", "type": "produce", "answer": "Я работаю в понедельник и в пятницу.", "acceptable": ["работаю в понедельник и пятницу"] },
+    { "q": "Ask what time it is.", "type": "produce", "answer": "Сколько времени?", "acceptable": ["сколько времени"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "match",
+      "prompt": "Match the day to its meaning.",
+      "items": [
+        { "left": "понедельник", "right": "Monday" },
+        { "left": "среда", "right": "Wednesday" },
+        { "left": "пятница", "right": "Friday" },
+        { "left": "суббота", "right": "Saturday" },
+        { "left": "воскресенье", "right": "Sunday" }
+      ]
+    },
+    {
+      "type": "fill",
+      "prompt": "Fill in в or во.",
+      "items": [
+        { "q": "___ вторник", "answer": "во" },
+        { "q": "___ понедельник", "answer": "в" },
+        { "q": "___ пятницу", "answer": "в" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "\"On Wednesday\" — which is correct?",
+      "options": ["в среда", "в среду", "во среду"],
+      "answer": "в среду"
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "On Monday I work.", "answer": "В понедельник я работаю." },
+        { "q": "On Saturday we rest.", "answer": "В субботу мы отдыхаем." },
+        { "q": "What time is it?", "answer": "Сколько времени?" },
+        { "q": "It's three o'clock.", "answer": "Сейчас три часа." },
+        { "q": "Tomorrow I'm busy.", "answer": "Завтра я занят." }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["работаю", "понедельник", "я", "в"],
+      "answer": "Я работаю в понедельник."
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "On Tuesday and Thursday I work.", "answer": "Во вторник и в четверг я работаю." },
+      { "en": "On the weekend we rest.", "answer": "В выходные мы отдыхаем." },
+      { "en": "What time is it? — Ten o'clock.", "answer": "Сколько времени? — Десять часов." },
+      { "en": "Tomorrow is Friday.", "answer": "Завтра пятница." },
+      { "en": "The weekend is here!", "answer": "Выходные здесь!" }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences saying what you do on different days of the week.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 4-5 sentences about your week: which days you work, which days you rest.",
+      "minSentences": 4,
+      "modelAnswer": "В понедельник, вторник и среду я работаю. В четверг и пятницу тоже. А в выходные я отдыхаю. Это хорошая неделя!"
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Tell someone which days you work and which days you rest.",
+      "Ask someone «Сколько времени?» today."
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "On Monday I work.", "back": "В понедельник я работаю." },
+    { "type": "production", "front": "On Wednesday.", "back": "В среду." },
+    { "type": "production", "front": "On the weekend we rest.", "back": "В выходные мы отдыхаем." },
+    { "type": "production", "front": "What time is it?", "back": "Сколько времени?" },
+    { "type": "production", "front": "It's five o'clock.", "back": "Сейчас пять часов." },
+    { "type": "cloze", "front": "___ вторник. (on — в or во?)", "back": "Во вторник." },
+    { "type": "listening", "front": "[audio] Сколько времени?", "back": "Сколько времени?" },
+    { "type": "listening", "front": "[audio] В понедельник я работаю.", "back": "В понедельник я работаю." }
+  ]
+}

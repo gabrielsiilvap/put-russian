@@ -1,0 +1,152 @@
+{
+  "day": 15,
+  "week": 3,
+  "theme": "Having & not having (genitive)",
+  "function": "Say what you have.",
+  "canDo": "I can ask if someone has something and say what I don't have.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "У меня есть...: how Russian says \"to have\"",
+    "explanation": "Russian has no verb \"to have\" in daily use. Instead: **у** + the haver in the **genitive** + **есть** + the thing (which stays in the ordinary, nominative form). You already know two genitive pronoun forms from Day 1 — **меня** (я → меня) and **тебя** (ты → тебя) — from «меня зовут» and «как тебя зовут».\n\n**У меня́ есть теле́фон.** — I have a phone. **У тебя́ есть маши́на?** — Do you have a car?\n\nNouns take genitive endings too (you'll need this for Day 3's «нет»): masculine adds **-а/-я** (друг → дру́га), neuter changes **-о → -а** (письмо́ → письма́), feminine changes **-а → -ы/-и** (кни́га → кни́ги).",
+    "examples": [
+      { "ru": "У меня́ есть телефо́н.", "en": "I have a phone." },
+      { "ru": "У тебя́ есть маши́на?", "en": "Do you have a car?" },
+      { "ru": "У меня́ есть соба́ка и ко́шка.", "en": "I have a dog and a cat." },
+      { "ru": "У тебя́ есть вре́мя?", "en": "Do you have time?" }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0303", "ru": "деньги", "en": "money", "pos": "noun", "gender": "pl", "note": "plural-only word", "example": { "ru": "У меня есть деньги.", "en": "I have money." } },
+    { "id": "w0304", "ru": "телефон", "en": "phone", "pos": "noun", "gender": "m", "example": { "ru": "У тебя есть телефон?", "en": "Do you have a phone?" } },
+    { "id": "w0305", "ru": "машина", "en": "car", "pos": "noun", "gender": "f", "example": { "ru": "У меня есть машина.", "en": "I have a car." } },
+    { "id": "w0306", "ru": "велосипед", "en": "bicycle", "pos": "noun", "gender": "m", "example": { "ru": "У меня есть велосипед.", "en": "I have a bicycle." } },
+    { "id": "w0307", "ru": "собака", "en": "dog", "pos": "noun", "gender": "f", "example": { "ru": "У тебя есть собака?", "en": "Do you have a dog?" } },
+    { "id": "w0308", "ru": "кошка", "en": "cat", "pos": "noun", "gender": "f", "example": { "ru": "У меня есть кошка.", "en": "I have a cat." } },
+    { "id": "w0309", "ru": "квартира", "en": "apartment", "pos": "noun", "gender": "f", "example": { "ru": "У меня есть квартира.", "en": "I have an apartment." } },
+    { "id": "w0310", "ru": "ключ", "en": "key", "pos": "noun", "gender": "m", "example": { "ru": "У тебя есть ключ?", "en": "Do you have a key?" } },
+    { "id": "w0311", "ru": "сумка", "en": "bag", "pos": "noun", "gender": "f", "example": { "ru": "Где сумка?", "en": "Where's the bag?" } },
+    { "id": "w0312", "ru": "паспорт", "en": "passport", "pos": "noun", "gender": "m", "example": { "ru": "У меня есть паспорт.", "en": "I have a passport." } },
+    { "id": "w0313", "ru": "билет", "en": "ticket", "pos": "noun", "gender": "m", "example": { "ru": "У тебя есть билет?", "en": "Do you have a ticket?" } },
+    { "id": "w0314", "ru": "идея", "en": "idea", "pos": "noun", "gender": "f", "example": { "ru": "У меня есть идея!", "en": "I have an idea!" } },
+    { "id": "w0315", "ru": "план", "en": "plan", "pos": "noun", "gender": "m", "example": { "ru": "У меня есть план.", "en": "I have a plan." } },
+    { "id": "w0316", "ru": "проблема", "en": "problem", "pos": "noun", "gender": "f", "example": { "ru": "Это проблема.", "en": "That's a problem." } },
+    { "id": "w0317", "ru": "документ", "en": "document", "pos": "noun", "gender": "m", "example": { "ru": "У меня есть документ.", "en": "I have a document." } },
+    { "id": "w0318", "ru": "вещь", "en": "thing", "pos": "noun", "gender": "f", "example": { "ru": "Это вещь.", "en": "This is a thing." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "Do you have a car?",
+      "lines": [
+        { "speaker": "A", "ru": "У тебя есть машина?", "en": "Do you have a car?" },
+        { "speaker": "B", "ru": "Нет, но у меня есть велосипед.", "en": "No, but I have a bicycle." },
+        { "speaker": "A", "ru": "А у меня есть машина, но я всегда занятый!", "en": "And I have a car, but I'm always busy!" },
+        { "speaker": "B", "ru": "Понимаю. У меня тоже есть эта проблема.", "en": "I understand. I have that problem too." }
+      ]
+    },
+    {
+      "title": "Before the trip",
+      "lines": [
+        { "speaker": "A", "ru": "У тебя есть паспорт и билет?", "en": "Do you have a passport and a ticket?" },
+        { "speaker": "B", "ru": "Да, есть. А деньги?", "en": "Yes, I do. And money?" },
+        { "speaker": "A", "ru": "Да, у меня есть деньги. Всё хорошо!", "en": "Yes, I have money. Everything's good!" },
+        { "speaker": "B", "ru": "Отлично! У меня есть идея — сначала кофе?", "en": "Great! I have an idea — coffee first?" }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, what does speaker B have instead of a car?", "type": "understand", "answer": "a bicycle", "acceptable": ["велосипед", "bicycle", "a bicycle"] },
+    { "q": "In dialogue 2, does speaker B have their passport and ticket?", "type": "understand", "answer": "yes", "acceptable": ["да", "yes"] },
+    { "q": "Say you have a phone and a bicycle.", "type": "produce", "answer": "У меня есть телефон и велосипед.", "acceptable": ["у меня есть телефон и велосипед"] },
+    { "q": "Ask someone if they have a dog.", "type": "produce", "answer": "У тебя есть собака?", "acceptable": ["у тебя есть собака"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning.",
+      "items": [
+        { "left": "деньги", "right": "money" },
+        { "left": "квартира", "right": "apartment" },
+        { "left": "паспорт", "right": "passport" },
+        { "left": "план", "right": "plan" },
+        { "left": "проблема", "right": "problem" }
+      ]
+    },
+    {
+      "type": "fill",
+      "prompt": "Fill in у меня or у тебя.",
+      "items": [
+        { "q": "___ есть машина. (I have)", "answer": "У меня" },
+        { "q": "___ есть время? (Do you have)", "answer": "У тебя" }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "\"I have a car\" — which is correct?",
+      "options": ["Я есть машина.", "У меня есть машина.", "Я имею машина."],
+      "answer": "У меня есть машина."
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "I have a phone.", "answer": "У меня есть телефон." },
+        { "q": "Do you have money?", "answer": "У тебя есть деньги?" },
+        { "q": "I have a cat and a dog.", "answer": "У меня есть кошка и собака." },
+        { "q": "I have an idea!", "answer": "У меня есть идея!" },
+        { "q": "Do you have a passport?", "answer": "У тебя есть паспорт?" }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["есть", "меня", "машина", "у"],
+      "answer": "У меня есть машина."
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "I have a bicycle and a passport.", "answer": "У меня есть велосипед и паспорт." },
+      { "en": "Do you have a plan?", "answer": "У тебя есть план?" },
+      { "en": "I have a key and a bag.", "answer": "У меня есть ключ и сумка." },
+      { "en": "That's a problem.", "answer": "Это проблема." },
+      { "en": "I have an apartment here.", "answer": "У меня есть квартира здесь." }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences saying what you have, using «У меня есть...».",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 4-5 sentences about what you have: things, a plan, an idea.",
+      "minSentences": 4,
+      "modelAnswer": "У меня есть телефон, паспорт и деньги. У меня есть велосипед и квартира здесь. У меня есть план — я хочу говорить по-русски каждый день. У меня есть идея!"
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Tell someone one thing you have: «У меня есть...»",
+      "Ask someone «У тебя есть...?» about something real."
+    ],
+    "verification": "Did each land? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "I have a phone.", "back": "У меня есть телефон." },
+    { "type": "production", "front": "Do you have a car?", "back": "У тебя есть машина?" },
+    { "type": "production", "front": "I have a dog and a cat.", "back": "У меня есть собака и кошка." },
+    { "type": "production", "front": "Do you have time?", "back": "У тебя есть время?" },
+    { "type": "production", "front": "I have an idea!", "back": "У меня есть идея!" },
+    { "type": "production", "front": "I have money.", "back": "У меня есть деньги." },
+    { "type": "cloze", "front": "___ есть машина. (I have)", "back": "У меня есть машина." },
+    { "type": "listening", "front": "[audio] У тебя есть машина?", "back": "У тебя есть машина?" },
+    { "type": "listening", "front": "[audio] У меня есть план.", "back": "У меня есть план." }
+  ]
+}
