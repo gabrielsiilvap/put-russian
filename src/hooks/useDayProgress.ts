@@ -1,0 +1,10 @@
+import { useLiveQuery } from "dexie-react-hooks";
+import { db, getDayProgress, type DayProgress } from "../lib/db";
+
+export function useDayProgress(day: number): DayProgress | undefined {
+  return useLiveQuery(() => getDayProgress(day), [day]);
+}
+
+export function useAllProgress(): DayProgress[] | undefined {
+  return useLiveQuery(() => db.dayProgress.toArray(), []);
+}

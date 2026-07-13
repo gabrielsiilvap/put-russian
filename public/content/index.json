@@ -1,0 +1,732 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "week": 1,
+      "theme": "Survival present + \"I want\" + questions",
+      "function": "Greet, give name, say what you want",
+      "test": null,
+      "available": true
+    },
+    {
+      "day": 2,
+      "week": 1,
+      "theme": "Survival present + \"I want\" + questions",
+      "function": "Say where you live / what you do",
+      "test": null,
+      "available": true
+    },
+    {
+      "day": 3,
+      "week": 1,
+      "theme": "Survival present + \"I want\" + questions",
+      "function": "Ask \"you\" questions",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 4,
+      "week": 1,
+      "theme": "Survival present + \"I want\" + questions",
+      "function": "Say what you like doing",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 5,
+      "week": 1,
+      "theme": "Survival present + \"I want\" + questions",
+      "function": "Full present-tense control",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 6,
+      "week": 1,
+      "theme": "Survival present + \"I want\" + questions",
+      "function": "Consolidate + light review",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 7,
+      "week": 1,
+      "theme": "Survival present + \"I want\" + questions",
+      "function": "Weekly checkpoint test 1 + rest",
+      "test": "test-01",
+      "available": false
+    },
+    {
+      "day": 8,
+      "week": 2,
+      "theme": "Doing things / daily life (accusative)",
+      "function": "Talk about objects you act on",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 9,
+      "week": 2,
+      "theme": "Doing things / daily life (accusative)",
+      "function": "More daily actions",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 10,
+      "week": 2,
+      "theme": "Doing things / daily life (accusative)",
+      "function": "Describe your routine",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 11,
+      "week": 2,
+      "theme": "Doing things / daily life (accusative)",
+      "function": "Frequency & habits",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 12,
+      "week": 2,
+      "theme": "Doing things / daily life (accusative)",
+      "function": "Ask & answer about daily life",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 13,
+      "week": 2,
+      "theme": "Doing things / daily life (accusative)",
+      "function": "Consolidate + light review",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 14,
+      "week": 2,
+      "theme": "Doing things / daily life (accusative)",
+      "function": "Weekly checkpoint test 2 + rest",
+      "test": "test-02",
+      "available": false
+    },
+    {
+      "day": 15,
+      "week": 3,
+      "theme": "Having & not having (genitive)",
+      "function": "Say what you have",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 16,
+      "week": 3,
+      "theme": "Having & not having (genitive)",
+      "function": "Ask if someone has something",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 17,
+      "week": 3,
+      "theme": "Having & not having (genitive)",
+      "function": "Say what you lack",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 18,
+      "week": 3,
+      "theme": "Having & not having (genitive)",
+      "function": "Talk about family",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 19,
+      "week": 3,
+      "theme": "Having & not having (genitive)",
+      "function": "Quantities",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 20,
+      "week": 3,
+      "theme": "Having & not having (genitive)",
+      "function": "Consolidate + light review",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 21,
+      "week": 3,
+      "theme": "Having & not having (genitive)",
+      "function": "Weekly checkpoint test 3 + rest",
+      "test": "test-03",
+      "available": false
+    },
+    {
+      "day": 22,
+      "week": 4,
+      "theme": "Numbers, age, money (genitive continued)",
+      "function": "Count things",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 23,
+      "week": 4,
+      "theme": "Numbers, age, money (genitive continued)",
+      "function": "Prices & money",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 24,
+      "week": 4,
+      "theme": "Numbers, age, money (genitive continued)",
+      "function": "Age",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 25,
+      "week": 4,
+      "theme": "Numbers, age, money (genitive continued)",
+      "function": "Time & dates basics",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 26,
+      "week": 4,
+      "theme": "Numbers, age, money (genitive continued)",
+      "function": "Shopping + age dialogue consolidation",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 27,
+      "week": 4,
+      "theme": "Numbers, age, money (genitive continued)",
+      "function": "Full review of weeks 1–4",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 28,
+      "week": 4,
+      "theme": "Numbers, age, money (genitive continued)",
+      "function": "MONTH-1 MAJOR MOCK",
+      "test": "test-04",
+      "available": false
+    },
+    {
+      "day": 29,
+      "week": 5,
+      "theme": "Dative: liking, needing, giving",
+      "function": "The dative",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 30,
+      "week": 5,
+      "theme": "Dative: liking, needing, giving",
+      "function": "Say what you like",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 31,
+      "week": 5,
+      "theme": "Dative: liking, needing, giving",
+      "function": "Say what you need",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 32,
+      "week": 5,
+      "theme": "Dative: liking, needing, giving",
+      "function": "Give / help / call someone",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 33,
+      "week": 5,
+      "theme": "Dative: liking, needing, giving",
+      "function": "Opinions consolidation",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 34,
+      "week": 5,
+      "theme": "Dative: liking, needing, giving",
+      "function": "Consolidate + light review",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 35,
+      "week": 5,
+      "theme": "Dative: liking, needing, giving",
+      "function": "Weekly checkpoint test 5 + rest",
+      "test": "test-05",
+      "available": false
+    },
+    {
+      "day": 36,
+      "week": 6,
+      "theme": "Prepositional: location & topics",
+      "function": "Say where things are",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 37,
+      "week": 6,
+      "theme": "Prepositional: location & topics",
+      "function": "Locations around town",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 38,
+      "week": 6,
+      "theme": "Prepositional: location & topics",
+      "function": "Talk \"about\" something",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 39,
+      "week": 6,
+      "theme": "Prepositional: location & topics",
+      "function": "в vs на",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 40,
+      "week": 6,
+      "theme": "Prepositional: location & topics",
+      "function": "Describe your neighborhood consolidation",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 41,
+      "week": 6,
+      "theme": "Prepositional: location & topics",
+      "function": "Consolidate + light review",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 42,
+      "week": 6,
+      "theme": "Prepositional: location & topics",
+      "function": "Weekly checkpoint test 6 + rest",
+      "test": "test-06",
+      "available": false
+    },
+    {
+      "day": 43,
+      "week": 7,
+      "theme": "Instrumental: with & being",
+      "function": "Say \"with\" someone/something",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 44,
+      "week": 7,
+      "theme": "Instrumental: with & being",
+      "function": "State your profession",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 45,
+      "week": 7,
+      "theme": "Instrumental: with & being",
+      "function": "By what means",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 46,
+      "week": 7,
+      "theme": "Instrumental: with & being",
+      "function": "Common instrumental verbs",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 47,
+      "week": 7,
+      "theme": "Instrumental: with & being",
+      "function": "Six-case self-audit consolidation",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 48,
+      "week": 7,
+      "theme": "Instrumental: with & being",
+      "function": "Consolidate + light review",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 49,
+      "week": 7,
+      "theme": "Instrumental: with & being",
+      "function": "Weekly checkpoint test 7 (case-system checkpoint) + rest",
+      "test": "test-07",
+      "available": false
+    },
+    {
+      "day": 50,
+      "week": 8,
+      "theme": "The past + aspect intro",
+      "function": "Past tense",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 51,
+      "week": 8,
+      "theme": "The past + aspect intro",
+      "function": "Past of your core verbs",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 52,
+      "week": 8,
+      "theme": "The past + aspect intro",
+      "function": "Aspect, the big idea",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 53,
+      "week": 8,
+      "theme": "The past + aspect intro",
+      "function": "Aspect in the past",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 54,
+      "week": 8,
+      "theme": "The past + aspect intro",
+      "function": "Tell a story about yesterday",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 55,
+      "week": 8,
+      "theme": "The past + aspect intro",
+      "function": "Full review weeks 5–8",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 56,
+      "week": 8,
+      "theme": "The past + aspect intro",
+      "function": "MONTH-2 MAJOR MOCK",
+      "test": "test-08",
+      "available": false
+    },
+    {
+      "day": 57,
+      "week": 9,
+      "theme": "Future & plans",
+      "function": "Compound future",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 58,
+      "week": 9,
+      "theme": "Future & plans",
+      "function": "Simple (perfective) future",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 59,
+      "week": 9,
+      "theme": "Future & plans",
+      "function": "Choosing aspect in the future",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 60,
+      "week": 9,
+      "theme": "Future & plans",
+      "function": "Intentions & hopes",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 61,
+      "week": 9,
+      "theme": "Future & plans",
+      "function": "Talk about your week ahead",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 62,
+      "week": 9,
+      "theme": "Future & plans",
+      "function": "Consolidate + light review",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 63,
+      "week": 9,
+      "theme": "Future & plans",
+      "function": "Weekly checkpoint test 9 + rest",
+      "test": "test-09",
+      "available": false
+    },
+    {
+      "day": 64,
+      "week": 10,
+      "theme": "Verbs of motion",
+      "function": "Going on foot",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 65,
+      "week": 10,
+      "theme": "Verbs of motion",
+      "function": "Going by vehicle",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 66,
+      "week": 10,
+      "theme": "Verbs of motion",
+      "function": "Arrive / leave",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 67,
+      "week": 10,
+      "theme": "Verbs of motion",
+      "function": "Enter / exit / reach / approach",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 68,
+      "week": 10,
+      "theme": "Verbs of motion",
+      "function": "Ask the way",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 69,
+      "week": 10,
+      "theme": "Verbs of motion",
+      "function": "Consolidate + light review",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 70,
+      "week": 10,
+      "theme": "Verbs of motion",
+      "function": "Weekly checkpoint test 10 + rest",
+      "test": "test-10",
+      "available": false
+    },
+    {
+      "day": 71,
+      "week": 11,
+      "theme": "Complex sentences",
+      "function": "Report thoughts",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 72,
+      "week": 11,
+      "theme": "Complex sentences",
+      "function": "Give reasons",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 73,
+      "week": 11,
+      "theme": "Complex sentences",
+      "function": "Purpose & condition",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 74,
+      "week": 11,
+      "theme": "Complex sentences",
+      "function": "Time clauses",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 75,
+      "week": 11,
+      "theme": "Complex sentences",
+      "function": "Describe with relative clauses",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 76,
+      "week": 11,
+      "theme": "Complex sentences",
+      "function": "Consolidate + light review",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 77,
+      "week": 11,
+      "theme": "Complex sentences",
+      "function": "Weekly checkpoint test 11 + rest",
+      "test": "test-11",
+      "available": false
+    },
+    {
+      "day": 78,
+      "week": 12,
+      "theme": "Requests, politeness, would-like",
+      "function": "Give instructions",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 79,
+      "week": 12,
+      "theme": "Requests, politeness, would-like",
+      "function": "Polite requests",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 80,
+      "week": 12,
+      "theme": "Requests, politeness, would-like",
+      "function": "Obligation",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 81,
+      "week": 12,
+      "theme": "Requests, politeness, would-like",
+      "function": "Hypotheticals & wishes",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 82,
+      "week": 12,
+      "theme": "Requests, politeness, would-like",
+      "function": "Handle a service interaction politely",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 83,
+      "week": 12,
+      "theme": "Requests, politeness, would-like",
+      "function": "Consolidate + light review",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 84,
+      "week": 12,
+      "theme": "Requests, politeness, would-like",
+      "function": "Weekly checkpoint test 12 + rest",
+      "test": "test-12",
+      "available": false
+    },
+    {
+      "day": 85,
+      "week": 13,
+      "theme": "Integration & fluency push",
+      "function": "Compare things",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 86,
+      "week": 13,
+      "theme": "Integration & fluency push",
+      "function": "Best/most",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 87,
+      "week": 13,
+      "theme": "Integration & fluency push",
+      "function": "Full review — the six cases",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 88,
+      "week": 13,
+      "theme": "Integration & fluency push",
+      "function": "Full review — verbs (aspect, tense, motion)",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 89,
+      "week": 13,
+      "theme": "Integration & fluency push",
+      "function": "Free conversation",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 90,
+      "week": 13,
+      "theme": "Integration & fluency push",
+      "function": "Final consolidation across all functions",
+      "test": null,
+      "available": false
+    },
+    {
+      "day": 91,
+      "week": 13,
+      "theme": "Integration & fluency push",
+      "function": "FINAL B1 SPEAKING MOCK",
+      "test": "test-13",
+      "available": false
+    }
+  ]
+}

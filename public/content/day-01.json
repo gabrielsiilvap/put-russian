@@ -1,0 +1,171 @@
+{
+  "day": 1,
+  "week": 1,
+  "theme": "Survival present + \"I want\" + questions",
+  "function": "Greet someone, tell them your name, and say what you want.",
+  "canDo": "I can introduce myself, say what I want, and ask a simple question.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "No \"to be\" in the present, and \"I want\" = хочу",
+    "explanation": "Russian drops **am / is / are** in the present. *Я студент* literally means \"I student\" = I am a student. Just put the words together.\n\n**\"I want\" = хочу**, followed by a noun in the object (accusative) form, or by an infinitive verb.",
+    "examples": [
+      { "ru": "Я студент.", "en": "I am a student.", "note": "No word for 'am'." },
+      { "ru": "Хочу воду.", "en": "I want water.", "note": "воду = object form of вода." },
+      { "ru": "Хочу говорить по-русски.", "en": "I want to speak Russian.", "note": "хочу + infinitive." },
+      { "ru": "Меня зовут Габриэль.", "en": "My name is Gabriel.", "note": "Idiom: literally 'me they call'." }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0101", "ru": "привет", "en": "hi", "pos": "phrase", "note": "informal", "example": { "ru": "Привет! Как дела?", "en": "Hi! How are you?" } },
+    { "id": "w0102", "ru": "здравствуйте", "en": "hello", "pos": "phrase", "note": "formal, use with strangers", "example": { "ru": "Здравствуйте!", "en": "Hello!" } },
+    { "id": "w0103", "ru": "пока", "en": "bye", "pos": "phrase", "note": "informal", "example": { "ru": "Пока!", "en": "Bye!" } },
+    { "id": "w0104", "ru": "до свидания", "en": "goodbye", "pos": "phrase", "note": "formal", "example": { "ru": "До свидания!", "en": "Goodbye!" } },
+    { "id": "w0105", "ru": "спасибо", "en": "thank you", "pos": "phrase", "example": { "ru": "Спасибо!", "en": "Thank you!" } },
+    { "id": "w0106", "ru": "пожалуйста", "en": "please / you're welcome", "pos": "phrase", "example": { "ru": "Воду, пожалуйста.", "en": "Water, please." } },
+    { "id": "w0107", "ru": "извините", "en": "excuse me / sorry", "pos": "phrase", "note": "formal", "example": { "ru": "Извините!", "en": "Excuse me!" } },
+    { "id": "w0108", "ru": "да", "en": "yes", "pos": "particle", "example": { "ru": "Да, немного.", "en": "Yes, a little." } },
+    { "id": "w0109", "ru": "нет", "en": "no", "pos": "particle", "example": { "ru": "Нет, спасибо.", "en": "No, thank you." } },
+    { "id": "w0110", "ru": "меня зовут", "en": "my name is", "pos": "phrase", "note": "literally 'me they call'", "example": { "ru": "Меня зовут Габриэль.", "en": "My name is Gabriel." } },
+    { "id": "w0111", "ru": "как вас зовут?", "en": "what is your name?", "pos": "phrase", "note": "formal", "example": { "ru": "Как вас зовут?", "en": "What is your name?" } },
+    { "id": "w0112", "ru": "очень приятно", "en": "nice to meet you", "pos": "phrase", "example": { "ru": "Очень приятно!", "en": "Nice to meet you!" } },
+    { "id": "w0113", "ru": "я", "en": "I", "pos": "pronoun", "example": { "ru": "Я студент.", "en": "I am a student." } },
+    { "id": "w0114", "ru": "хочу", "en": "I want", "pos": "verb", "aspectPartner": "захотеть", "note": "from хотеть", "example": { "ru": "Хочу воду.", "en": "I want water." } },
+    { "id": "w0115", "ru": "говорить", "en": "to speak", "pos": "verb", "aspectPartner": "сказать", "example": { "ru": "Я хочу говорить по-русски.", "en": "I want to speak Russian." } },
+    { "id": "w0116", "ru": "по-русски", "en": "in Russian", "pos": "adv", "example": { "ru": "Вы говорите по-русски?", "en": "Do you speak Russian?" } },
+    { "id": "w0117", "ru": "немного", "en": "a little", "pos": "adv", "example": { "ru": "Я немного говорю по-русски.", "en": "I speak a little Russian." } },
+    { "id": "w0118", "ru": "вода", "en": "water", "pos": "noun", "gender": "f", "note": "object form: воду", "example": { "ru": "Хочу воду.", "en": "I want water." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "Meeting someone",
+      "glossWords": [ { "ru": "отлично", "en": "great" } ],
+      "lines": [
+        { "speaker": "A", "ru": "Здравствуйте! Меня зовут Анна. Как вас зовут?", "en": "Hello! My name is Anna. What is your name?" },
+        { "speaker": "B", "ru": "Здравствуйте! Меня зовут Габриэль. Очень приятно.", "en": "Hello! My name is Gabriel. Nice to meet you." },
+        { "speaker": "A", "ru": "Очень приятно! Вы говорите по-русски?", "en": "Nice to meet you! Do you speak Russian?" },
+        { "speaker": "B", "ru": "Немного. Я хочу говорить по-русски.", "en": "A little. I want to speak Russian." },
+        { "speaker": "A", "ru": "Отлично!", "en": "Great!" }
+      ]
+    },
+    {
+      "title": "Buying water",
+      "note": "On the street, Russians often just say «Воду, пожалуйста» without «хочу». Both work.",
+      "glossWords": [ { "ru": "вот", "en": "here you go" } ],
+      "lines": [
+        { "speaker": "A", "ru": "Здравствуйте!", "en": "Hello!" },
+        { "speaker": "B", "ru": "Здравствуйте! Хочу воду, пожалуйста.", "en": "Hello! I want water, please." },
+        { "speaker": "A", "ru": "Вот, пожалуйста.", "en": "Here you go." },
+        { "speaker": "B", "ru": "Спасибо!", "en": "Thank you!" },
+        { "speaker": "A", "ru": "Пожалуйста. До свидания!", "en": "You're welcome. Goodbye!" },
+        { "speaker": "B", "ru": "До свидания!", "en": "Goodbye!" }
+      ]
+    },
+    {
+      "title": "A quick exchange",
+      "lines": [
+        { "speaker": "A", "ru": "Извините! Вы говорите по-русски?", "en": "Excuse me! Do you speak Russian?" },
+        { "speaker": "B", "ru": "Да, немного.", "en": "Yes, a little." },
+        { "speaker": "A", "ru": "Спасибо!", "en": "Thank you!" },
+        { "speaker": "B", "ru": "Пожалуйста.", "en": "You're welcome." }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "In dialogue 1, does Gabriel speak Russian fluently or a little?", "type": "understand", "answer": "a little", "acceptable": ["немного", "a little", "little"] },
+    { "q": "What does Gabriel say he wants to do? (answer in Russian)", "type": "produce", "answer": "Я хочу говорить по-русски.", "acceptable": ["хочу говорить по-русски", "говорить по-русски"] },
+    { "q": "In dialogue 2, what does the customer ask for?", "type": "understand", "answer": "water", "acceptable": ["воду", "вода", "water"] },
+    { "q": "Someone says «Как вас зовут?» — write your reply.", "type": "produce", "answer": "Меня зовут ...", "acceptable": ["меня зовут"] },
+    { "q": "Write how you would get a stranger's attention and ask if they speak Russian.", "type": "produce", "answer": "Извините, вы говорите по-русски?", "acceptable": ["извините вы говорите по-русски"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "match",
+      "prompt": "Match the Russian to its meaning.",
+      "items": [
+        { "left": "привет", "right": "hi" },
+        { "left": "до свидания", "right": "goodbye" },
+        { "left": "спасибо", "right": "thank you" },
+        { "left": "извините", "right": "excuse me" },
+        { "left": "пожалуйста", "right": "please" }
+      ]
+    },
+    {
+      "type": "fill",
+      "prompt": "Fill in the blank.",
+      "items": [
+        { "q": "Меня ___ Габриэль.", "answer": "зовут" },
+        { "q": "Очень ___.", "answer": "приятно" },
+        { "q": "Как ___ зовут?", "answer": "вас" },
+        { "q": "Я ___ говорить по-русски.", "answer": "хочу" },
+        { "q": "___, вы говорите по-русски?", "answer": "извините" }
+      ]
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "Hello, nice to meet you.", "answer": "Здравствуйте, очень приятно." },
+        { "q": "My name is Gabe.", "answer": "Меня зовут Габриэль.", "acceptable": ["меня зовут"] },
+        { "q": "What is your name?", "answer": "Как вас зовут?" },
+        { "q": "I want water.", "answer": "Хочу воду.", "acceptable": ["хочу воды", "я хочу воду"] },
+        { "q": "I speak a little Russian.", "answer": "Я немного говорю по-русски.", "acceptable": ["я говорю немного по-русски"] }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in the right order.",
+      "tokens": ["по-русски", "говорить", "хочу", "я"],
+      "answer": "Я хочу говорить по-русски."
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "Hello! My name is Anna.", "answer": "Здравствуйте! Меня зовут Анна." },
+      { "en": "Excuse me, do you speak Russian?", "answer": "Извините, вы говорите по-русски?" },
+      { "en": "Yes, a little.", "answer": "Да, немного." },
+      { "en": "I want water, please.", "answer": "Хочу воду, пожалуйста.", "acceptable": ["воду, пожалуйста"] },
+      { "en": "Thank you! Goodbye!", "answer": "Спасибо! До свидания!" }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 of your own sentences mixing greetings, your name, and хочу.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write a 3–4 sentence self-introduction you would actually say to a neighbour.",
+      "minSentences": 3,
+      "modelAnswer": "Здравствуйте! Меня зовут Габриэль. Я немного говорю по-русски. Очень приятно."
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Greet one stranger with «Здравствуйте».",
+      "Say «Спасибо» to someone who helps you.",
+      "Try «Меня зовут…» with one person and see if they respond."
+    ],
+    "verification": "Did each one land? Note yes / no. That is today's ground truth."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "hello (formal)", "back": "Здравствуйте" },
+    { "type": "production", "front": "thank you", "back": "Спасибо" },
+    { "type": "production", "front": "excuse me / sorry (formal)", "back": "Извините" },
+    { "type": "production", "front": "My name is Gabriel.", "back": "Меня зовут Габриэль." },
+    { "type": "production", "front": "What is your name? (formal)", "back": "Как вас зовут?" },
+    { "type": "production", "front": "Nice to meet you.", "back": "Очень приятно." },
+    { "type": "production", "front": "I want water.", "back": "Хочу воду." },
+    { "type": "production", "front": "I want to speak Russian.", "back": "Хочу говорить по-русски." },
+    { "type": "production", "front": "I speak a little Russian.", "back": "Я немного говорю по-русски." },
+    { "type": "cloze", "front": "Меня ___ Габриэль. (my name is)", "back": "Меня зовут Габриэль." },
+    { "type": "cloze", "front": "Вы ___ по-русски? (speak)", "back": "Вы говорите по-русски?" },
+    { "type": "listening", "front": "[audio] Извините, вы говорите по-русски?", "back": "Извините, вы говорите по-русски?" }
+  ]
+}

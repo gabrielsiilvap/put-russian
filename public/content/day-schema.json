@@ -1,0 +1,165 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ПУТЬ B1 Day",
+  "type": "object",
+  "required": ["day", "week", "theme", "function", "canDo", "grammarPoint", "vocab", "dialogues", "comprehension", "exercises", "writing", "mission", "srsCards"],
+  "properties": {
+    "day": { "type": "integer", "minimum": 1, "maximum": 91 },
+    "week": { "type": "integer", "minimum": 1, "maximum": 13 },
+    "theme": { "type": "string", "description": "The week's theme." },
+    "function": { "type": "string", "description": "Today's micro-function." },
+    "canDo": { "type": "string", "description": "The 'I can...' statement this day contributes to." },
+    "review": { "type": "boolean", "default": false },
+    "test": { "type": ["string", "null"], "description": "Test id if this day administers one, else null." },
+    "needsReview": { "type": "boolean", "default": false, "description": "Set true if any Russian here should be tutor-checked." },
+
+    "grammarPoint": {
+      "type": "object",
+      "required": ["title", "explanation", "examples"],
+      "properties": {
+        "title": { "type": "string" },
+        "explanation": { "type": "string", "description": "Markdown. Concise, one point." },
+        "examples": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["ru", "en"],
+            "properties": {
+              "ru": { "type": "string" },
+              "en": { "type": "string" },
+              "note": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "vocab": {
+      "type": "array",
+      "minItems": 12, "maxItems": 20,
+      "items": {
+        "type": "object",
+        "required": ["id", "ru", "en"],
+        "properties": {
+          "id": { "type": "string", "description": "e.g. w0103 = week1 running index." },
+          "ru": { "type": "string" },
+          "en": { "type": "string" },
+          "pos": { "type": "string", "description": "noun/verb/adj/adv/phrase..." },
+          "gender": { "type": "string", "enum": ["m", "f", "n", "pl", ""], "description": "for nouns" },
+          "aspectPartner": { "type": ["string", "null"], "description": "for verbs: the other-aspect form" },
+          "note": { "type": "string" },
+          "example": {
+            "type": "object",
+            "properties": { "ru": { "type": "string" }, "en": { "type": "string" } }
+          },
+          "forvoUrl": { "type": ["string", "null"] }
+        }
+      }
+    },
+
+    "dialogues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "lines"],
+        "properties": {
+          "title": { "type": "string" },
+          "note": { "type": "string" },
+          "glossWords": {
+            "type": "array",
+            "items": { "type": "object", "properties": { "ru": {"type":"string"}, "en": {"type":"string"} } }
+          },
+          "lines": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["speaker", "ru", "en"],
+              "properties": {
+                "speaker": { "type": "string", "enum": ["A", "B"] },
+                "ru": { "type": "string" },
+                "en": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "comprehension": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["q", "type", "answer"],
+        "properties": {
+          "q": { "type": "string" },
+          "type": { "type": "string", "enum": ["understand", "produce"] },
+          "answer": { "type": "string" },
+          "acceptable": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+
+    "exercises": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "prompt"],
+        "properties": {
+          "type": { "type": "string", "enum": ["match", "fill", "translate", "mcq", "cloze", "order"] },
+          "prompt": { "type": "string" },
+          "items": { "type": "array", "description": "for match: [{left,right}]; for fill/cloze/translate: [{q,answer,acceptable?,note?}]" },
+          "options": { "type": "array", "items": { "type": "string" }, "description": "for mcq" },
+          "answer": { "description": "for mcq/order (string) — the correct option or ordered sentence" },
+          "tokens": { "type": "array", "items": { "type": "string" }, "description": "for order" }
+        }
+      }
+    },
+
+    "writing": {
+      "type": "object",
+      "required": ["translate", "buildSentences", "freeWrite"],
+      "properties": {
+        "translate": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["en", "answer"],
+            "properties": { "en": {"type":"string"}, "answer": {"type":"string"}, "acceptable": {"type":"array","items":{"type":"string"}} }
+          }
+        },
+        "buildSentences": {
+          "type": "object",
+          "properties": { "instruction": {"type":"string"}, "count": {"type":"integer"} }
+        },
+        "freeWrite": {
+          "type": "object",
+          "required": ["prompt", "minSentences"],
+          "properties": { "prompt": {"type":"string"}, "minSentences": {"type":"integer"}, "modelAnswer": {"type":"string"} }
+        }
+      }
+    },
+
+    "mission": {
+      "type": "object",
+      "required": ["tasks", "verification"],
+      "properties": {
+        "tasks": { "type": "array", "items": { "type": "string" } },
+        "verification": { "type": "string" }
+      }
+    },
+
+    "srsCards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "front", "back"],
+        "properties": {
+          "type": { "type": "string", "enum": ["production", "cloze", "listening"] },
+          "front": { "type": "string" },
+          "back": { "type": "string", "description": "Russian; app generates TTS audio from this." },
+          "hint": { "type": "string" }
+        }
+      }
+    }
+  }
+}

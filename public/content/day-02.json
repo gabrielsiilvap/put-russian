@@ -1,0 +1,160 @@
+{
+  "day": 2,
+  "week": 1,
+  "theme": "Survival present + \"I want\" + questions",
+  "function": "Say where you live and what you do.",
+  "canDo": "I can introduce myself, say what I want, and ask a simple question.",
+  "review": false,
+  "test": null,
+  "needsReview": false,
+
+  "grammarPoint": {
+    "title": "Present tense: I / you / we (first-conjugation verbs)",
+    "explanation": "Most verbs take these present-tense endings on the stem for **я / ты / мы**:\n\n- я → **-ю** (знаю, работаю, делаю)\n- ты → **-ешь** (знаешь, работаешь)\n- мы → **-ем** (знаем, работаем)\n\nSome stems change: **жить → живу, живёшь, живём**. You already met *говорить* (a second-conjugation verb: говорю, говоришь) — we come back to that pattern on Day 3.",
+    "examples": [
+      { "ru": "Я работаю.", "en": "I work.", "note": "работать → работаю" },
+      { "ru": "Ты знаешь?", "en": "Do you know?", "note": "знать → знаешь" },
+      { "ru": "Я живу в Душанбе.", "en": "I live in Dushanbe.", "note": "жить → живу; в Душанбе is previewed, learn it as a chunk." },
+      { "ru": "Что ты делаешь?", "en": "What are you doing?", "note": "делать → делаешь" }
+    ]
+  },
+
+  "vocab": [
+    { "id": "w0119", "ru": "знать", "en": "to know", "pos": "verb", "example": { "ru": "Я знаю.", "en": "I know." } },
+    { "id": "w0120", "ru": "работать", "en": "to work", "pos": "verb", "example": { "ru": "Я работаю здесь.", "en": "I work here." } },
+    { "id": "w0121", "ru": "жить", "en": "to live", "pos": "verb", "note": "живу, живёшь, живёт", "example": { "ru": "Я живу в Душанбе.", "en": "I live in Dushanbe." } },
+    { "id": "w0122", "ru": "делать", "en": "to do / to make", "pos": "verb", "aspectPartner": "сделать", "example": { "ru": "Что ты делаешь?", "en": "What are you doing?" } },
+    { "id": "w0123", "ru": "понимать", "en": "to understand", "pos": "verb", "aspectPartner": "понять", "example": { "ru": "Я понимаю.", "en": "I understand." } },
+    { "id": "w0124", "ru": "что", "en": "what", "pos": "pronoun", "example": { "ru": "Что это?", "en": "What is this?" } },
+    { "id": "w0125", "ru": "где", "en": "where", "pos": "adv", "example": { "ru": "Где вы живёте?", "en": "Where do you live?" } },
+    { "id": "w0126", "ru": "это", "en": "this / this is", "pos": "pronoun", "example": { "ru": "Это вода.", "en": "This is water." } },
+    { "id": "w0127", "ru": "здесь", "en": "here", "pos": "adv", "example": { "ru": "Я здесь.", "en": "I am here." } },
+    { "id": "w0128", "ru": "там", "en": "there", "pos": "adv", "example": { "ru": "Вода там.", "en": "The water is there." } },
+    { "id": "w0129", "ru": "дома", "en": "at home", "pos": "adv", "example": { "ru": "Я дома.", "en": "I am at home." } },
+    { "id": "w0130", "ru": "тоже", "en": "also / too", "pos": "adv", "example": { "ru": "Я тоже здесь живу.", "en": "I also live here." } },
+    { "id": "w0131", "ru": "и", "en": "and", "pos": "conj", "example": { "ru": "Я работаю и живу здесь.", "en": "I work and live here." } },
+    { "id": "w0132", "ru": "ты", "en": "you (informal)", "pos": "pronoun", "example": { "ru": "Что ты делаешь?", "en": "What are you doing?" } },
+    { "id": "w0133", "ru": "мы", "en": "we", "pos": "pronoun", "example": { "ru": "Мы живём здесь.", "en": "We live here." } },
+    { "id": "w0134", "ru": "хорошо", "en": "good / well / okay", "pos": "adv", "example": { "ru": "Всё хорошо.", "en": "Everything is good." } }
+  ],
+
+  "dialogues": [
+    {
+      "title": "Where do you live?",
+      "lines": [
+        { "speaker": "A", "ru": "Где вы живёте?", "en": "Where do you live?" },
+        { "speaker": "B", "ru": "Я живу в Душанбе. А вы?", "en": "I live in Dushanbe. And you?" },
+        { "speaker": "A", "ru": "Я тоже здесь живу.", "en": "I also live here." },
+        { "speaker": "B", "ru": "Отлично!", "en": "Great!" }
+      ],
+      "glossWords": [ { "ru": "а вы?", "en": "and you?" } ]
+    },
+    {
+      "title": "What are you doing?",
+      "lines": [
+        { "speaker": "A", "ru": "Что ты делаешь?", "en": "What are you doing?" },
+        { "speaker": "B", "ru": "Я работаю. А ты?", "en": "I'm working. And you?" },
+        { "speaker": "A", "ru": "Я дома. Всё хорошо.", "en": "I'm at home. Everything's good." }
+      ]
+    },
+    {
+      "title": "Do you understand?",
+      "lines": [
+        { "speaker": "A", "ru": "Вы понимаете по-русски?", "en": "Do you understand Russian?" },
+        { "speaker": "B", "ru": "Да, немного. Я знаю немного.", "en": "Yes, a little. I know a little." },
+        { "speaker": "A", "ru": "Хорошо!", "en": "Good!" }
+      ]
+    }
+  ],
+
+  "comprehension": [
+    { "q": "Where does speaker B live in dialogue 1?", "type": "understand", "answer": "in Dushanbe", "acceptable": ["в Душанбе", "Dushanbe", "Душанбе"] },
+    { "q": "In dialogue 2, what is speaker B doing?", "type": "understand", "answer": "working", "acceptable": ["работает", "работаю", "working", "work"] },
+    { "q": "Answer in Russian: «Где вы живёте?»", "type": "produce", "answer": "Я живу в Душанбе.", "acceptable": ["живу в"] },
+    { "q": "Answer in Russian: «Что ты делаешь?» (say you are working)", "type": "produce", "answer": "Я работаю.", "acceptable": ["работаю"] }
+  ],
+
+  "exercises": [
+    {
+      "type": "fill",
+      "prompt": "Put the verb in the я-form (I).",
+      "items": [
+        { "q": "Я ___ в Душанбе. (жить)", "answer": "живу" },
+        { "q": "Я ___ здесь. (работать)", "answer": "работаю" },
+        { "q": "Я ___ по-русски немного. (знать)", "answer": "знаю" },
+        { "q": "Я ___ дома. (быть — leave blank, no word needed)", "answer": "", "note": "trick: present 'to be' is dropped. Correct is: Я дома." }
+      ]
+    },
+    {
+      "type": "fill",
+      "prompt": "Put the verb in the ты-form (you, informal).",
+      "items": [
+        { "q": "Что ты ___? (делать)", "answer": "делаешь" },
+        { "q": "Ты ___ по-русски? (понимать)", "answer": "понимаешь" },
+        { "q": "Где ты ___? (жить)", "answer": "живёшь", "acceptable": ["живешь"] }
+      ]
+    },
+    {
+      "type": "mcq",
+      "prompt": "Choose the correct word: «___ вы живёте?»",
+      "options": ["Что", "Где", "Тоже", "И"],
+      "answer": "Где"
+    },
+    {
+      "type": "translate",
+      "prompt": "Translate into Russian.",
+      "items": [
+        { "q": "I live and work here.", "answer": "Я живу и работаю здесь." },
+        { "q": "What is this?", "answer": "Что это?" },
+        { "q": "I also live here.", "answer": "Я тоже здесь живу.", "acceptable": ["я тоже живу здесь"] }
+      ]
+    },
+    {
+      "type": "order",
+      "prompt": "Put the words in order.",
+      "tokens": ["живёте", "где", "вы"],
+      "answer": "Где вы живёте?"
+    }
+  ],
+
+  "writing": {
+    "translate": [
+      { "en": "Where do you live?", "answer": "Где вы живёте?" },
+      { "en": "I live in Dushanbe.", "answer": "Я живу в Душанбе." },
+      { "en": "What are you doing?", "answer": "Что ты делаешь?" },
+      { "en": "I work here.", "answer": "Я работаю здесь." },
+      { "en": "I understand a little.", "answer": "Я понимаю немного.", "acceptable": ["я немного понимаю"] }
+    ],
+    "buildSentences": {
+      "instruction": "Write 5 sentences about yourself using живу, работаю, знаю, and делаю.",
+      "count": 5
+    },
+    "freeWrite": {
+      "prompt": "Write 3–4 sentences: say your name, where you live, what you do, and that you speak a little Russian.",
+      "minSentences": 3,
+      "modelAnswer": "Здравствуйте! Меня зовут Габриэль. Я живу в Душанбе и работаю здесь. Я немного говорю по-русски."
+    }
+  },
+
+  "mission": {
+    "tasks": [
+      "Ask one person «Где вы живёте?» and understand the answer.",
+      "Tell someone «Я живу в Душанбе» and «Я работаю здесь»."
+    ],
+    "verification": "Did they understand you without switching to English? Note yes / no."
+  },
+
+  "srsCards": [
+    { "type": "production", "front": "Where do you live? (formal)", "back": "Где вы живёте?" },
+    { "type": "production", "front": "I live in Dushanbe.", "back": "Я живу в Душанбе." },
+    { "type": "production", "front": "I work here.", "back": "Я работаю здесь." },
+    { "type": "production", "front": "What are you doing? (informal)", "back": "Что ты делаешь?" },
+    { "type": "production", "front": "Do you understand Russian?", "back": "Вы понимаете по-русски?" },
+    { "type": "production", "front": "I know a little.", "back": "Я знаю немного." },
+    { "type": "production", "front": "I also live here.", "back": "Я тоже здесь живу." },
+    { "type": "production", "front": "What is this?", "back": "Что это?" },
+    { "type": "cloze", "front": "Я ___ в Душанбе. (live)", "back": "Я живу в Душанбе." },
+    { "type": "cloze", "front": "Что ты ___? (do/make)", "back": "Что ты делаешь?" },
+    { "type": "listening", "front": "[audio] Где вы живёте?", "back": "Где вы живёте?" }
+  ]
+}
