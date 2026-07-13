@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { loadIndex } from "../lib/content";
 import { useAllProgress } from "../hooks/useDayProgress";
 import type { ContentIndex } from "../types/day";
-import { FlameIcon, ChevronIcon } from "../components/icons";
+import { CAN_DO } from "../content/canDo";
+import { FlameIcon, ChevronIcon, CheckIcon } from "../components/icons";
 
 const TOTAL_DAYS = 91;
+const TOTAL_WEEKS = 13;
 
 export function DashboardPage() {
   const [index, setIndex] = useState<ContentIndex | null>(null);
@@ -78,6 +80,64 @@ export function DashboardPage() {
             {nextTest.function}
           </p>
         )}
+      </section>
+
+      <section>
+        <p className="mb-3 text-sm font-semibold text-ink">All weeks</p>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {Array.from({ length: TOTAL_WEEKS }, (_, i) => i + 1).map((w) => {
+            const weekDays = index.days.filter((d) => d.week === w);
+            const doneCount = weekDays.filter((d) => doneDays.has(d.day)).length;
+            const hasContent = weekDays.some((d) => d.available);
+            const isCurrentWeek = w === current.week;
+            const complete = weekDays.length > 0 && doneCount === weekDays.length;
+            return (
+              <Link
+                key={w}
+                to={`/week/${w}`}
+                className={`press flex items-start gap-3 rounded-card border p-4 transition-shadow ${
+                  isCurrentWeek ? "border-accent bg-accent-tint" : "border-line bg-surface hover:shadow-md"
+                }`}
+              >
+                <span
+                  className={`flex h-9 w-9 flex-none items-center justify-center rounded-full border-2 text-sm font-bold ${
+                    complete
+                      ? "border-good bg-good text-white"
+                      : isCurrentWeek
+                      ? "border-accent text-accent"
+                      : "border-line text-muted"
+                  }`}
+                >
+                  {complete ? <CheckIcon size={16} /> : w}
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="block truncate text-sm font-semibold text-ink">
+                    {weekDays[0]?.theme ?? `Week ${w}`}
+                  </span>
+                  <span className="mt-0.5 block text-xs text-muted">{CAN_DO[w]}</span>
+                  <span className="mt-1.5 flex items-center gap-2">
+                    {hasContent ? (
+                      <>
+                        <span className="h-1.5 flex-1 max-w-20 overflow-hidden rounded-full bg-line">
+                          <span
+                            className="block h-full rounded-full bg-gold"
+                            style={{ width: `${weekDays.length ? (doneCount / weekDays.length) * 100 : 0}%` }}
+                          />
+                        </span>
+                        <span className="text-[11px] font-semibold text-muted">
+                          {doneCount}/{weekDays.length}
+                        </span>
+                      </>
+                    ) : (
+                      <span className="text-[11px] font-semibold text-muted">Content coming</span>
+                    )}
+                  </span>
+                </span>
+                <ChevronIcon size={16} className="mt-1.5 flex-none text-muted" />
+              </Link>
+            );
+          })}
+        </div>
       </section>
     </div>
   );
