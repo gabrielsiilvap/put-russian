@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import type { Test } from "../types/test";
-import { loadTest } from "../lib/content";
+import { loadTest, loadIndex } from "../lib/content";
+import { markDayDone, markDayUndone } from "../lib/db";
+import { useDayProgress } from "../hooks/useDayProgress";
 import { ExerciseRunner } from "../components/ExerciseRunner";
 import { CheckIcon, MicIcon } from "../components/icons";
 
@@ -9,10 +11,19 @@ export function TestPage() {
   const { testId } = useParams();
   const [test, setTest] = useState<Test | null | undefined>(undefined);
   const [canDoTicks, setCanDoTicks] = useState<Record<number, boolean>>({});
+  const [testDay, setTestDay] = useState<number | null>(null);
+  const progress = useDayProgress(testDay ?? -1);
 
   useEffect(() => {
     setTest(undefined);
-    if (testId) loadTest(testId).then(setTest);
+    setTestDay(null);
+    if (testId) {
+      loadTest(testId).then(setTest);
+      loadIndex().then((idx) => {
+        const match = idx.days.find((d) => d.test === testId);
+        setTestDay(match?.day ?? null);
+      });
+    }
   }, [testId]);
 
   if (!testId) return <Navigate to="/" replace />;
@@ -48,6 +59,23 @@ export function TestPage() {
           Auto-graded sections below check themselves as you go. Score isn't tallied automatically yet — use the
           can-do checklist as your real signal for this checkpoint.
         </p>
+        {testDay !== null && (
+          <button
+            type="button"
+            onClick={() => (progress?.doneAt ? markDayUndone(testDay) : markDayDone(testDay))}
+            className={`press mt-4 inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold ${
+              progress?.doneAt ? "bg-line text-muted" : "bg-accent text-white"
+            }`}
+          >
+            {progress?.doneAt ? (
+              <>
+                <CheckIcon size={15} /> Checkpoint completed
+              </>
+            ) : (
+              "Mark checkpoint complete"
+            )}
+          </button>
+        )}
       </div>
 
       <div className="grid gap-4">

@@ -17,15 +17,26 @@ export interface FreeWrite {
   createdAt: number;
 }
 
+export interface CourseSettings {
+  id: 1; // singleton row
+  startDate: string; // ISO date, "YYYY-MM-DD" — Day 1 lands on this calendar date
+}
+
 class PutDB extends Dexie {
   dayProgress!: EntityTable<DayProgress, "day">;
   freeWrites!: EntityTable<FreeWrite, "id">;
+  settings!: EntityTable<CourseSettings, "id">;
 
   constructor() {
     super("put-b1");
     this.version(1).stores({
       dayProgress: "day, doneAt",
       freeWrites: "++id, day, createdAt",
+    });
+    this.version(2).stores({
+      dayProgress: "day, doneAt",
+      freeWrites: "++id, day, createdAt",
+      settings: "id",
     });
   }
 }
@@ -65,4 +76,24 @@ export async function latestFreeWrite(day: number): Promise<FreeWrite | undefine
 
 export async function allCompletedDays(): Promise<DayProgress[]> {
   return db.dayProgress.filter((d) => d.doneAt !== null).toArray();
+}
+
+// For days with no 7-block structure (checkpoint/test days) — mark the
+// whole day done/undone directly rather than toggling individual blocks.
+export async function markDayDone(day: number) {
+  const cur = await getDayProgress(day);
+  await db.dayProgress.put({ ...cur, doneAt: Date.now() });
+}
+
+export async function markDayUndone(day: number) {
+  const cur = await getDayProgress(day);
+  await db.dayProgress.put({ ...cur, doneAt: null });
+}
+
+export async function getCourseSettings(): Promise<CourseSettings | undefined> {
+  return db.settings.get(1);
+}
+
+export async function setStartDate(startDate: string) {
+  await db.settings.put({ id: 1, startDate });
 }
