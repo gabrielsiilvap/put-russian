@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ПУТЬ · Распорядок дня</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f2ebdd;
+    --paper2:#f8f3e8;
+    --card:#fbf7ee;
+    --ink:#211d18;
+    --ink-soft:#6a6055;
+    --ink-faint:#9a9082;
+    --rule:#d9cdb7;
+    --rule-strong:#c6b89e;
+    --stamp:#9e3b2e;
+    --stamp-soft:#c98a7f;
+    --teal:#2f5a5b;
+    --teal-soft:#cfe0dc;
+    --gold:#c48a2c;
+    --shadow:0 1px 0 rgba(33,29,24,.04), 0 8px 24px -18px rgba(33,29,24,.5);
+    --disp:'Fraunces', Georgia, serif;
+    --body:'Spectral', Georgia, serif;
+    --mono:'Space Mono', ui-monospace, monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--body); font-size:17px; line-height:1.6;
+    background-image:
+      radial-gradient(circle at 18% 12%, rgba(158,59,46,.03), transparent 40%),
+      radial-gradient(circle at 85% 78%, rgba(47,90,91,.035), transparent 42%);
+  }
+  .wrap{max-width:820px; margin:0 auto; padding:0 20px 100px}
+
+  /* ---- Masthead ---- */
+  header.mast{padding:34px 0 18px; border-bottom:2px solid var(--ink); margin-bottom:0}
+  .kicker{font-family:var(--mono); font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--stamp); display:flex; align-items:center; gap:10px}
+  .kicker::before{content:""; width:26px; height:2px; background:var(--stamp); display:inline-block}
+  h1.title{font-family:var(--disp); font-weight:600; font-size:clamp(34px,7vw,52px); line-height:1.02; margin:10px 0 6px; letter-spacing:-.01em}
+  h1.title .ru{font-style:italic; color:var(--ink)}
+  .dek{font-size:16px; color:var(--ink-soft); max-width:60ch; margin:0}
+  .meta{font-family:var(--mono); font-size:11.5px; color:var(--ink-faint); margin-top:14px; display:flex; gap:16px; flex-wrap:wrap}
+  .meta b{color:var(--teal); font-weight:700}
+
+  /* ---- Tabs ---- */
+  nav.tabs{position:sticky; top:0; z-index:20; background:var(--paper);
+    display:flex; gap:2px; border-bottom:2px solid var(--ink); margin:0 0 30px;
+    box-shadow:0 10px 18px -18px rgba(33,29,24,.6)}
+  nav.tabs button{
+    flex:1; appearance:none; border:0; background:transparent; cursor:pointer;
+    font-family:var(--mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--ink-soft); padding:14px 6px 12px; position:relative; transition:color .15s}
+  nav.tabs button .n{display:block; font-size:15px; letter-spacing:.02em; text-transform:none; font-family:var(--disp); color:var(--ink); margin-top:2px}
+  nav.tabs button:hover{color:var(--stamp)}
+  nav.tabs button.active{color:var(--stamp)}
+  nav.tabs button.active::after{content:""; position:absolute; left:0; right:0; bottom:-2px; height:3px; background:var(--stamp)}
+  nav.tabs button:focus-visible{outline:2px solid var(--teal); outline-offset:-3px}
+
+  section.pane{display:none; animation:fade .25s ease}
+  section.pane.on{display:block}
+  @keyframes fade{from{opacity:0; transform:translateY(4px)}to{opacity:1; transform:none}}
+
+  /* ---- Lessons ---- */
+  .lesson{background:var(--card); border:1px solid var(--rule); border-radius:3px;
+    box-shadow:var(--shadow); margin-bottom:20px; overflow:hidden}
+  .lesson > summary{list-style:none; cursor:pointer; padding:20px 22px; display:flex; align-items:baseline; gap:14px}
+  .lesson > summary::-webkit-details-marker{display:none}
+  .lnum{font-family:var(--mono); font-size:13px; font-weight:700; color:var(--stamp);
+    border:1.5px solid var(--stamp); border-radius:50%; width:30px; height:30px;
+    display:grid; place-items:center; flex:none; margin-top:2px}
+  .lhead{flex:1}
+  .lhead h2{font-family:var(--disp); font-weight:600; font-size:21px; margin:0; line-height:1.2}
+  .lhead .sub{font-size:14px; color:var(--ink-soft); margin-top:2px}
+  .chev{font-family:var(--mono); color:var(--ink-faint); transition:transform .2s; margin-top:4px}
+  .lesson[open] .chev{transform:rotate(90deg); color:var(--stamp)}
+  .lbody{padding:2px 24px 24px; border-top:1px dashed var(--rule-strong)}
+  .lbody p{margin:16px 0}
+  .lbody h3{font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--teal); margin:22px 0 8px}
+
+  .ru{font-family:var(--body); font-weight:500}
+  .stress{color:var(--stamp); font-weight:600}
+  .lit{color:var(--ink-faint); font-style:italic}
+
+  .rule-box{background:var(--paper2); border-left:3px solid var(--gold); padding:12px 16px; margin:14px 0; border-radius:0 3px 3px 0; font-size:15.5px}
+  .rule-box b{color:var(--ink)}
+  .why{background:rgba(47,90,91,.06); border:1px solid var(--teal-soft); border-radius:3px; padding:12px 16px; margin:14px 0; font-size:15.5px}
+  .why::before{content:"почему? · why"; display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal); margin-bottom:5px}
+
+  /* example lines */
+  .ex{margin:10px 0; padding-left:14px; border-left:2px solid var(--rule-strong)}
+  .ex .r{font-size:18px}
+  .ex .e{font-size:14px; color:var(--ink-soft)}
+  .say{appearance:none; border:1px solid var(--rule-strong); background:var(--paper2); color:var(--stamp);
+    font-family:var(--mono); font-size:11px; border-radius:20px; padding:2px 10px 3px; cursor:pointer; margin-left:6px; vertical-align:middle; transition:.15s}
+  .say:hover{background:var(--stamp); color:#fff; border-color:var(--stamp)}
+  .say:active{transform:scale(.94)}
+
+  /* conjugation tables */
+  table.conj{width:100%; border-collapse:collapse; margin:14px 0; font-size:15px}
+  table.conj td{padding:6px 10px; border-bottom:1px solid var(--rule)}
+  table.conj td:first-child{font-family:var(--mono); font-size:12px; color:var(--ink-soft); width:34%}
+  table.conj td.f{font-weight:500}
+  table.conj .end{color:var(--stamp); font-weight:600}
+  table.conj caption{text-align:left; font-family:var(--mono); font-size:12px; color:var(--teal); padding-bottom:4px}
+
+  /* ---- Words / flashcards ---- */
+  .deckbar{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:18px; flex-wrap:wrap}
+  .deckbar .count{font-family:var(--mono); font-size:12px; color:var(--ink-soft)}
+  .deckbar .count b{color:var(--stamp)}
+  .pill{appearance:none; border:1.5px solid var(--ink); background:transparent; color:var(--ink);
+    font-family:var(--mono); font-size:11.5px; letter-spacing:.04em; text-transform:uppercase;
+    padding:7px 14px; border-radius:20px; cursor:pointer; transition:.15s}
+  .pill:hover{background:var(--ink); color:var(--paper)}
+  .pill.mini{padding:5px 11px; font-size:11px}
+
+  .card-stage{perspective:1400px; margin:0 auto; max-width:520px}
+  .flash{position:relative; width:100%; min-height:230px; cursor:pointer; transform-style:preserve-3d; transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+  .flash.flip{transform:rotateY(180deg)}
+  .face{position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden;
+    background:var(--card); border:1px solid var(--rule); border-radius:5px; box-shadow:var(--shadow);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:26px}
+  .face .tag{position:absolute; top:12px; left:14px; font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint)}
+  .face .rw{font-family:var(--disp); font-weight:600; font-size:40px; line-height:1.05}
+  .face .tr{font-family:var(--mono); font-size:13px; color:var(--ink-soft); margin-top:8px}
+  .back{transform:rotateY(180deg); background:var(--paper2)}
+  .back .en{font-family:var(--disp); font-size:28px; font-weight:600}
+  .back .note{font-size:14px; color:var(--ink-soft); margin-top:10px; max-width:34ch}
+  .flip-hint{font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); position:absolute; bottom:12px}
+  .navrow{display:flex; align-items:center; justify-content:center; gap:10px; margin-top:18px}
+  .arrow{appearance:none; border:1.5px solid var(--ink); background:var(--card); color:var(--ink); width:44px; height:44px; border-radius:50%; font-size:18px; cursor:pointer; transition:.15s}
+  .arrow:hover{background:var(--ink); color:var(--paper)}
+  .knowrow{display:flex; justify-content:center; gap:10px; margin-top:14px}
+
+  /* ---- Exercises ---- */
+  .scorebar{display:flex; align-items:center; justify-content:space-between; gap:12px; background:var(--card); border:1px solid var(--rule); border-radius:3px; padding:12px 16px; margin-bottom:20px; box-shadow:var(--shadow)}
+  .scorebar .s{font-family:var(--mono); font-size:13px}
+  .scorebar .s b{color:var(--stamp); font-size:16px}
+  .ex-item{background:var(--card); border:1px solid var(--rule); border-radius:3px; padding:18px 20px; margin-bottom:16px; box-shadow:var(--shadow)}
+  .ex-item .q{font-size:16.5px; margin:0 0 4px}
+  .ex-item .q .ru{font-weight:500}
+  .ex-item .hint{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--teal); margin-bottom:10px; display:block}
+  .blank{border:none; border-bottom:2px solid var(--rule-strong); background:transparent; font-family:var(--body); font-size:17px; color:var(--ink); padding:2px 6px; min-width:130px; text-align:center}
+  .blank:focus{outline:none; border-color:var(--stamp)}
+  .opts{display:flex; flex-wrap:wrap; gap:8px; margin:6px 0}
+  .opt{appearance:none; border:1.5px solid var(--rule-strong); background:var(--paper2); color:var(--ink); font-family:var(--body); font-size:16px; padding:6px 16px; border-radius:22px; cursor:pointer; transition:.12s}
+  .opt:hover{border-color:var(--ink)}
+  .opt.pick{border-color:var(--teal); background:var(--teal-soft)}
+  .opt.right{border-color:var(--teal); background:var(--teal); color:#fff}
+  .opt.wrong{border-color:var(--stamp); background:var(--stamp-soft); color:#3a1a15}
+  .check{appearance:none; border:1.5px solid var(--ink); background:var(--ink); color:var(--paper); font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; padding:7px 16px; border-radius:20px; cursor:pointer; margin-top:8px; transition:.15s}
+  .check:hover{background:var(--stamp); border-color:var(--stamp)}
+  .fb{margin-top:10px; font-size:14px; font-family:var(--mono); display:none}
+  .fb.show{display:block}
+  .fb.ok{color:var(--teal)}
+  .fb.no{color:var(--stamp)}
+  .fb .ans{color:var(--ink); font-weight:700}
+
+  /* ---- Dialogues ---- */
+  .dlg{background:var(--card); border:1px solid var(--rule); border-radius:3px; box-shadow:var(--shadow); margin-bottom:22px; overflow:hidden}
+  .dlg-head{padding:16px 20px; border-bottom:1px dashed var(--rule-strong); display:flex; justify-content:space-between; align-items:center; gap:12px}
+  .dlg-head h2{font-family:var(--disp); font-size:20px; margin:0}
+  .dlg-head .scene{font-family:var(--mono); font-size:11px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.1em}
+  .dlg-body{padding:8px 20px 18px}
+  .line{padding:12px 0; border-bottom:1px solid var(--rule); display:flex; gap:12px}
+  .line:last-child{border-bottom:0}
+  .who{font-family:var(--mono); font-size:12px; font-weight:700; color:var(--stamp); flex:none; width:34px; padding-top:3px}
+  .who.b{color:var(--teal)}
+  .said .r{font-size:18px}
+  .said .t{font-size:13.5px; color:var(--ink-soft); margin-top:2px; display:none}
+  .said.reveal .t{display:block}
+
+  footer{margin-top:40px; padding-top:20px; border-top:2px solid var(--ink); font-family:var(--mono); font-size:11px; color:var(--ink-faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px}
+
+  @media (max-width:560px){
+    body{font-size:16px}
+    nav.tabs button .n{font-size:13px}
+    .face .rw{font-size:32px}
+    .lbody{padding-left:18px; padding-right:18px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important; transition:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="mast">
+    <div class="kicker">ПУТЬ · Module 07</div>
+    <h1 class="title">Daily Routine <span class="ru">/ Распоря́док дня</span></h1>
+    <p class="dek">Every routine word from A1 to A2, plus the grammar underneath it: why <span class="ru">у́тро</span> becomes <span class="ru">у́тром</span>, why verbs grow a <span class="ru">‑ся</span> tail, and why you go <span class="ru">в спортза́л</span> but train <span class="ru">в спортза́ле</span>.</p>
+    <div class="meta"><span>Target: <b>use it in speech</b></span><span>Core set: <b>20 high-value words</b></span><span>Audio: tap <b>▶ speak</b></span></div>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-pane="lessons">Grammar<span class="n">Уро́ки</span></button>
+    <button class="tab" data-pane="words">Words<span class="n">Слова́</span></button>
+    <button class="tab" data-pane="ex">Drills<span class="n">Пра́ктика</span></button>
+    <button class="tab" data-pane="dlg">Dialogues<span class="n">Диало́ги</span></button>
+  </nav>
+
+  <!-- ============ LESSONS ============ -->
+  <section class="pane on" id="lessons">
+
+    <details class="lesson" open>
+      <summary><span class="lnum">1</span><div class="lhead"><h2>When it happens: <span class="ru">у́тром, ве́чером</span></h2><div class="sub">Time-of-day words &amp; telling the clock</div></div><span class="chev">›</span></summary>
+      <div class="lbody">
+        <p>Four words tell you the part of the day. To say <em>during</em> that part, you don't add a preposition. You change the ending.</p>
+        <table class="conj">
+          <tr><td>the thing</td><td class="f">→ when</td><td></td></tr>
+          <tr><td>у́тро (morning)</td><td class="f ru">у́тр<span class="end">ом</span></td><td>in the morning <button class="say" data-say="утром">▶</button></td></tr>
+          <tr><td>день (day)</td><td class="f ru">дн<span class="end">ём</span></td><td>during the day <button class="say" data-say="днём">▶</button></td></tr>
+          <tr><td>ве́чер (evening)</td><td class="f ru">ве́чер<span class="end">ом</span></td><td>in the evening <button class="say" data-say="вечером">▶</button></td></tr>
+          <tr><td>ночь (night)</td><td class="f ru">но́ч<span class="end">ью</span></td><td>at night <button class="say" data-say="ночью">▶</button></td></tr>
+        </table>
+        <div class="why">That <span class="ru">‑ом / ‑ем / ‑ью</span> ending is the <b>instrumental case</b>. One of its jobs is answering "when?" for a stretch of time. No <span class="ru">в</span>, no <span class="ru">на</span>. The ending <em>is</em> the "in the." You'll meet the instrumental again everywhere; here it just means <em>during</em>.</p>
+
+        <h3>Telling the clock</h3>
+        <p>For a specific hour, use <span class="ru">в</span> + the number + <span class="ru">часо́в</span>.</p>
+        <div class="ex"><div class="r"><span class="ru">В во́семь часо́в утра́.</span> <button class="say" data-say="В восемь часов утра">▶</button></div><div class="e">At eight in the morning.</div></div>
+        <div class="rule-box"><b>The <span class="ru">час</span> shape-shifts after numbers:</b><br>1 → <span class="ru">час</span> · 2,3,4 → <span class="ru">часа́</span> · 5–20 → <span class="ru">часо́в</span>. So <span class="ru">два часа́</span> but <span class="ru">семь часо́в</span>.</div>
+        <div class="why">Numbers boss the noun around. After 2–4 you get a "few" ending (<span class="ru">часа́</span>), after 5+ you get the "many/genitive plural" ending (<span class="ru">часо́в</span>). Don't overthink it now: memorize <span class="ru">часа́</span> for 2‑4 and <span class="ru">часо́в</span> for the rest.</div>
+      </div>
+    </details>
+
+    <details class="lesson">
+      <summary><span class="lnum">2</span><div class="lhead"><h2>The verbs &amp; the <span class="ru">‑ся</span> tail</h2><div class="sub">The "I" form + reflexive verbs like <span class="ru">просыпа́ться</span></div></div><span class="chev">›</span></summary>
+      <div class="lbody">
+        <p>Russian verbs change their ending for who's doing them. You mostly need the <b>я (I)</b> form. Pattern for regular verbs: chop <span class="ru">‑ть</span>, add <span class="ru">‑ю</span>.</p>
+        <table class="conj">
+          <caption>завтракать → to have breakfast</caption>
+          <tr><td>я</td><td class="f ru">за́втрака<span class="end">ю</span></td><td>I have breakfast <button class="say" data-say="я завтракаю">▶</button></td></tr>
+          <tr><td>ты</td><td class="f ru">за́втрака<span class="end">ешь</span></td><td>you</td></tr>
+          <tr><td>он / она́</td><td class="f ru">за́втрака<span class="end">ет</span></td><td>he / she</td></tr>
+        </table>
+
+        <h3>Reflexive verbs: the <span class="ru">‑ся</span> ones</h3>
+        <p>Some verbs end in <span class="ru">‑ся</span>: <span class="ru">просыпа́ться, умыва́ться, учи́ться, тренирова́ться, ложи́ться</span>. The <span class="ru">‑ся</span> means the action loops back on you.</p>
+        <div class="ex"><div class="r"><span class="ru">просыпа́ть</span> = to wake someone. <span class="ru">просыпа́ть<b class="stress">ся</b></span> = to wake <em>yourself</em> up.</div></div>
+        <div class="rule-box"><b>Conjugate the main part, then re-attach the tail:</b><br>after a vowel it shrinks to <span class="ru">‑сь</span>, after a consonant it stays <span class="ru">‑ся</span>.</div>
+        <table class="conj">
+          <caption>просыпаться → to wake up</caption>
+          <tr><td>я</td><td class="f ru">просыпа́ю<span class="end">сь</span></td><td>I wake up <button class="say" data-say="я просыпаюсь">▶</button></td></tr>
+          <tr><td>ты</td><td class="f ru">просыпа́ешь<span class="end">ся</span></td><td>you wake up</td></tr>
+          <tr><td>он / она́</td><td class="f ru">просыпа́ет<span class="end">ся</span></td><td>he / she wakes up</td></tr>
+        </table>
+        <p>Your daily <span class="ru">‑сь</span> verbs, memorized as chunks:</p>
+        <div class="ex"><div class="r"><span class="ru">я просыпа́юсь</span> · <span class="ru">я умыва́юсь</span> · <span class="ru">я учу́сь</span> · <span class="ru">я трениру́юсь</span> · <span class="ru">я ложу́сь спать</span> <button class="say" data-say="я просыпаюсь, я умываюсь, я учусь, я тренируюсь, я ложусь спать">▶</button></div></div>
+
+        <h3>The three you'll say most (irregular, just learn them)</h3>
+        <table class="conj">
+          <tr><td>встава́ть → get up</td><td class="f ru">я вста<span class="end">ю́</span></td><td><button class="say" data-say="я встаю">▶</button></td></tr>
+          <tr><td>есть → eat</td><td class="f ru">я <span class="end">ем</span></td><td><button class="say" data-say="я ем">▶</button></td></tr>
+          <tr><td>пить → drink</td><td class="f ru">я <span class="end">пью</span></td><td><button class="say" data-say="я пью">▶</button></td></tr>
+        </table>
+      </div>
+    </details>
+
+    <details class="lesson">
+      <summary><span class="lnum">3</span><div class="lhead"><h2>How often: <span class="ru">три ра́за в неде́лю</span></h2><div class="sub">Frequency words &amp; "per week / per day"</div></div><span class="chev">›</span></summary>
+      <div class="lbody">
+        <p>Drop these in front of any verb to say how often. No grammar changes needed.</p>
+        <div class="ex"><div class="r"><span class="ru">всегда́</span> always · <span class="ru">обы́чно</span> usually · <span class="ru">ча́сто</span> often · <span class="ru">иногда́</span> sometimes · <span class="ru">ре́дко</span> rarely · <span class="ru">никогда́</span> never <button class="say" data-say="всегда, обычно, часто, иногда, редко, никогда">▶</button></div></div>
+        <h3>"X times per week"</h3>
+        <div class="ex"><div class="r"><span class="ru">три ра́за в неде́лю</span> <button class="say" data-say="три раза в неделю">▶</button></div><div class="e">three times a week</div></div>
+        <div class="rule-box"><b>Two pieces:</b> <span class="ru">ра́за</span> (times) + <span class="ru">в неде́лю</span> (per week).<br>Counting: 1 → <span class="ru">раз</span> · 2,3,4 → <span class="ru">ра́за</span> · 5+ → <span class="ru">раз</span>. So <span class="ru">пять раз</span>.</div>
+        <div class="why">"Per week / per day" uses <span class="ru">в</span> + the <b>accusative</b>: <span class="ru">в неде́лю, в день, в час</span>. Feminine <span class="ru">неде́ля</span> becomes <span class="ru">неде́лю</span>. It's the same little <span class="ru">в</span> as "into" — think of it as fitting X into the frame of a week.</div>
+      </div>
+    </details>
+
+    <details class="lesson">
+      <summary><span class="lnum">4</span><div class="lhead"><h2>Going places: <span class="ru">иду́</span> vs <span class="ru">хожу́</span></h2><div class="sub">Motion verbs + <span class="ru">в спортза́л</span> (to) vs <span class="ru">в спортза́ле</span> (in)</div></div><span class="chev">›</span></summary>
+      <div class="lbody">
+        <p>Russian splits "to go" in two, by <em>how</em> you're going.</p>
+        <table class="conj">
+          <tr><td>right now, one way</td><td class="f ru">идти́ → я иду́</td><td>on foot <button class="say" data-say="я иду">▶</button></td></tr>
+          <tr><td>regularly / round trips</td><td class="f ru">ходи́ть → я хожу́</td><td>on foot <button class="say" data-say="я хожу">▶</button></td></tr>
+          <tr><td>right now, one way</td><td class="f ru">е́хать → я е́ду</td><td>by transport <button class="say" data-say="я еду">▶</button></td></tr>
+          <tr><td>regularly / round trips</td><td class="f ru">е́здить → я е́зжу</td><td>by transport <button class="say" data-say="я езжу">▶</button></td></tr>
+        </table>
+        <div class="ex"><div class="r"><span class="ru">Сейча́с я иду́ в спортза́л.</span> <button class="say" data-say="Сейчас я иду в спортзал">▶</button></div><div class="e">Right now I'm walking to the gym.</div></div>
+        <div class="ex"><div class="r"><span class="ru">Я хожу́ в спортза́л три ра́за в неде́лю.</span> <button class="say" data-say="Я хожу в спортзал три раза в неделю">▶</button></div><div class="e">I go to the gym three times a week.</div></div>
+        <div class="why"><b>Habit = <span class="ru">ходи́ть/е́здить</span>. Happening now = <span class="ru">идти́/е́хать</span>.</b> For your routine paragraph you almost always want the habit ones: <span class="ru">хожу́</span>, <span class="ru">е́зжу</span>.</div>
+
+        <h3><span class="ru">в спортза́л</span> vs <span class="ru">в спортза́ле</span></h3>
+        <div class="rule-box"><b>Movement toward → </b><span class="ru">в спортза́л</span> (accusative, "into the gym").<br><b>Sitting still inside → </b><span class="ru">в спортза́ле</span> (prepositional, "in the gym").</div>
+        <div class="ex"><div class="r"><span class="ru">Я иду́ в спортза́л.</span> → <span class="lit">I'm heading to the gym.</span></div><div class="r"><span class="ru">Я трениру́юсь в спортза́ле.</span> → <span class="lit">I train in the gym.</span></div></div>
+        <div class="why">Same preposition <span class="ru">в</span>, two endings. <b>Motion picks accusative, location picks prepositional.</b> That <span class="ru">‑е</span> at the end of <span class="ru">спортза́ле</span> is the "you're already there" signal.</div>
+      </div>
+    </details>
+
+    <details class="lesson">
+      <summary><span class="lnum">5</span><div class="lhead"><h2>Having &amp; trying: <span class="ru">у меня́ есть · я стара́юсь</span></h2><div class="sub">Two phrase templates + the glue words</div></div><span class="chev">›</span></summary>
+      <div class="lbody">
+        <h3><span class="ru">У меня́ есть…</span> — "I have…"</h3>
+        <div class="ex"><div class="r"><span class="ru">У меня́ есть уро́к ру́сского языка́.</span> <button class="say" data-say="У меня есть урок русского языка">▶</button></div><div class="e">I have a Russian lesson.</div></div>
+        <div class="why">Russian doesn't really say "I have." It says <b>"by me there is"</b>: <span class="ru">у меня́ есть</span> + the thing. Fixed chunk — just reuse it.</div>
+
+        <h3><span class="ru">Я стара́юсь</span> + verb — "I try to…"</h3>
+        <div class="ex"><div class="r"><span class="ru">Я стара́юсь учи́ть ру́сский язы́к ка́ждый день.</span> <button class="say" data-say="Я стараюсь учить русский язык каждый день">▶</button></div><div class="e">I try to study Russian every day.</div></div>
+        <div class="rule-box"><b>After <span class="ru">стара́юсь</span> the next verb stays in the dictionary (‑ть) form:</b> <span class="ru">стара́юсь просыпа́ться, стара́юсь ходи́ть, стара́юсь чита́ть.</span></div>
+
+        <h3>The glue that makes you sound fluent</h3>
+        <div class="ex"><div class="r"><span class="ru">пото́м</span> then · <span class="ru">по́сле э́того</span> after that · <span class="ru">та́кже / ещё</span> also · <span class="ru">когда́</span> when · <span class="ru">потому́ что</span> because · <span class="ru">поэ́тому</span> so/therefore <button class="say" data-say="потом, после этого, также, когда, потому что, поэтому">▶</button></div></div>
+      </div>
+    </details>
+
+    <details class="lesson">
+      <summary><span class="lnum">6</span><div class="lhead"><h2>Your paragraph, decoded</h2><div class="sub">Every rule above, working together</div></div><span class="chev">›</span></summary>
+      <div class="lbody">
+        <p>Here's your template routine with the grammar tagged. Read it out loud, then swap in your own hours and days.</p>
+        <div class="ex" style="border-color:var(--stamp)">
+          <div class="r"><span class="ru">С понеде́льника по пя́тницу</span> <button class="say" data-say="С понедельника по пятницу">▶</button></div>
+          <div class="e">From Monday to Friday · <span class="lit">с + gen … по + acc = a range</span></div>
+        </div>
+        <div class="ex">
+          <div class="r"><span class="ru">я стара́юсь просыпа́ться в семь или во́семь часо́в утра́.</span> <button class="say" data-say="я стараюсь просыпаться в семь или восемь часов утра">▶</button></div>
+          <div class="e">I try to wake up at seven or eight in the morning · <span class="lit">стараюсь + infinitive · в + число + часов</span></div>
+        </div>
+        <div class="ex">
+          <div class="r"><span class="ru">Пото́м я встаю́ и за́втракаю.</span> <button class="say" data-say="Потом я встаю и завтракаю">▶</button></div>
+          <div class="e">Then I get up and have breakfast · <span class="lit">connector + я-forms</span></div>
+        </div>
+        <div class="ex">
+          <div class="r"><span class="ru">Я стара́юсь ходи́ть в спортза́л три ра́за в неде́лю.</span> <button class="say" data-say="Я стараюсь ходить в спортзал три раза в неделю">▶</button></div>
+          <div class="e">I try to go to the gym three times a week · <span class="lit">habit verb · в + acc (to) · frequency</span></div>
+        </div>
+        <div class="ex">
+          <div class="r"><span class="ru">Ве́чером я рабо́таю, потому́ что когда́ в Таджикиста́не ве́чер, в Брази́лии у́тро.</span> <button class="say" data-say="Вечером я работаю, потому что когда в Таджикистане вечер, в Бразилии утро">▶</button></div>
+          <div class="e">In the evening I work, because when it's evening in Tajikistan, it's morning in Brazil · <span class="lit">instrumental time + potomú chto</span></div>
+        </div>
+        <p style="margin-top:18px"><button class="pill" data-say="С понедельника по пятницу я стараюсь просыпаться в семь или восемь часов утра. Потом я встаю и завтракаю. Я стараюсь ходить в спортзал три раза в неделю. Вечером я работаю, потому что когда в Таджикистане вечер, в Бразилии утро.">▶ Play the whole paragraph</button></p>
+      </div>
+    </details>
+
+  </section>
+
+  <!-- ============ WORDS ============ -->
+  <section class="pane" id="words">
+    <div class="deckbar">
+      <div class="count">Card <b id="cardIdx">1</b> / <span id="cardTotal">20</span> · <span id="knownCount">0</span> marked known</div>
+      <div style="display:flex; gap:8px">
+        <button class="pill mini" id="shuffleBtn">Shuffle</button>
+        <button class="pill mini" id="coreBtn">Core 20 ✓</button>
+        <button class="pill mini" id="allBtn">All 40</button>
+      </div>
+    </div>
+    <div class="card-stage">
+      <div class="flash" id="flash">
+        <div class="face front">
+          <span class="tag" id="ftag">verb</span>
+          <div class="rw" id="fru">просыпа́ться</div>
+          <div class="tr" id="ftr">prosypátʹsya</div>
+          <button class="say" id="fsay" style="margin-top:16px" data-say="просыпаться">▶ speak</button>
+          <span class="flip-hint">tap card to flip</span>
+        </div>
+        <div class="face back">
+          <div class="en" id="ben">to wake up</div>
+          <div class="note" id="bnote">я просыпаюсь — reflexive, ‑сь after the vowel</div>
+          <span class="flip-hint">tap to flip back</span>
+        </div>
+      </div>
+    </div>
+    <div class="navrow">
+      <button class="arrow" id="prevBtn" aria-label="previous">‹</button>
+      <button class="arrow" id="flipBtn" aria-label="flip" style="width:auto; border-radius:22px; padding:0 20px; font-family:var(--mono); font-size:12px; text-transform:uppercase">flip</button>
+      <button class="arrow" id="nextBtn" aria-label="next">›</button>
+    </div>
+    <div class="knowrow">
+      <button class="pill mini" id="knowBtn" style="border-color:var(--teal); color:var(--teal)">Mark known →</button>
+      <button class="pill mini" id="resetKnow">Reset known</button>
+    </div>
+  </section>
+
+  <!-- ============ EXERCISES ============ -->
+  <section class="pane" id="ex">
+    <div class="scorebar">
+      <div class="s">Score <b id="score">0</b> / <span id="scoreMax">0</span></div>
+      <button class="pill mini" id="resetEx">Reset drills</button>
+    </div>
+    <div id="exList"></div>
+  </section>
+
+  <!-- ============ DIALOGUES ============ -->
+  <section class="pane" id="dlg">
+    <div style="display:flex; justify-content:flex-end; margin-bottom:14px">
+      <button class="pill mini" id="toggleTr">Show / hide English</button>
+    </div>
+
+    <div class="dlg">
+      <div class="dlg-head"><h2>Утром в кафе́</h2><span class="scene">A · warm-up</span></div>
+      <div class="dlg-body" data-dlg="1"></div>
+    </div>
+
+    <div class="dlg">
+      <div class="dlg-head"><h2>Расска́жешь о свои́х дня́х?</h2><span class="scene">B · your routine</span></div>
+      <div class="dlg-body" data-dlg="2"></div>
+    </div>
+
+    <div class="dlg">
+      <div class="dlg-head"><h2>В спортза́ле</h2><span class="scene">C · at the gym</span></div>
+      <div class="dlg-body" data-dlg="3"></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>ПУТЬ · Распорядок дня</span>
+    <span>Гейб → B1 к сентябрю́</span>
+  </footer>
+
+</div>
+
+<script>
+/* ---------------- audio ---------------- */
+let ruVoice = null;
+function pickVoice(){
+  const vs = speechSynthesis.getVoices();
+  ruVoice = vs.find(v=>/ru[-_]RU/i.test(v.lang)) || vs.find(v=>/^ru/i.test(v.lang)) || null;
+}
+pickVoice();
+if (typeof speechSynthesis !== 'undefined') speechSynthesis.onvoiceschanged = pickVoice;
+function speak(text){
+  if(!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'ru-RU'; u.rate = 0.9;
+  if(ruVoice) u.voice = ruVoice;
+  speechSynthesis.speak(u);
+}
+document.addEventListener('click', e=>{
+  const b = e.target.closest('[data-say]');
+  if(b){ speak(b.getAttribute('data-say')); }
+});
+
+/* ---------------- tabs ---------------- */
+document.querySelectorAll('nav.tabs .tab').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('nav.tabs .tab').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.pane').forEach(p=>p.classList.remove('on'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.pane).classList.add('on');
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+});
+
+/* ---------------- word deck ---------------- */
+// [ru w/ stress, translit, en, note, tag, plain-for-audio]
+const CORE = [
+  ["просыпа́ться","prosypátʹsya","to wake up","я просыпа́юсь — reflexive, ‑сь after the vowel","verb·‑ся","просыпаться"],
+  ["встава́ть","vstavátʹ","to get up","я встаю́ — irregular, drops the ‑ва","verb","вставать"],
+  ["за́втракать","závtrakatʹ","to have breakfast","я за́втракаю — regular ‑ю verb","verb","завтракать"],
+  ["учи́ться","uchítʹsya","to study","я учу́сь — where/that you study","verb·‑ся","учиться"],
+  ["рабо́тать","rabótatʹ","to work","я рабо́таю — regular","verb","работать"],
+  ["ходи́ть","khodítʹ","to go (regularly)","я хожу́ — habit, round trips, on foot","verb·motion","ходить"],
+  ["идти́","idtí","to go (now)","я иду́ — one direction, right now, on foot","verb·motion","идти"],
+  ["ждать","zhdatʹ","to wait","я жду — takes accusative object","verb","ждать"],
+  ["гуля́ть","gulyátʹ","to take a walk","я гуля́ю — leisure walk, not going somewhere","verb","гулять"],
+  ["ложи́ться спать","lozhítʹsya spatʹ","to go to bed","я ложу́сь спать — reflexive chunk","phrase·‑ся","ложиться спать"],
+  ["у́тром","útrom","in the morning","instrumental of у́тро — the ending = 'in the'","time","утром"],
+  ["ве́чером","vécherom","in the evening","instrumental of ве́чер","time","вечером"],
+  ["пото́м","potóm","then / after","connector, no grammar change","glue","потом"],
+  ["обы́чно","obýchno","usually","frequency adverb, drop it in front","glue","обычно"],
+  ["ка́ждый день","kázhdyj denʹ","every day","fixed chunk — accusative but looks like base","phrase","каждый день"],
+  ["три ра́за в неде́лю","tri ráza v nedélyu","three times a week","ра́за (2‑4) + в + acc","phrase","три раза в неделю"],
+  ["потому́ что","potomú chto","because","gives the reason","glue","потому что"],
+  ["когда́","kogdá","when","links two clauses","glue","когда"],
+  ["ру́сский язы́к","rússkij yazýk","Russian (language)","язы́к = language / tongue","noun","русский язык"],
+  ["спортза́л","sportzál","gym","в спортза́л = to · в спортза́ле = in","noun","спортзал"]
+];
+const EXTRA = [
+  ["умыва́ться","umyvátʹsya","to wash up","я умыва́юсь — reflexive","verb·‑ся","умываться"],
+  ["чи́стить зу́бы","chístitʹ zúby","to brush teeth","я чи́щу зу́бы","phrase","чистить зубы"],
+  ["есть","jestʹ","to eat","я ем, ты ешь — irregular","verb","есть"],
+  ["пить","pitʹ","to drink","я пью — irregular","verb","пить"],
+  ["изуча́ть","izuchátʹ","to study (a subject)","я изуча́ю — deep study of X","verb","изучать"],
+  ["учи́ть","uchítʹ","to learn / memorize","я учу́ — 2nd conjugation","verb","учить"],
+  ["начина́ть","nachinátʹ","to start","я начина́ю","verb","начинать"],
+  ["зака́нчивать","zakánchivatʹ","to finish","я зака́нчиваю","verb","заканчивать"],
+  ["е́хать","jékhatʹ","to go by transport (now)","я е́ду — one direction, right now","verb·motion","ехать"],
+  ["е́здить","jézditʹ","to go by transport (regularly)","я е́зжу — habit","verb·motion","ездить"],
+  ["тренирова́ться","trenirovátʹsya","to train / work out","я трениру́юсь — reflexive","verb·‑ся","тренироваться"],
+  ["отдыха́ть","otdykhátʹ","to rest","я отдыха́ю","verb","отдыхать"],
+  ["чита́ть","chitátʹ","to read","я чита́ю","verb","читать"],
+  ["смотре́ть","smotrétʹ","to watch","я смотрю́ — 2nd conjugation","verb","смотреть"],
+  ["спать","spatʹ","to sleep","я сплю — irregular","verb","спать"],
+  ["ра́но","ráno","early","adverb","time","рано"],
+  ["по́здно","pózdno","late","adverb (д is silent)","time","поздно"],
+  ["всегда́","vsegdá","always","frequency","glue","всегда"],
+  ["иногда́","inogdá","sometimes","frequency","glue","иногда"],
+  ["поэ́тому","poétomu","so / therefore","result connector","glue","поэтому"]
+];
+
+let deck = CORE.slice();
+let di = 0;
+const known = new Set();
+
+const flash = document.getElementById('flash');
+const fru = document.getElementById('fru'), ftr = document.getElementById('ftr'),
+      ftag = document.getElementById('ftag'), ben = document.getElementById('ben'),
+      bnote = document.getElementById('bnote'), fsay = document.getElementById('fsay');
+
+function renderCard(){
+  const c = deck[di];
+  flash.classList.remove('flip');
+  setTimeout(()=>{
+    fru.textContent = c[0]; ftr.textContent = c[1]; ftag.textContent = c[4];
+    ben.textContent = c[2]; bnote.textContent = c[3];
+    fsay.setAttribute('data-say', c[5]);
+  }, flash.classList.contains('flip')?0:0);
+  document.getElementById('cardIdx').textContent = di+1;
+  document.getElementById('cardTotal').textContent = deck.length;
+  document.getElementById('knownCount').textContent = known.size;
+  const kb = document.getElementById('knowBtn');
+  kb.textContent = known.has(c[5]) ? 'Known ✓' : 'Mark known →';
+}
+flash.addEventListener('click', ()=> flash.classList.toggle('flip'));
+document.getElementById('flipBtn').addEventListener('click', e=>{ e.stopPropagation(); flash.classList.toggle('flip'); });
+document.getElementById('nextBtn').addEventListener('click', ()=>{ di=(di+1)%deck.length; renderCard(); });
+document.getElementById('prevBtn').addEventListener('click', ()=>{ di=(di-1+deck.length)%deck.length; renderCard(); });
+document.getElementById('shuffleBtn').addEventListener('click', ()=>{
+  for(let i=deck.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[deck[i],deck[j]]=[deck[j],deck[i]];}
+  di=0; renderCard();
+});
+document.getElementById('coreBtn').addEventListener('click', ()=>{ deck=CORE.slice(); di=0; renderCard(); });
+document.getElementById('allBtn').addEventListener('click', ()=>{ deck=CORE.concat(EXTRA); di=0; renderCard(); });
+document.getElementById('knowBtn').addEventListener('click', ()=>{
+  const key = deck[di][5];
+  if(known.has(key)) known.delete(key); else known.add(key);
+  renderCard();
+});
+document.getElementById('resetKnow').addEventListener('click', ()=>{ known.clear(); renderCard(); });
+renderCard();
+
+/* ---------------- exercises ---------------- */
+// types: type (fill blank), mc (multiple choice)
+const EXERCISES = [
+  {t:'type', q:'Put the verb in the "я" form: <span class="ru">просыпа́ться</span> →', hint:'reflexive ‑ся verb', a:['просыпаюсь','просыпа́юсь'], say:'я просыпаюсь', fb:'я <b>просыпа́юсь</b> — vowel + сь.'},
+  {t:'type', q:'"I get up" — <span class="ru">встава́ть</span> →', hint:'irregular, drops ‑ва', a:['встаю','встаю́'], say:'я встаю', fb:'я <b>встаю́</b>.'},
+  {t:'mc', q:'In the morning = ?', hint:'time-of-day → instrumental', opts:['в у́тро','у́тром','у́тра'], correct:1, say:'утром', fb:'<b>у́тром</b> — the ‑ом ending means "during".'},
+  {t:'mc', q:'<span class="ru">Я хожу́ ___ спортза́л три ра́за в неде́лю.</span>', hint:'motion toward = accusative', opts:['в спортза́ле','в спортза́л','на спортза́ле'], correct:1, say:'в спортзал', fb:'Movement toward → <b>в спортза́л</b> (accusative).'},
+  {t:'mc', q:'<span class="ru">Я трениру́юсь ___ .</span> (I train in the gym)', hint:'location = prepositional', opts:['в спортза́л','в спортза́ле','спортза́л'], correct:1, say:'в спортзале', fb:'Sitting/doing inside → <b>в спортза́ле</b>.'},
+  {t:'mc', q:'Which "go" for a daily habit on foot?', hint:'habit vs now', opts:['иду́','хожу́','е́ду'], correct:1, say:'хожу', fb:'Habit on foot → <b>хожу́</b> (ходи́ть).'},
+  {t:'type', q:'"three times a week" =', hint:'ра́за + в + acc', a:['три раза в неделю','три ра́за в неде́лю'], say:'три раза в неделю', fb:'<b>три ра́за в неде́лю</b>.'},
+  {t:'mc', q:'<span class="ru">У меня́ ___ уро́к ру́сского языка́.</span> (I have…)', hint:'"by me there is"', opts:['есть','иметь','я'], correct:0, say:'У меня есть урок русского языка', fb:'<b>у меня́ есть</b> + the thing.'},
+  {t:'mc', q:'After <span class="ru">я стара́юсь</span>, the next verb is…', hint:'try to + ___', opts:['the я-form (учу́)','the dictionary form (учи́ть)','instrumental'], correct:1, say:'я стараюсь учить', fb:'Keep it as the infinitive: <b>стара́юсь учи́ть</b>.'},
+  {t:'type', q:'Connector for "because" =', hint:'gives a reason', a:['потому что','потому́ что'], say:'потому что', fb:'<b>потому́ что</b>.'},
+  {t:'mc', q:'At 8 o\'clock =', hint:'в + number + часо́в', opts:['в во́семь час','в во́семь часа́','в во́семь часо́в'], correct:2, say:'в восемь часов', fb:'5+ → <b>часо́в</b>: в во́семь часо́в.'},
+  {t:'type', q:'"I go to bed" (reflexive chunk) =', hint:'ложи́ться спать → я…', a:['ложусь спать','ложу́сь спать'], say:'я ложусь спать', fb:'я <b>ложу́сь спать</b>.'}
+];
+
+const exList = document.getElementById('exList');
+let scoreMax = 0;
+const answered = new Set();
+function norm(s){ return s.toLowerCase().replace(/ё/g,'е').replace(/[́]/g,'').replace(/\s+/g,' ').trim(); }
+
+EXERCISES.forEach((ex, i)=>{
+  scoreMax++;
+  const item = document.createElement('div');
+  item.className = 'ex-item';
+  let inner = `<p class="q"><b style="color:var(--stamp);font-family:var(--mono);font-size:13px">${String(i+1).padStart(2,'0')}</b> &nbsp;${ex.q}</p><span class="hint">${ex.hint}</span>`;
+  if(ex.t==='type'){
+    inner += `<div><input class="blank" data-i="${i}" placeholder="type here…" autocomplete="off" spellcheck="false"> <button class="say" data-say="${ex.say}">▶</button></div><button class="check" data-i="${i}">Check</button>`;
+  } else {
+    inner += `<div class="opts">` + ex.opts.map((o,k)=>`<button class="opt" data-i="${i}" data-k="${k}">${o}</button>`).join('') + `</div>`;
+  }
+  inner += `<div class="fb" id="fb${i}"></div>`;
+  item.innerHTML = inner;
+  exList.appendChild(item);
+});
+document.getElementById('scoreMax').textContent = scoreMax;
+
+function markScore(i, ok, exObj){
+  const fb = document.getElementById('fb'+i);
+  fb.className = 'fb show ' + (ok?'ok':'no');
+  fb.innerHTML = (ok?'✓ Верно. ':'✗ Не совсем. ') + `<span class="ans">${exObj.fb}</span>`;
+  if(ok && !answered.has(i)){ answered.add(i); updateScore(); }
+  if(!ok) answered.delete(i);
+}
+function updateScore(){ document.getElementById('score').textContent = answered.size; }
+
+exList.addEventListener('click', e=>{
+  const chk = e.target.closest('.check');
+  if(chk){
+    const i = +chk.dataset.i; const ex = EXERCISES[i];
+    const val = exList.querySelector(`.blank[data-i="${i}"]`).value;
+    const ok = ex.a.some(a=>norm(a)===norm(val));
+    markScore(i, ok, ex);
+    return;
+  }
+  const opt = e.target.closest('.opt');
+  if(opt){
+    const i = +opt.dataset.i, k = +opt.dataset.k; const ex = EXERCISES[i];
+    const group = exList.querySelectorAll(`.opt[data-i="${i}"]`);
+    group.forEach(o=>o.classList.remove('pick','right','wrong'));
+    const ok = k===ex.correct;
+    opt.classList.add(ok?'right':'wrong');
+    if(!ok) group[ex.correct].classList.add('right');
+    markScore(i, ok, ex);
+  }
+});
+document.getElementById('resetEx').addEventListener('click', ()=>{
+  answered.clear(); updateScore();
+  exList.querySelectorAll('.blank').forEach(b=>b.value='');
+  exList.querySelectorAll('.opt').forEach(o=>o.classList.remove('pick','right','wrong'));
+  exList.querySelectorAll('.fb').forEach(f=>{f.className='fb'; f.innerHTML='';});
+});
+
+/* ---------------- dialogues ---------------- */
+const DIALOGUES = {
+  1:[
+    ['А','До́брое у́тро! Ты уже́ за́втракал?','Good morning! Have you had breakfast yet?'],
+    ['Б','Нет ещё. Я то́лько встал. Обы́чно я за́втракаю в во́семь часо́в.','Not yet. I just got up. I usually have breakfast at eight.'],
+    ['А','Что ты пьёшь у́тром — чай и́ли ко́фе?','What do you drink in the morning — tea or coffee?'],
+    ['Б','У́тром я всегда́ пью ко́фе. По́сле э́того я иду́ в спортза́л.','In the morning I always drink coffee. After that I go to the gym.']
+  ],
+  2:[
+    ['А','Расскажи́, как прохо́дит твой день.','Tell me how your day goes.'],
+    ['Б','С понеде́льника по пя́тницу я стара́юсь просыпа́ться ра́но, в семь часо́в.','From Monday to Friday I try to wake up early, at seven.'],
+    ['А','И ты сра́зу рабо́таешь?','And do you work right away?'],
+    ['Б','Нет. Снача́ла я трениру́юсь, пото́м у меня́ уро́к ру́сского языка́. Рабо́таю я ве́чером.','No. First I train, then I have a Russian lesson. I work in the evening.'],
+    ['А','Почему́ ве́чером?','Why in the evening?'],
+    ['Б','Потому́ что когда́ в Таджикиста́не ве́чер, в Брази́лии у́тро.','Because when it\'s evening in Tajikistan, it\'s morning in Brazil.']
+  ],
+  3:[
+    ['А','Ты ча́сто хо́дишь в спортза́л?','Do you go to the gym often?'],
+    ['Б','Да, три ра́за в неде́лю. А ещё я пла́ваю два ра́за.','Yes, three times a week. And I also swim twice.'],
+    ['А','Кла́ссно. А когда́ ты отдыха́ешь?','Cool. And when do you rest?'],
+    ['Б','В суббо́ту. Я чита́ю, гуля́ю и по́здно ложу́сь спать.','On Saturday. I read, take walks, and go to bed late.']
+  ]
+};
+Object.entries(DIALOGUES).forEach(([id, lines])=>{
+  const box = document.querySelector(`.dlg-body[data-dlg="${id}"]`);
+  lines.forEach(([who, ru, en])=>{
+    const row = document.createElement('div');
+    row.className = 'line';
+    row.innerHTML = `<div class="who ${who==='Б'?'b':''}">${who}</div>
+      <div class="said">
+        <div class="r ru">${ru} <button class="say" data-say="${ru.replace(/[́]/g,'')}">▶</button></div>
+        <div class="t">${en}</div>
+      </div>`;
+    box.appendChild(row);
+  });
+});
+document.getElementById('toggleTr').addEventListener('click', ()=>{
+  document.querySelectorAll('.said').forEach(s=>s.classList.toggle('reveal'));
+});
+</script>
+</body>
+</html>
